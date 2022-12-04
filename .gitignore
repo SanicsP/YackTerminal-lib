@@ -1,0 +1,12 @@
+*.ini
+*.bin 
+*.lib
+*.exe
+*.json
+*.a
+*.o
+*.ar
+*.cmake
+*.txt
+*Makefile
+/build
