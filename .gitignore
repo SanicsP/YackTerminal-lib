@@ -9,4 +9,8 @@
 *.cmake
 *.txt
 *Makefile
+
 /build
+/.vscode
+/concept
+
