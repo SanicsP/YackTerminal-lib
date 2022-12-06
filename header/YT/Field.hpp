@@ -10,8 +10,8 @@ namespace YackTerminal {
 		
 		public: // constructors 
 			
-			Field(size_t argc , char* argv[]) noexcept;
-			Field(const std::string& arg_str) noexcept;
+			Field(size_t argc , char* argv[]) ;
+			Field(const std::string& arg_str) ;
 
 		private: // members
 
@@ -25,6 +25,8 @@ namespace YackTerminal {
 			void rconstruct(const std::string& nw_arg_str);
 
 	};
+
+	
 } //end of namespace 
 
 

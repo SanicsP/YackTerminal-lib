@@ -4,7 +4,7 @@ using namespace YackTerminal;
 
 Field::Field(size_t argc , char* argv[]) 
 {
-
+	
 }
 
 Field::Field(const std::string& arg_str) 

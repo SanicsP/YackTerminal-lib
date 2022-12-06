@@ -11,7 +11,7 @@ namespace YackTerminal {
 	class Command{
 
 		public : // constructors
-		
+			
 		private :
 			
 		public:  // services 
