@@ -2,12 +2,13 @@
 #define UTILS_HPP
 
 #include <string>
+#include <iostream>
 
 namespace YackTerminal {
 
-	std::string Argv2String(int argc , char* argv[]);
-	
-};
+	std::string argv2String(int argc , char* argv[]);
+	void say();
+}
 
 
 #endif

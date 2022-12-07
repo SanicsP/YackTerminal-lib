@@ -1,28 +1,31 @@
-#include "Field.hpp"
+#include <Field.hpp>
 
-using namespace YackTerminal;
+namespace YackTerminal { 
 
-Field::Field(size_t argc , char* argv[]) 
-{
-	
-}
 
-Field::Field(const std::string& arg_str) 
-{
+	Field::Field(size_t argc , char* argv[]) 
+	{
+		
+	}
 
-}
+	Field::Field(const std::string& arg_str) 
+	{
 
-const std::string& Field::operator[](size_t key) const
-{
+	}
 
-}
+	const std::string& Field::operator[](size_t key) const
+	{
 
-std::string Field::name() const noexcept
-{
+	}
 
-}
+	std::string Field::name() const noexcept
+	{
 
-void Field::rconstruct(const std::string& nw_arg_str)
-{
+	}
+
+	void Field::rconstruct(const std::string& nw_arg_str)
+	{
+
+	}
 
 }
