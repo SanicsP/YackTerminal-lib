@@ -11,7 +11,10 @@ std::string argv2String(int argc , char* argv[])
 	for(int i = 0 ; i < argc ; i++)
 	{
 		std::string c_str = argv[i];
-		return_str += " " + c_str;
+		if(i != argc - 1)
+			return_str += c_str + " ";
+		else
+			return_str += c_str;
 	}
 
 	return return_str;
