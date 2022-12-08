@@ -20,6 +20,16 @@ std::string argv2String(int argc , char* argv[])
 	return return_str;
 }
 
+char** string2Argv(const std::string& str)
+{
+	char** retunr_argv = nullptr;
+	std::istringstream sstr {str};
+	
+	
+	
+}
+
+
 void say()
 {
 	std::cout<<"hello world"<<std::endl;
