@@ -10,7 +10,7 @@ void UT_Command()
 
 }
 
-void UT_Other()
+void UT_Other(int argc , char* argv[])
 {
 
 	std::string compare{"Utest test"};
@@ -18,8 +18,9 @@ void UT_Other()
 	int argc1 = 2;
 	assert((YackTerminal::argv2String(argc1 , argv1) == compare ) && "argv2string Err");
 	
+	
 	std::vector<std::string> argv2;
-	argv2 = YackTerminal::stringSplit(" Hello  world haha" , ' ');
+	argv2 = YackTerminal::stringSplit("Helloworldhahazdzdzd" , ' ');
 	
 	for(std::string i : argv2)
 	{

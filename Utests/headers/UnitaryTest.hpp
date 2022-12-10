@@ -8,6 +8,6 @@
 #include <iostream>
 void UT_Field();
 void UT_Command();
-void UT_Other();
+void UT_Other(int argc , char* argv[]);
 
 #endif
