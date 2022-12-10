@@ -8,16 +8,13 @@ namespace YackTerminal {
 	Field::Field(size_t argc , char* argv[]) 
 	{
 		std::string str_argv = argv2String(argc , argv);
-		std::vector<std::string> arg_array = stringSplit(str_argv , ' ');
-
-		m_name = arg_array[1];
-		m_argv = std::vector<std::string>{std::begin(arg_array ) + 2 ,std::end(arg_array)};
+		this->rconstruct(str_argv);
 		
 	}
 
 	Field::Field(const std::string& arg_str) 
 	{
-
+		this->rconstruct(arg_str);
 	}
 
 	const std::string& Field::operator[](size_t key) const
@@ -32,7 +29,9 @@ namespace YackTerminal {
 
 	void Field::rconstruct(const std::string& nw_arg_str)
 	{
-		
+		std::vector<std::string> arg_array = stringSplit(nw_arg_str , ' ');
+		m_name = arg_array[1];
+		m_argv = std::vector<std::string>{std::begin(arg_array) + 2 ,std::end(arg_array)};
 	}
 
 }
