@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <functional>
+#include <stdexcept>
 
 namespace YackTerminal {
 
@@ -24,7 +25,7 @@ namespace YackTerminal {
 			const std::string& operator[](size_t key) const;
 			std::string name() const noexcept;
 			void rconstruct(const std::string& nw_arg_str);
-			bool inspect(const std::function<bool(const std::string&)>& predicate) const noexcept;
+			bool inspect(const std::function<bool(const std::string&)>& predicate) const;
 
 	};
 
