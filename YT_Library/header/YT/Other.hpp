@@ -4,11 +4,14 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include <vector>
+#include <algorithm>
 namespace YackTerminal {
-
+	
 	std::string argv2String(int argc , char* argv[]);
 	char** string2Argv(const std::string& str);
-	void say();
+	std::vector<std::string> stringSplit(const std::string& str , char delim);
+
 }
 
 

@@ -5,7 +5,9 @@ namespace YackTerminal {
 
 	Field::Field(size_t argc , char* argv[]) 
 	{
-		
+		m_name = argv[1];
+		for(int i = 2 ; i < argc ; i++)
+			m_argv[i] = argv[i];
 	}
 
 	Field::Field(const std::string& arg_str) 
@@ -25,7 +27,7 @@ namespace YackTerminal {
 
 	void Field::rconstruct(const std::string& nw_arg_str)
 	{
-
+		
 	}
 
 }

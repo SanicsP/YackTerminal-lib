@@ -5,7 +5,7 @@
 #include <YT/Field.hpp>
 #include <YT/Other.hpp>
 #include <cassert>
-
+#include <iostream>
 void UT_Field();
 void UT_Command();
 void UT_Other();
