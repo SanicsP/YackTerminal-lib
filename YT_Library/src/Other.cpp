@@ -20,14 +20,6 @@ namespace YackTerminal{
 		return return_str;
 	}
 
-	char** string2Argv(const std::string& str)
-	{
-		char** retunr_argv = nullptr;
-		std::istringstream sstr {str};
-		
-		
-		
-	}
 
 	std::vector<std::string> stringSplit(const std::string& str , char delim)
 	{

@@ -5,7 +5,8 @@ namespace yt = YackTerminal;
 
 int main(int argc , char* argv[])
 {
-	UT_Other(argc , argv);
+	//UT_Other(argc , argv);
+	UT_Field(argc , argv);
 	
 	std::cout<<"No Error"<<std::endl;
 	std::cin.get();

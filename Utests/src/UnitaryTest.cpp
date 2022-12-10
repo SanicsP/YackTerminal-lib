@@ -1,8 +1,10 @@
 #include <UnitaryTest.hpp>	
 
-void UT_Field()
+void UT_Field(int argc , char* argv[])
 {
-	// YackTerminal::Field TestField{}; // Constructor test
+	YackTerminal::Field f{argc , argv};
+	std::cout<<f.name()<<" "<<f[0]<<std::endl;
+	
 }
 
 void UT_Command()

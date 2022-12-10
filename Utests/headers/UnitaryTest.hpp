@@ -6,7 +6,8 @@
 #include <YT/Other.hpp>
 #include <cassert>
 #include <iostream>
-void UT_Field();
+
+void UT_Field(int argc , char* argv[]);
 void UT_Command();
 void UT_Other(int argc , char* argv[]);
 
