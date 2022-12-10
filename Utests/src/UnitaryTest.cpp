@@ -4,7 +4,10 @@ void UT_Field(int argc , char* argv[])
 {
 	YackTerminal::Field f{argc , argv};
 	std::cout<<f.name()<<" "<<f[0]<<std::endl;
-	
+	bool predicate = f.inspect([](const std::string& str)-> bool {
+		return str.size() > 4;
+	});
+	std::cout<<std::boolalpha<<predicate<<'\n';
 }
 
 void UT_Command()

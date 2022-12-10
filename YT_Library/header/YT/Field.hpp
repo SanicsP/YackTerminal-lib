@@ -3,6 +3,8 @@
 
 #include <string>
 #include <vector>
+#include <functional>
+
 namespace YackTerminal {
 
 	class Field {
@@ -19,9 +21,10 @@ namespace YackTerminal {
 
 		public : //operations
 			
-			const std::string& operator[](size_t key) const ;
+			const std::string& operator[](size_t key) const;
 			std::string name() const noexcept;
 			void rconstruct(const std::string& nw_arg_str);
+			bool inspect(const std::function<bool(const std::string&)>& predicate) const noexcept;
 
 	};
 
