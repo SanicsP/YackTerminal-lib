@@ -1,13 +1,43 @@
 #include <UnitaryTest.hpp>	
 
-void UT_Field(int argc , char* argv[])
+namespace yt = YackTerminal;
+
+void UT_Field()
 {
-	YackTerminal::Field f{argc , argv};
-	std::cout<<f.name()<<" "<<f[0]<<std::endl;
-	bool predicate = f.inspect([](const std::string& str)-> bool {
-		return str.size() > 4;
-	});
-	std::cout<<std::boolalpha<<predicate<<'\n';
+	std::string assert_msg{"assertion fail : "};
+	//Test of constructors
+	{
+		//ield(size_t argc , char* argv[])
+		int argc = 4;
+		char* argv[] {
+			"prog" , "command" , "arg1" , "arg2"
+		};
+
+		auto predicate = [](const std::string& str) -> bool {return str.size() >= 4;};
+		yt::Field field{argc , argv};
+	
+		assert(field.name() == "command" && "assert fail : constructor(int argc , char* argv[])");
+		
+		assert(field[0] == "arg1" && field[1] == "arg2" &&  "assert fail : constructor");
+		
+		assert(field.inspect(predicate) == true && "asset fail in func inspect()");
+		
+		/////////////////////////////////////////////////////
+
+		yt::Field field2{"prog command arg1 arg2"};
+
+		assert(field2.name() == "command" && "assert fail : constructor(std::string)");
+		
+		assert(field2[0] == "arg1" && field2[1] == "arg2" &&  "assert fail : constructor");
+		
+		assert(field2.inspect(predicate) == true && "function inspect(predicat)");
+
+		field.rconstruct(" Program  command' arg1' arg2' arg3' ");
+		assert(field.name() == "command'"&& "func reconstruct");
+		assert(field[0] == "arg1'" && "func reconstruct");
+
+	}
+	//End 
 }
 
 void UT_Command()
@@ -15,20 +45,7 @@ void UT_Command()
 
 }
 
-void UT_Other(int argc , char* argv[])
+void UT_Other()
 {
 
-	std::string compare{"Utest test"};
-	char* argv1[] = {"Utest" , "test"};
-	int argc1 = 2;
-	assert((YackTerminal::argv2String(argc1 , argv1) == compare ) && "argv2string Err");
-	
-	std::string argvStr = YackTerminal::argv2String(argc , argv);
-	std::vector<std::string> argv2;
-	argv2 = YackTerminal::stringSplit(argvStr , ' ');
-	
-	for(std::string i : argv2)
-	{
-		std::cout<<"["<<i<<"]\n";
-	}
 }

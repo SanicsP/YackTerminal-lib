@@ -7,8 +7,12 @@
 #include <cassert>
 #include <iostream>
 
-void UT_Field(int argc , char* argv[]);
+
+#define assertErr(msg , str) ((msg + str).c_str)
+
+
+void UT_Field();
 void UT_Command();
-void UT_Other(int argc , char* argv[]);
+void UT_Other();
 
 #endif

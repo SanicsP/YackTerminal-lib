@@ -33,6 +33,7 @@ namespace YackTerminal {
 		m_name = arg_array[1];
 		m_argv = std::vector<std::string>{std::begin(arg_array) + 2 ,std::end(arg_array)};
 	}
+	
 	bool Field::inspect(const std::function<bool(const std::string&)>& predicate) const 
 	{
 		if(m_argv.empty())

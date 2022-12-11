@@ -36,7 +36,7 @@ namespace YackTerminal{
 			while(true) {
 			if (mov_it == std::end(str)  - 1)
 			{
-				std::cout<<"repos eof string\n";
+				
 				break;
 			}
 			else if(*mov_it == delim && *(mov_it + 1) != delim)
