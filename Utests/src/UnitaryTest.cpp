@@ -49,3 +49,14 @@ void UT_Other()
 {
 
 }
+
+void UT_Flag()
+{
+	auto predicate = [](const std::string& str) -> bool {
+		return str.size() >= 4;
+	};
+
+	yt::Flag f{"-flag[arg1 arg2]" , '[' , ']'};
+	std::cout<<f.name()<<" -> "<<f[0]<<" , "<<f[1]<<std::endl;
+	std::cout<<std::boolalpha<<f.inspect(predicate)<<std::endl;
+}

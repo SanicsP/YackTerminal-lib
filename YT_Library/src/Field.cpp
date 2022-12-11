@@ -17,6 +17,7 @@ namespace YackTerminal {
 		this->rconstruct(arg_str);
 	}
 
+
 	const std::string& Field::operator[](size_t key) const
 	{
 		return m_argv[key];

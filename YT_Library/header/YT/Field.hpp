@@ -15,7 +15,9 @@ namespace YackTerminal {
 			Field(size_t argc , char* argv[]) ;
 			Field(const std::string& arg_str) ;
 
-		private: // members
+			Field() = default; 
+
+		protected: // members
 
 			std::string m_name;
 			std::vector<std::string> m_argv;
@@ -24,8 +26,8 @@ namespace YackTerminal {
 			
 			const std::string& operator[](size_t key) const;
 			std::string name() const noexcept;
-			void rconstruct(const std::string& nw_arg_str);
-			bool inspect(const std::function<bool(const std::string&)>& predicate) const;
+			virtual void rconstruct(const std::string& nw_arg_str);
+			virtual bool inspect(const std::function<bool(const std::string&)>& predicate) const;
 
 	};
 

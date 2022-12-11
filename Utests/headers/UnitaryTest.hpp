@@ -6,7 +6,7 @@
 #include <YT/Other.hpp>
 #include <cassert>
 #include <iostream>
-
+#include<YT/Flag.hpp>
 
 #define assertErr(msg , str) ((msg + str).c_str)
 
@@ -14,5 +14,6 @@
 void UT_Field();
 void UT_Command();
 void UT_Other();
+void UT_Flag();
 
 #endif
