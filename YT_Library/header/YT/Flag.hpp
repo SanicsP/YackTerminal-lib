@@ -16,7 +16,7 @@ namespace YackTerminal {
 			void rconstruct(const std::string& nw_arg_str) override;
 			bool inspect(const std::function<bool(const std::string&)>& predicate) const override;
 		private : 
-			bool isFalg(const std::string& arg) const;
+			bool isFlag(const std::string& arg) const;
 	};
 
 	bool isFlag(const std::string& arg , char delimIn , char delimOut);

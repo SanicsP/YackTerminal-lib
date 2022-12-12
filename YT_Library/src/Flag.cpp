@@ -11,7 +11,7 @@ namespace YackTerminal {
 	void Flag::rconstruct(const std::string& nw_arg_str ) 
 	{
 		using StrIt = std::string::const_iterator;
-		if(!isFalg(nw_arg_str))
+		if(!isFlag(nw_arg_str))
 			throw std::invalid_argument("Invalid flag");
 		
 		StrIt delimI_it = std::find(std::begin(nw_arg_str) , std::end(nw_arg_str) , m_delim_in);
@@ -35,7 +35,7 @@ namespace YackTerminal {
 		return true;
 	}
 
-	bool Flag::isFalg(const std::string& arg) const 
+	bool Flag::isFlag(const std::string& arg) const 
 	{
 		if(
 			std::count(std::begin(arg) , std::end(arg) , m_delim_in) != 1 ||

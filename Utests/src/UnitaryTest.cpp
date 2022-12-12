@@ -42,6 +42,8 @@ void UT_Field()
 
 void UT_Command()
 {
+	yt::Command com{"prog command arg1 arg2 f<arg1,arg2> " , '<' , '>'};
+	std::cout<< com.name() << " " << com.m_argv[0] << " " << com.m_flagv[0].name()<<std::endl;
 
 }
 

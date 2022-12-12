@@ -6,6 +6,7 @@
 #include <functional>
 #include <Field.hpp>
 #include <Flag.hpp>
+#include <Other.hpp>
 namespace YackTerminal  
 {
 
@@ -13,14 +14,16 @@ namespace YackTerminal
 	{
 
 		public : // constructors
-			Command(int argc , char* argv[]);
-			Command(const std::string& arg_str);
+			Command(int argc , char* argv[] , char delimI , char delimO);
+			Command(const std::string& arg_str , char delimI , char delimO );
 		private :
-			std::vector<Flag> m_flagv;
+			char m_delim_in;
+			char m_delim_out;
 		public:  // services 
-		
-		void rconstruct(const std::string& nw_arg_str) override;
-		bool inspect(const std::function<bool(const std::string&)>& predicate) const override;
+			std::vector<Flag> m_flagv;
+	
+			void rconstruct(const std::string& nw_arg_str) override;
+			bool inspect(const std::function<bool(const std::string&)>& predicate) const override;
 			
 			
 	};
