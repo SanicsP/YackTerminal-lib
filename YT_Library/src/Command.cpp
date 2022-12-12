@@ -2,17 +2,19 @@
 
 namespace YackTerminal {
 
-	Command::Command(int argc , char* argv[] , char delimI , char delimO) : 
+	Command::Command(int argc , char* argv[] , char delimI , char delimO , char flag_delim) : 
 	m_delim_in(delimI),
-	m_delim_out(delimO)
+	m_delim_out(delimO),
+	m_flag_arg_delim(flag_delim)
 	{
 		std::string arg_array = argv2String(argc , argv);
 		rconstruct(arg_array);
 	}
 	
-	Command::Command(const std::string& arg_str , char delimI , char delimO) :
+	Command::Command(const std::string& arg_str , char delimI , char delimO , char flag_delim) :
 	m_delim_in(delimI),
-	m_delim_out(delimO)
+	m_delim_out(delimO),
+	m_flag_arg_delim(flag_delim)
 	{
 		rconstruct(arg_str);
 	}
@@ -29,7 +31,7 @@ namespace YackTerminal {
 			if(isFlag(m_argv[i] , m_delim_in , m_delim_out))
 			{
 				std::cout<<"flag"<<std::endl;
-				m_flagv.push_back(Flag{m_argv[i] , m_delim_in , m_delim_out});
+				m_flagv.push_back(Flag{m_argv[i] , m_delim_in , m_delim_out , m_flag_arg_delim});
 			}
 		}
 		std::cout<<"\n";

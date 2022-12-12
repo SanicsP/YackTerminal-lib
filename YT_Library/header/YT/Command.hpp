@@ -14,11 +14,12 @@ namespace YackTerminal
 	{
 
 		public : // constructors
-			Command(int argc , char* argv[] , char delimI , char delimO);
-			Command(const std::string& arg_str , char delimI , char delimO );
+			Command(int argc , char* argv[] , char delimI , char delimO , char flag_delim);
+			Command(const std::string& arg_str , char delimI , char delimO , char flag_delim);
 		private :
 			char m_delim_in;
 			char m_delim_out;
+			char m_flag_arg_delim;
 		public:  // services 
 			std::vector<Flag> m_flagv;
 	

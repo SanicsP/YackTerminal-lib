@@ -42,8 +42,12 @@ void UT_Field()
 
 void UT_Command()
 {
-	yt::Command com{"prog command arg1 arg2 f<arg1,arg2> " , '<' , '>'};
+	yt::Command com{"prog command arg1 arg2 f<arg1,arg2,arg3,arg4,arg5,arg6>" , '<' , '>' , ','};
 	std::cout<< com.name() << " " << com.m_argv[0] << " " << com.m_flagv[0].name()<<std::endl;
+	for(std::string str : com.m_flagv[0].m_argv)
+	{
+		std::cout<<str<<std::endl;
+	}
 
 }
 
@@ -60,7 +64,7 @@ void UT_Flag()
 		}
 	};
 
-	yt::Flag test_flag{"test<arg1 arg2 arg3>" , '<' , '>'};
+	yt::Flag test_flag{"test<arg1,arg2,arg3>" , '<' , '>', ','};
 	assert(test_flag.name() == "test" &&"Assert fail in Flag class constructor");
 
 	test_flag.rconstruct("reconstruct_test<arg1' arg2' arg3'>");

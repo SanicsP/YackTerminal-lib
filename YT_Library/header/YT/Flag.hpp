@@ -7,11 +7,12 @@ namespace YackTerminal {
 	class Flag : public Field
 	{
 		public:
-			Flag(const std::string& ArgStr , char deliI , char deliO);
+			Flag(const std::string& ArgStr , char deliI , char deliO , char arg_delim);
 			Flag() = default;
 		private:
 			char m_delim_in;
 			char m_delim_out;
+			char m_arg_delim;
 		public : 
 			void rconstruct(const std::string& nw_arg_str) override;
 			bool inspect(const std::function<bool(const std::string&)>& predicate) const override;

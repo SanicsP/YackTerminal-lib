@@ -2,9 +2,10 @@
 #include <Other.hpp>
 namespace YackTerminal {
 
-	Flag::Flag(const std::string& ArgStr , char deliI , char deliO) : 
+	Flag::Flag(const std::string& ArgStr , char deliI , char deliO , char arg_delim) : 
 	m_delim_in(deliI) ,
-	m_delim_out(deliO)
+	m_delim_out(deliO),
+	m_arg_delim(arg_delim)
 	{
 		rconstruct(ArgStr);
 	}
@@ -22,7 +23,7 @@ namespace YackTerminal {
 
 		std::string sub_str = {delimI_it + 1 , delimO_it};
 
-		m_argv = stringSplit(sub_str , ' ');
+		m_argv = stringSplit(sub_str , m_arg_delim);
 	}
 
 	bool Flag::inspect(const std::function<bool(const std::string&)>& predicate) const 
