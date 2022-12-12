@@ -49,5 +49,22 @@ namespace YackTerminal {
 		return true;
 	}
 	
+	///Free func 
+
+	bool isFlag(const std::string& arg , char delimIn , char delimOut)
+	{
+		if(
+			std::count(std::begin(arg) , std::end(arg) , delimIn) != 1 ||
+			std::count(std::begin(arg) , std::end(arg) , delimOut) != 1 
+		)
+			return false;
+		if(
+			arg.back() != delimOut || arg.front() == delimIn
+		)
+			return false;
+		return true;
+	}
+
 
 };
+

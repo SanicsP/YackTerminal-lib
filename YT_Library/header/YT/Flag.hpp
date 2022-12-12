@@ -19,7 +19,9 @@ namespace YackTerminal {
 			bool isFalg(const std::string& arg) const;
 	};
 
+	bool isFlag(const std::string& arg , char delimIn , char delimOut);
 }
+
 
 
 #endif

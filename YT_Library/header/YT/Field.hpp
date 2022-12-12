@@ -13,6 +13,7 @@ namespace YackTerminal {
 		public: // constructors 
 			
 			Field(size_t argc , char* argv[]) ;
+			
 			Field(const std::string& arg_str) ;
 
 			Field() = default; 
@@ -20,14 +21,15 @@ namespace YackTerminal {
 		protected: // members
 
 			std::string m_name;
-			std::vector<std::string> m_argv;
 
 		public : //operations
-			
+
 			const std::string& operator[](size_t key) const;
 			std::string name() const noexcept;
 			virtual void rconstruct(const std::string& nw_arg_str);
 			virtual bool inspect(const std::function<bool(const std::string&)>& predicate) const;
+			std::vector<std::string> m_argv;
+			
 
 	};
 

@@ -52,11 +52,21 @@ void UT_Other()
 
 void UT_Flag()
 {
-	auto predicate = [](const std::string& str) -> bool {
-		return str.size() >= 4;
+	std::function<bool(const std::string&)> predicate {
+		[](const std::string & str ) -> bool{
+			return str.size() >= 4;
+		}
 	};
 
-	yt::Flag f{"-flag[arg1 arg2]" , '[' , ']'};
-	std::cout<<f.name()<<" -> "<<f[0]<<" , "<<f[1]<<std::endl;
-	std::cout<<std::boolalpha<<f.inspect(predicate)<<std::endl;
+	yt::Flag test_flag{"test<arg1 arg2 arg3>" , '<' , '>'};
+	assert(test_flag.name() == "test" &&"Assert fail in Flag class constructor");
+
+	test_flag.rconstruct("reconstruct_test<arg1' arg2' arg3'>");
+	assert(test_flag.name() == "reconstruct_test" &&"Assert fail in Flag class rconstruct function");
+
+	bool check = test_flag.inspect(predicate);
+	assert(check &&"Assert fail in Flag inspect function");
+
+	std::cout<<std::boolalpha<<yt::isFlag("t<arg1 arg2>" , '<' , '>')<<std::endl;
+	
 }
