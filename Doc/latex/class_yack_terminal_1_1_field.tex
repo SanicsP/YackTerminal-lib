@@ -1,5 +1,14 @@
 \hypertarget{class_yack_terminal_1_1_field}{}\doxysection{Yack\+Terminal\+::Field Class Reference}
 \label{class_yack_terminal_1_1_field}\index{YackTerminal::Field@{YackTerminal::Field}}
+
+
+classe représentant un champ  
+
+
+
+
+{\ttfamily \#include $<$Field.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -10,7 +19,7 @@
 const std\+::string \& \mbox{\hyperlink{class_yack_terminal_1_1_field_ad6c5ae0033a0db6e0d041e7ed7b1dc65}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t key) const
 \begin{DoxyCompactList}\small\item\em Operateur d\textquotesingle{}accès en lecture des éléments du veteur d\textquotesingle{}argument de l\textquotesingle{}objet de type field. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_yack_terminal_1_1_field_a5e73cb3942742568a9e975650beae157}{name}} () const noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em renvoi le nom du champ \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_yack_terminal_1_1_field_af54903ed6e54661531aaa7cf9c7449fd}{rconstruct}} (const std\+::string \&nw\+\_\+arg\+\_\+str)
 \begin{DoxyCompactList}\small\item\em reconstruit un objet de type field à partir d\textquotesingle{}une chaîne de caractères \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{class_yack_terminal_1_1_field_af14f785e578606ee1123bb5b12b85499}{inspect}} (const std\+::function$<$ bool(const std\+::string \&)$>$ \&predicate) const
@@ -28,6 +37,11 @@ std\+::vector$<$ std\+::string $>$ {\bfseries m\+\_\+argv}
 std\+::string {\bfseries m\+\_\+name}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+classe représentant un champ 
+
+un champ est un élément possédant un nom auquel lui est associé une liste de d\textquotesingle{}arguments délimités par des espaces 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_yack_terminal_1_1_field_a9a4f0ca00ef0d0f6cbe06f0a374ad82a}\label{class_yack_terminal_1_1_field_a9a4f0ca00ef0d0f6cbe06f0a374ad82a}} 
@@ -100,11 +114,13 @@ Reimplemented in \mbox{\hyperlink{class_yack_terminal_1_1_command_ac1ff96ecaae48
 {\footnotesize\ttfamily std\+::string Yack\+Terminal\+::\+Field\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
-\begin{DoxyParams}{Parameters}
-{\em } & \\
-\hline
-\end{DoxyParams}
-return \mbox{\Hypertarget{class_yack_terminal_1_1_field_ad6c5ae0033a0db6e0d041e7ed7b1dc65}\label{class_yack_terminal_1_1_field_ad6c5ae0033a0db6e0d041e7ed7b1dc65}} 
+
+renvoi le nom du champ 
+
+\begin{DoxyReturn}{Returns}
+le nom du champ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_yack_terminal_1_1_field_ad6c5ae0033a0db6e0d041e7ed7b1dc65}\label{class_yack_terminal_1_1_field_ad6c5ae0033a0db6e0d041e7ed7b1dc65}} 
 \index{YackTerminal::Field@{YackTerminal::Field}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!YackTerminal::Field@{YackTerminal::Field}}
 \doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}

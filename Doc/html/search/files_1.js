@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['other_2ehpp_0',['Other.hpp',['../_other_8hpp.html',1,'']]]
+  ['flag_2ehpp_0',['Flag.hpp',['../_flag_8hpp.html',1,'']]]
 ];

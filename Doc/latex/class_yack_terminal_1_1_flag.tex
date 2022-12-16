@@ -1,16 +1,28 @@
 \hypertarget{class_yack_terminal_1_1_flag}{}\doxysection{Yack\+Terminal\+::Flag Class Reference}
 \label{class_yack_terminal_1_1_flag}\index{YackTerminal::Flag@{YackTerminal::Flag}}
+
+
+classe representant le drapeau d\textquotesingle{}une commande , une spécification suplémentaire modifiant le comportement d\textquotesingle{}une commande  
+
+
+
+
+{\ttfamily \#include $<$Flag.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_yack_terminal_1_1_flag_aec9620e227f0b668043cdfe73e00ed92}{Flag}} (const std\+::string \&Arg\+Str, char deliI, char deliO, char arg\+\_\+delim)
-\item 
+\begin{DoxyCompactList}\small\item\em Constrcuteur de la classe \mbox{\hyperlink{class_yack_terminal_1_1_flag}{Flag}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_yack_terminal_1_1_flag_a184567b80ff348b3bae12a33d3441cc9}{rconstruct}} (const std\+::string \&nw\+\_\+arg\+\_\+str) override
-\item 
+\begin{DoxyCompactList}\small\item\em reconstruit un objet de type field à partir d\textquotesingle{}une chaîne de caractères \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_yack_terminal_1_1_flag_a8707ffa59925dd2b0f9182879673f208}{inspect}} (const std\+::function$<$ bool(const std\+::string \&)$>$ \&predicate) const override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em applique un prédicat unaire à chaque élément du vecteur d\textquotesingle{}arguments \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+classe representant le drapeau d\textquotesingle{}une commande , une spécification suplémentaire modifiant le comportement d\textquotesingle{}une commande 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_yack_terminal_1_1_flag_aec9620e227f0b668043cdfe73e00ed92}\label{class_yack_terminal_1_1_flag_aec9620e227f0b668043cdfe73e00ed92}} 
@@ -20,11 +32,26 @@ bool \mbox{\hyperlink{class_yack_terminal_1_1_flag_a8707ffa59925dd2b0f9182879673
 {\footnotesize\ttfamily Yack\+Terminal\+::\+Flag\+::\+Flag (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Arg\+Str,  }\item[{char}]{deliI,  }\item[{char}]{deliO,  }\item[{char}]{arg\+\_\+delim }\end{DoxyParamCaption})}
 
 
+
+Constrcuteur de la classe \mbox{\hyperlink{class_yack_terminal_1_1_flag}{Flag}}. 
+
+Construit un objet de type flag à partir d\textquotesingle{}une chaîne de caractères ~\newline
+ 
 \begin{DoxyParams}{Parameters}
-{\em } & \\
+{\em Arg\+Str} & chaîne de carctères sur laquelle se fera la construction \\
+\hline
+{\em deliI} & caractère de délimitaion ouvrant ex \+: \mbox{[} ou \texorpdfstring{$<$}{<} \\
+\hline
+{\em deliO} & caractère de délimitaion fermant ex \+: \mbox{]} ou \texorpdfstring{$>$}{>} \\
+\hline
+{\em deliO} & caractère de délimitaion des arguments \+: , ou $\vert$ ~\newline
+ \\
 \hline
 \end{DoxyParams}
-return 
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_yack_terminal_1_1_flag_a8707ffa59925dd2b0f9182879673f208}\label{class_yack_terminal_1_1_flag_a8707ffa59925dd2b0f9182879673f208}} 
@@ -34,11 +61,18 @@ return
 {\footnotesize\ttfamily bool Yack\+Terminal\+::\+Flag\+::inspect (\begin{DoxyParamCaption}\item[{const std\+::function$<$ bool(const std\+::string \&)$>$ \&}]{predicate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+
+applique un prédicat unaire à chaque élément du vecteur d\textquotesingle{}arguments 
+
+le prédicat unaire doit s\textquotesingle{}agir d\textquotesingle{}une fonction avec un seul arguement de type std\+::string qui retourne une valeur booléene 
 \begin{DoxyParams}{Parameters}
-{\em } & \\
+{\em predicate} & predicat unaire à appliquer \\
 \hline
 \end{DoxyParams}
-return 
+\begin{DoxyReturn}{Returns}
+retourne vrai si tout les éléments vérifient le prédicat faux dans le cas contraire 
+\end{DoxyReturn}
+
 
 Reimplemented from \mbox{\hyperlink{class_yack_terminal_1_1_field_af14f785e578606ee1123bb5b12b85499}{Yack\+Terminal\+::\+Field}}.
 
@@ -49,11 +83,18 @@ Reimplemented from \mbox{\hyperlink{class_yack_terminal_1_1_field_af14f785e57860
 {\footnotesize\ttfamily void Yack\+Terminal\+::\+Flag\+::rconstruct (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nw\+\_\+arg\+\_\+str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+
+reconstruit un objet de type field à partir d\textquotesingle{}une chaîne de caractères 
+
+
 \begin{DoxyParams}{Parameters}
-{\em } & \\
+{\em nw\+\_\+arg\+\_\+str} & chaîne de caractère de référence \\
 \hline
 \end{DoxyParams}
-return 
+\begin{DoxyReturn}{Returns}
+aucune donnée en retour 
+\end{DoxyReturn}
+
 
 Reimplemented from \mbox{\hyperlink{class_yack_terminal_1_1_field_af54903ed6e54661531aaa7cf9c7449fd}{Yack\+Terminal\+::\+Field}}.
 
@@ -61,4 +102,4 @@ Reimplemented from \mbox{\hyperlink{class_yack_terminal_1_1_field_af54903ed6e546
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-header/\+YT/Flag.\+hpp\end{DoxyCompactItemize}
+header/\+YT/\mbox{\hyperlink{_flag_8hpp}{Flag.\+hpp}}\end{DoxyCompactItemize}

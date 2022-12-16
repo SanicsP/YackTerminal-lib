@@ -8,6 +8,11 @@
 
 namespace YackTerminal {
 
+	/**
+	 * @brief classe représentant un champ 
+	 * @details un champ est un élément possédant un nom auquel lui est associé une liste de
+	 * d'arguments délimités par des espaces 
+	*/
 	class Field {
 		
 		public: // constructors 
@@ -50,10 +55,8 @@ namespace YackTerminal {
 			const std::string& operator[](size_t key) const;
 			
 			/**
-			 * @brief 
-			 * @details
-			 * @param
-			 * @return
+			 * @brief renvoi le nom du champ
+			 * @return le nom du champ
 			*/
 			std::string name() const noexcept;
 			

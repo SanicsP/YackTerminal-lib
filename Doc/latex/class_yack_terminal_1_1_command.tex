@@ -1,24 +1,38 @@
 \hypertarget{class_yack_terminal_1_1_command}{}\doxysection{Yack\+Terminal\+::Command Class Reference}
 \label{class_yack_terminal_1_1_command}\index{YackTerminal::Command@{YackTerminal::Command}}
+
+
+Classe représentant l\textquotesingle{}entrée d\textquotesingle{}une commande de l\textquotesingle{}utilisateur lors de l\textquotesingle{}appel d\textquotesingle{}un programme.  
+
+
+
+
+{\ttfamily \#include $<$Command.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_yack_terminal_1_1_command_ae09e74a739a11b8ca936e64d107b265e}{Command}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, char delimI, char delimO, char flag\+\_\+delim)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructeur de base de la classe command. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_yack_terminal_1_1_command_a516521e4bb72f6aa651f65c0cb0f6d30}{Command}} (const std\+::string \&arg\+\_\+str, char delimI, char delimO, char flag\+\_\+delim)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructeur de base de la classe command. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_yack_terminal_1_1_command_afac5aebc9e213da59a6a9c556e7b2941}{rconstruct}} (const std\+::string \&nw\+\_\+arg\+\_\+str) override
-\item 
+\begin{DoxyCompactList}\small\item\em reconstruit un objet de type field à partir d\textquotesingle{}une chaîne de caractères \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_yack_terminal_1_1_command_ac1ff96ecaae48b95d815f9aa41e96cb5}{inspect}} (const std\+::function$<$ bool(const std\+::string \&)$>$ \&predicate) const override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em applique un prédicat unaire à chaque élément du vecteur d\textquotesingle{}arguments \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_yack_terminal_1_1_command_af18ee75cec3009560165d83410baed21}\label{class_yack_terminal_1_1_command_af18ee75cec3009560165d83410baed21}} 
 std\+::vector$<$ \mbox{\hyperlink{class_yack_terminal_1_1_flag}{Flag}} $>$ {\bfseries m\+\_\+flagv}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em vecteur d\textquotesingle{}arguments du drapeau \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+Classe représentant l\textquotesingle{}entrée d\textquotesingle{}une commande de l\textquotesingle{}utilisateur lors de l\textquotesingle{}appel d\textquotesingle{}un programme. 
+
+Tout ce que l\textquotesingle{}entrée de commande peut contenir \+: le nom de la commande , les arguments de la commande , les spécifications suplémentaires avec leurs arguments 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_yack_terminal_1_1_command_ae09e74a739a11b8ca936e64d107b265e}\label{class_yack_terminal_1_1_command_ae09e74a739a11b8ca936e64d107b265e}} 
@@ -28,22 +42,52 @@ std\+::vector$<$ \mbox{\hyperlink{class_yack_terminal_1_1_flag}{Flag}} $>$ {\bfs
 {\footnotesize\ttfamily Yack\+Terminal\+::\+Command\+::\+Command (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{char}]{delimI,  }\item[{char}]{delimO,  }\item[{char}]{flag\+\_\+delim }\end{DoxyParamCaption})}
 
 
+
+Constructeur de base de la classe command. 
+
+Construit un objet de type commande à l\textquotesingle{}aide d\textquotesingle{}un vecteur d\textquotesingle{}arguments et de sa taille 
 \begin{DoxyParams}{Parameters}
-{\em } & \\
+{\em argc} & la taille du vecteur d\textquotesingle{}arguements \\
+\hline
+{\em argv} & vecteur d\textquotesingle{}argument \\
+\hline
+{\em delimI} & caractère de délimitation ouvrant pour les drapeaux ex \+: \mbox{[} , \texorpdfstring{$<$}{<} \\
+\hline
+{\em delimO} & caractère de délimitation fermant pour les drapeaux ex \+: \mbox{]} , \texorpdfstring{$>$}{>} \\
+\hline
+{\em delimO} & caractère de délimitation pour les arguments des flags \+: \char`\"{} \char`\"{} , \char`\"{},\char`\"{} , \char`\"{}$\vert$\char`\"{} \char`\"{}/\char`\"{} \\
 \hline
 \end{DoxyParams}
-return \mbox{\Hypertarget{class_yack_terminal_1_1_command_a516521e4bb72f6aa651f65c0cb0f6d30}\label{class_yack_terminal_1_1_command_a516521e4bb72f6aa651f65c0cb0f6d30}} 
+\begin{DoxyReturn}{Returns}
+aucune donnée en retour 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_yack_terminal_1_1_command_a516521e4bb72f6aa651f65c0cb0f6d30}\label{class_yack_terminal_1_1_command_a516521e4bb72f6aa651f65c0cb0f6d30}} 
 \index{YackTerminal::Command@{YackTerminal::Command}!Command@{Command}}
 \index{Command@{Command}!YackTerminal::Command@{YackTerminal::Command}}
 \doxysubsubsection{\texorpdfstring{Command()}{Command()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Yack\+Terminal\+::\+Command\+::\+Command (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{arg\+\_\+str,  }\item[{char}]{delimI,  }\item[{char}]{delimO,  }\item[{char}]{flag\+\_\+delim }\end{DoxyParamCaption})}
 
 
+
+Constructeur de base de la classe command. 
+
+Construit un objet de type commande à partir d\textquotesingle{}une chaîne de caractères 
 \begin{DoxyParams}{Parameters}
-{\em } & \\
+{\em argc} & la taille du vecteur d\textquotesingle{}arguements \\
+\hline
+{\em argv} & vecteur d\textquotesingle{}argument \\
+\hline
+{\em delimI} & caractère de délimitation ouvrant pour les drapeaux ex \+: \mbox{[} , \texorpdfstring{$<$}{<} \\
+\hline
+{\em delimO} & caractère de délimitation fermant pour les drapeaux ex \+: \mbox{]} , \texorpdfstring{$>$}{>} \\
+\hline
+{\em delimO} & caractère de délimitation pour les arguments des flags \+: \char`\"{} \char`\"{} , \char`\"{},\char`\"{} , \char`\"{}$\vert$\char`\"{} \char`\"{}/\char`\"{} \\
 \hline
 \end{DoxyParams}
-return 
+\begin{DoxyReturn}{Returns}
+aucune donnée en retour 
+\end{DoxyReturn}
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_yack_terminal_1_1_command_ac1ff96ecaae48b95d815f9aa41e96cb5}\label{class_yack_terminal_1_1_command_ac1ff96ecaae48b95d815f9aa41e96cb5}} 
@@ -53,11 +97,18 @@ return
 {\footnotesize\ttfamily bool Yack\+Terminal\+::\+Command\+::inspect (\begin{DoxyParamCaption}\item[{const std\+::function$<$ bool(const std\+::string \&)$>$ \&}]{predicate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+
+applique un prédicat unaire à chaque élément du vecteur d\textquotesingle{}arguments 
+
+le prédicat unaire doit s\textquotesingle{}agir d\textquotesingle{}une fonction avec un seul arguement de type std\+::string qui retourne une valeur booléene 
 \begin{DoxyParams}{Parameters}
-{\em } & \\
+{\em predicate} & predicat unaire à appliquer \\
 \hline
 \end{DoxyParams}
-return 
+\begin{DoxyReturn}{Returns}
+retourne vrai si tout les éléments vérifient le prédicat faux dans le cas contraire 
+\end{DoxyReturn}
+
 
 Reimplemented from \mbox{\hyperlink{class_yack_terminal_1_1_field_af14f785e578606ee1123bb5b12b85499}{Yack\+Terminal\+::\+Field}}.
 
@@ -68,11 +119,18 @@ Reimplemented from \mbox{\hyperlink{class_yack_terminal_1_1_field_af14f785e57860
 {\footnotesize\ttfamily void Yack\+Terminal\+::\+Command\+::rconstruct (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nw\+\_\+arg\+\_\+str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+
+reconstruit un objet de type field à partir d\textquotesingle{}une chaîne de caractères 
+
+
 \begin{DoxyParams}{Parameters}
-{\em } & \\
+{\em nw\+\_\+arg\+\_\+str} & chaîne de caractère de référence \\
 \hline
 \end{DoxyParams}
-return 
+\begin{DoxyReturn}{Returns}
+aucune donnée en retour 
+\end{DoxyReturn}
+
 
 Reimplemented from \mbox{\hyperlink{class_yack_terminal_1_1_field_af54903ed6e54661531aaa7cf9c7449fd}{Yack\+Terminal\+::\+Field}}.
 

@@ -81,20 +81,29 @@ $(function() {
   <div class="headertitle"><div class="title">YackTerminal::Command Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe représentant l'entrée d'une commande de l'utilisateur lors de l'appel d'un programme.  
+ <a href="class_yack_terminal_1_1_command.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_command_8hpp_source.html">Command.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae09e74a739a11b8ca936e64d107b265e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#ae09e74a739a11b8ca936e64d107b265e">Command</a> (int argc, char *argv[], char delimI, char delimO, char flag_delim)</td></tr>
+<tr class="memdesc:ae09e74a739a11b8ca936e64d107b265e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de base de la classe command.  <a href="class_yack_terminal_1_1_command.html#ae09e74a739a11b8ca936e64d107b265e">More...</a><br /></td></tr>
 <tr class="separator:ae09e74a739a11b8ca936e64d107b265e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a516521e4bb72f6aa651f65c0cb0f6d30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#a516521e4bb72f6aa651f65c0cb0f6d30">Command</a> (const std::string &amp;arg_str, char delimI, char delimO, char flag_delim)</td></tr>
+<tr class="memdesc:a516521e4bb72f6aa651f65c0cb0f6d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de base de la classe command.  <a href="class_yack_terminal_1_1_command.html#a516521e4bb72f6aa651f65c0cb0f6d30">More...</a><br /></td></tr>
 <tr class="separator:a516521e4bb72f6aa651f65c0cb0f6d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afac5aebc9e213da59a6a9c556e7b2941"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#afac5aebc9e213da59a6a9c556e7b2941">rconstruct</a> (const std::string &amp;nw_arg_str) override</td></tr>
+<tr class="memdesc:afac5aebc9e213da59a6a9c556e7b2941"><td class="mdescLeft">&#160;</td><td class="mdescRight">reconstruit un objet de type field à partir d'une chaîne de caractères  <a href="class_yack_terminal_1_1_command.html#afac5aebc9e213da59a6a9c556e7b2941">More...</a><br /></td></tr>
 <tr class="separator:afac5aebc9e213da59a6a9c556e7b2941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1ff96ecaae48b95d815f9aa41e96cb5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#ac1ff96ecaae48b95d815f9aa41e96cb5">inspect</a> (const std::function&lt; bool(const std::string &amp;)&gt; &amp;predicate) const override</td></tr>
+<tr class="memdesc:ac1ff96ecaae48b95d815f9aa41e96cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">applique un prédicat unaire à chaque élément du vecteur d'arguments  <a href="class_yack_terminal_1_1_command.html#ac1ff96ecaae48b95d815f9aa41e96cb5">More...</a><br /></td></tr>
 <tr class="separator:ac1ff96ecaae48b95d815f9aa41e96cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_yack_terminal_1_1_field"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_yack_terminal_1_1_field')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_yack_terminal_1_1_field.html">YackTerminal::Field</a></td></tr>
 <tr class="memitem:a9a4f0ca00ef0d0f6cbe06f0a374ad82a inherit pub_methods_class_yack_terminal_1_1_field"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_field.html#a9a4f0ca00ef0d0f6cbe06f0a374ad82a">Field</a> (size_t argc, char *argv[])</td></tr>
-<tr class="memdesc:a9a4f0ca00ef0d0f6cbe06f0a374ad82a inherit pub_methods_class_yack_terminal_1_1_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de base de la classe <a class="el" href="class_yack_terminal_1_1_field.html">Field</a>.  <a href="class_yack_terminal_1_1_field.html#a9a4f0ca00ef0d0f6cbe06f0a374ad82a">More...</a><br /></td></tr>
+<tr class="memdesc:a9a4f0ca00ef0d0f6cbe06f0a374ad82a inherit pub_methods_class_yack_terminal_1_1_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de base de la classe <a class="el" href="class_yack_terminal_1_1_field.html" title="classe représentant un champ">Field</a>.  <a href="class_yack_terminal_1_1_field.html#a9a4f0ca00ef0d0f6cbe06f0a374ad82a">More...</a><br /></td></tr>
 <tr class="separator:a9a4f0ca00ef0d0f6cbe06f0a374ad82a inherit pub_methods_class_yack_terminal_1_1_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d6798b7b62680f441abb1e564920b73 inherit pub_methods_class_yack_terminal_1_1_field"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_field.html#a0d6798b7b62680f441abb1e564920b73">Field</a> (const std::string &amp;arg_str)</td></tr>
 <tr class="memdesc:a0d6798b7b62680f441abb1e564920b73 inherit pub_methods_class_yack_terminal_1_1_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de base de la classe field.  <a href="class_yack_terminal_1_1_field.html#a0d6798b7b62680f441abb1e564920b73">More...</a><br /></td></tr>
@@ -103,6 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad6c5ae0033a0db6e0d041e7ed7b1dc65 inherit pub_methods_class_yack_terminal_1_1_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operateur d'accès en lecture des éléments du veteur d'argument de l'objet de type field.  <a href="class_yack_terminal_1_1_field.html#ad6c5ae0033a0db6e0d041e7ed7b1dc65">More...</a><br /></td></tr>
 <tr class="separator:ad6c5ae0033a0db6e0d041e7ed7b1dc65 inherit pub_methods_class_yack_terminal_1_1_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e73cb3942742568a9e975650beae157 inherit pub_methods_class_yack_terminal_1_1_field"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_field.html#a5e73cb3942742568a9e975650beae157">name</a> () const noexcept</td></tr>
+<tr class="memdesc:a5e73cb3942742568a9e975650beae157 inherit pub_methods_class_yack_terminal_1_1_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">renvoi le nom du champ  <a href="class_yack_terminal_1_1_field.html#a5e73cb3942742568a9e975650beae157">More...</a><br /></td></tr>
 <tr class="separator:a5e73cb3942742568a9e975650beae157 inherit pub_methods_class_yack_terminal_1_1_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af54903ed6e54661531aaa7cf9c7449fd inherit pub_methods_class_yack_terminal_1_1_field"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_field.html#af54903ed6e54661531aaa7cf9c7449fd">rconstruct</a> (const std::string &amp;nw_arg_str)</td></tr>
 <tr class="memdesc:af54903ed6e54661531aaa7cf9c7449fd inherit pub_methods_class_yack_terminal_1_1_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">reconstruit un objet de type field à partir d'une chaîne de caractères  <a href="class_yack_terminal_1_1_field.html#af54903ed6e54661531aaa7cf9c7449fd">More...</a><br /></td></tr>
@@ -115,6 +125,7 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:af18ee75cec3009560165d83410baed21"><td class="memItemLeft" align="right" valign="top"><a id="af18ee75cec3009560165d83410baed21" name="af18ee75cec3009560165d83410baed21"></a>
 std::vector&lt; <a class="el" href="class_yack_terminal_1_1_flag.html">Flag</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_flagv</b></td></tr>
+<tr class="memdesc:af18ee75cec3009560165d83410baed21"><td class="mdescLeft">&#160;</td><td class="mdescRight">vecteur d'arguments du drapeau <br /></td></tr>
 <tr class="separator:af18ee75cec3009560165d83410baed21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_yack_terminal_1_1_field"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_yack_terminal_1_1_field')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_yack_terminal_1_1_field.html">YackTerminal::Field</a></td></tr>
 <tr class="memitem:aea710147d375c20d35e05859713c8a06 inherit pub_attribs_class_yack_terminal_1_1_field"><td class="memItemLeft" align="right" valign="top"><a id="aea710147d375c20d35e05859713c8a06" name="aea710147d375c20d35e05859713c8a06"></a>
@@ -129,7 +140,10 @@ Additional Inherited Members</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td></tr>
 <tr class="separator:a0c2cb91ef5bcf30aa32d096c951b2168 inherit pro_attribs_class_yack_terminal_1_1_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Classe représentant l'entrée d'une commande de l'utilisateur lors de l'appel d'un programme. </p>
+<p >Tout ce que l'entrée de commande peut contenir : le nom de la commande , les arguments de la commande , les spécifications suplémentaires avec leurs arguments </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae09e74a739a11b8ca936e64d107b265e" name="ae09e74a739a11b8ca936e64d107b265e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae09e74a739a11b8ca936e64d107b265e">&#9670;&#160;</a></span>Command() <span class="overload">[1/2]</span></h2>
 
@@ -173,13 +187,19 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
+
+<p>Constructeur de base de la classe command. </p>
+<p >Construit un objet de type commande à l'aide d'un vecteur d'arguments et de sa taille </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">argc</td><td>la taille du vecteur d'arguements </td></tr>
+    <tr><td class="paramname">argv</td><td>vecteur d'argument </td></tr>
+    <tr><td class="paramname">delimI</td><td>caractère de délimitation ouvrant pour les drapeaux ex : [ , &lt; </td></tr>
+    <tr><td class="paramname">delimO</td><td>caractère de délimitation fermant pour les drapeaux ex : ] , &gt; </td></tr>
+    <tr><td class="paramname">delimO</td><td>caractère de délimitation pour les arguments des flags : " " , "," , "|" "/" </td></tr>
   </table>
   </dd>
 </dl>
-<p>return </p>
+<dl class="section return"><dt>Returns</dt><dd>aucune donnée en retour </dd></dl>
 
 </div>
 </div>
@@ -220,13 +240,19 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
+
+<p>Constructeur de base de la classe command. </p>
+<p >Construit un objet de type commande à partir d'une chaîne de caractères </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">argc</td><td>la taille du vecteur d'arguements </td></tr>
+    <tr><td class="paramname">argv</td><td>vecteur d'argument </td></tr>
+    <tr><td class="paramname">delimI</td><td>caractère de délimitation ouvrant pour les drapeaux ex : [ , &lt; </td></tr>
+    <tr><td class="paramname">delimO</td><td>caractère de délimitation fermant pour les drapeaux ex : ] , &gt; </td></tr>
+    <tr><td class="paramname">delimO</td><td>caractère de délimitation pour les arguments des flags : " " , "," , "|" "/" </td></tr>
   </table>
   </dd>
 </dl>
-<p>return </p>
+<dl class="section return"><dt>Returns</dt><dd>aucune donnée en retour </dd></dl>
 
 </div>
 </div>
@@ -254,13 +280,15 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
+
+<p>applique un prédicat unaire à chaque élément du vecteur d'arguments </p>
+<p >le prédicat unaire doit s'agir d'une fonction avec un seul arguement de type std::string qui retourne une valeur booléene </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">predicate</td><td>predicat unaire à appliquer </td></tr>
   </table>
   </dd>
 </dl>
-<p>return </p>
+<dl class="section return"><dt>Returns</dt><dd>retourne vrai si tout les éléments vérifient le prédicat faux dans le cas contraire </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_yack_terminal_1_1_field.html#af14f785e578606ee1123bb5b12b85499">YackTerminal::Field</a>.</p>
 
@@ -289,13 +317,15 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>reconstruit un objet de type field à partir d'une chaîne de caractères </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">nw_arg_str</td><td>chaîne de caractère de référence </td></tr>
   </table>
   </dd>
 </dl>
-<p>return </p>
+<dl class="section return"><dt>Returns</dt><dd>aucune donnée en retour </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_yack_terminal_1_1_field.html#af54903ed6e54661531aaa7cf9c7449fd">YackTerminal::Field</a>.</p>
 
