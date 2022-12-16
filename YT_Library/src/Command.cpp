@@ -48,6 +48,51 @@ namespace YackTerminal {
 		return true;
 	}
 
+	bool Command::hasFlag(const std::string& flag_name) const
+	{
+
+	}
 	
+	bool Command::inspectF(const std::string& flag_name , const std::function<bool(const std::string&)>& predicate) const
+	{
+
+	}
+	
+	bool Command::inspectF(const std::function<bool(const std::string&)>& predicate) const
+	{
+
+	}
+	
+	bool Command::inspectAll(const std::function<bool(const std::string&)>& predicate)const 
+	{
+
+	}
+	
+	std::size_t Command::aCount() const
+	{
+
+	}
+	
+	std::size_t Command::fArgCount(const std::string& flagName) const
+	{
+
+	}
+	
+	std::size_t Command::fArgCount() const
+	{
+
+	}
+	
+	std::size_t Command::fCount() const
+	{
+
+	}
+
+
+
+
+
+
+
 
 };
