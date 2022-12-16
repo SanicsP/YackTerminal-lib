@@ -31,16 +31,42 @@
 \DoxyCodeLine{56             \textcolor{keywordtype}{char} m\_delim\_out;}
 \DoxyCodeLine{57             \textcolor{keywordtype}{char} m\_flag\_arg\_delim;}
 \DoxyCodeLine{58         \textcolor{keyword}{public}:  \textcolor{comment}{// services }}
-\DoxyCodeLine{60 \textcolor{comment}{}            std::vector<Flag> \mbox{\hyperlink{class_yack_terminal_1_1_command_af18ee75cec3009560165d83410baed21}{m\_flagv}};}
-\DoxyCodeLine{61 }
-\DoxyCodeLine{62             \textcolor{comment}{//inherited override services from field class : }}
-\DoxyCodeLine{63             \textcolor{keywordtype}{void} \mbox{\hyperlink{class_yack_terminal_1_1_command_afac5aebc9e213da59a6a9c556e7b2941}{rconstruct}}(\textcolor{keyword}{const} std::string\& nw\_arg\_str) \textcolor{keyword}{override};}
-\DoxyCodeLine{64             \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_yack_terminal_1_1_command_ac1ff96ecaae48b95d815f9aa41e96cb5}{inspect}}(\textcolor{keyword}{const} std::function<\textcolor{keywordtype}{bool}(\textcolor{keyword}{const} std::string\&)>\& predicate) \textcolor{keyword}{const override};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60             \textcolor{comment}{//inherited override services from field class : }}
+\DoxyCodeLine{61             \textcolor{keywordtype}{void} \mbox{\hyperlink{class_yack_terminal_1_1_command_afac5aebc9e213da59a6a9c556e7b2941}{rconstruct}}(\textcolor{keyword}{const} std::string\& nw\_arg\_str) \textcolor{keyword}{override};}
+\DoxyCodeLine{62             \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_yack_terminal_1_1_command_ac1ff96ecaae48b95d815f9aa41e96cb5}{inspect}}(\textcolor{keyword}{const} std::function<\textcolor{keywordtype}{bool}(\textcolor{keyword}{const} std::string\&)>\& predicate) \textcolor{keyword}{const override};}
+\DoxyCodeLine{64             }
 \DoxyCodeLine{65             }
-\DoxyCodeLine{66             }
-\DoxyCodeLine{67     \};}
-\DoxyCodeLine{68 \}}
-\DoxyCodeLine{69 }
-\DoxyCodeLine{70 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{66             \textcolor{comment}{// cheks funcs}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{73             \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_yack_terminal_1_1_command_a6bd8aa9e3ae6d0164dbcb12882816661}{hasFlag}}(\textcolor{keyword}{const} std::string\& flag\_name) \textcolor{keyword}{const};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{82             \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_yack_terminal_1_1_command_abf817ad11a0590438691b722cd5cf540}{inspectF}}(\textcolor{keyword}{const} std::string\& flag\_name , \textcolor{keyword}{const} std::function<\textcolor{keywordtype}{bool}(\textcolor{keyword}{const} std::string\&)>\& predicate) \textcolor{keyword}{const};}
+\DoxyCodeLine{83             }
+\DoxyCodeLine{90             \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_yack_terminal_1_1_command_a15eda1624bdee7b1c126943058c3f426}{inspectF}}(\textcolor{keyword}{const} std::function<\textcolor{keywordtype}{bool}(\textcolor{keyword}{const} std::string\&)>\& predicate) \textcolor{keyword}{const};}
+\DoxyCodeLine{91             }
+\DoxyCodeLine{99             \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_yack_terminal_1_1_command_a99ccd00831e06e784c59066bf349dfab}{inspectAll}}(\textcolor{keyword}{const} std::function<\textcolor{keywordtype}{bool}(\textcolor{keyword}{const} std::string\&)>\& predicate)\textcolor{keyword}{const} ;}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103             \textcolor{comment}{// info funcs }}
+\DoxyCodeLine{104             }
+\DoxyCodeLine{110             std::size\_t \mbox{\hyperlink{class_yack_terminal_1_1_command_ac6b2dc3fb7e2eec9dcf8f0580be1c4a7}{aCount}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{111             }
+\DoxyCodeLine{116             std::size\_t \mbox{\hyperlink{class_yack_terminal_1_1_command_a5d65123521a3024e0eca9f14ed6f59fb}{fArgCount}}(\textcolor{keyword}{const} std::string\& flagName) \textcolor{keyword}{const};}
+\DoxyCodeLine{117             }
+\DoxyCodeLine{122             std::size\_t \mbox{\hyperlink{class_yack_terminal_1_1_command_a479d6cf00bf74f14fe9a7d73e263e7ca}{fArgCount}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{123             }
+\DoxyCodeLine{128             std::size\_t \mbox{\hyperlink{class_yack_terminal_1_1_command_a11df527ec90d7b97b72e1d84401abed6}{fCount}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 }
+\DoxyCodeLine{134             }
+\DoxyCodeLine{135         \textcolor{keyword}{public}: \textcolor{comment}{// public members  }}
+\DoxyCodeLine{137 \textcolor{comment}{}            std::vector<Flag> \mbox{\hyperlink{class_yack_terminal_1_1_command_af18ee75cec3009560165d83410baed21}{m\_flagv}};}
+\DoxyCodeLine{138     \};}
+\DoxyCodeLine{139 \}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

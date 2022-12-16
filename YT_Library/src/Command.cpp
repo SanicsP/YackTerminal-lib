@@ -39,7 +39,15 @@ namespace YackTerminal {
 	}
 	bool Command::inspect(const std::function<bool(const std::string&)>& predicate) const 
 	{
+		for(std::string str : m_argv)
+		{
+			if(!predicate(str))
+				return false;
+		}
 
+		return true;
 	}
+
+	
 
 };
