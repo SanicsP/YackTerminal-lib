@@ -1,0 +1,46 @@
+\hypertarget{_command_8hpp_source}{}\doxysection{Command.\+hpp}
+\label{_command_8hpp_source}\index{header/YT/Command.hpp@{header/YT/Command.hpp}}
+\mbox{\hyperlink{_command_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2  }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef COMMAND\_HPP}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define COMMAND\_HPP}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <Field.hpp>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <Flag.hpp>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_other_8hpp}{Other.hpp}}>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }YackTerminal  }
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{20     \textcolor{keyword}{class }\mbox{\hyperlink{class_yack_terminal_1_1_command}{Command}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_yack_terminal_1_1_field}{Field}}}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23         public : \textcolor{comment}{// constructors}}
+\DoxyCodeLine{24             }
+\DoxyCodeLine{31             \mbox{\hyperlink{class_yack_terminal_1_1_command_ae09e74a739a11b8ca936e64d107b265e}{Command}}(\textcolor{keywordtype}{int} argc , \textcolor{keywordtype}{char}* argv[] , \textcolor{keywordtype}{char} delimI , \textcolor{keywordtype}{char} delimO , \textcolor{keywordtype}{char} flag\_delim);}
+\DoxyCodeLine{32             }
+\DoxyCodeLine{39             \mbox{\hyperlink{class_yack_terminal_1_1_command_a516521e4bb72f6aa651f65c0cb0f6d30}{Command}}(\textcolor{keyword}{const} std::string\& arg\_str , \textcolor{keywordtype}{char} delimI , \textcolor{keywordtype}{char} delimO , \textcolor{keywordtype}{char} flag\_delim);}
+\DoxyCodeLine{40         private :}
+\DoxyCodeLine{41             \textcolor{keywordtype}{char} m\_delim\_in;}
+\DoxyCodeLine{42             \textcolor{keywordtype}{char} m\_delim\_out;}
+\DoxyCodeLine{43             \textcolor{keywordtype}{char} m\_flag\_arg\_delim;}
+\DoxyCodeLine{44         \textcolor{keyword}{public}:  \textcolor{comment}{// services }}
+\DoxyCodeLine{45             std::vector<Flag> m\_flagv;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47             }
+\DoxyCodeLine{54             \textcolor{keywordtype}{void} \mbox{\hyperlink{class_yack_terminal_1_1_command_afac5aebc9e213da59a6a9c556e7b2941}{rconstruct}}(\textcolor{keyword}{const} std::string\& nw\_arg\_str) \textcolor{keyword}{override};}
+\DoxyCodeLine{55             }
+\DoxyCodeLine{62             \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_yack_terminal_1_1_command_ac1ff96ecaae48b95d815f9aa41e96cb5}{inspect}}(\textcolor{keyword}{const} std::function<\textcolor{keywordtype}{bool}(\textcolor{keyword}{const} std::string\&)>\& predicate) \textcolor{keyword}{const override};}
+\DoxyCodeLine{63             }
+\DoxyCodeLine{64             }
+\DoxyCodeLine{65     \};}
+\DoxyCodeLine{66 \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

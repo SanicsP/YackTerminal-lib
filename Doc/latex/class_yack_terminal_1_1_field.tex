@@ -1,0 +1,151 @@
+\hypertarget{class_yack_terminal_1_1_field}{}\doxysection{Yack\+Terminal\+::Field Class Reference}
+\label{class_yack_terminal_1_1_field}\index{YackTerminal::Field@{YackTerminal::Field}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_yack_terminal_1_1_field_a9a4f0ca00ef0d0f6cbe06f0a374ad82a}{Field}} (size\+\_\+t argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Constructeur de base de la classe \mbox{\hyperlink{class_yack_terminal_1_1_field}{Field}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_yack_terminal_1_1_field_a0d6798b7b62680f441abb1e564920b73}{Field}} (const std\+::string \&arg\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Constructeur de base de la classe field. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_yack_terminal_1_1_field_ad6c5ae0033a0db6e0d041e7ed7b1dc65}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t key) const
+\begin{DoxyCompactList}\small\item\em Operateur d\textquotesingle{}accès en lecture des éléments du veteur d\textquotesingle{}argument de l\textquotesingle{}objet de type field. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_yack_terminal_1_1_field_a5e73cb3942742568a9e975650beae157}{name}} () const noexcept
+\item 
+virtual void \mbox{\hyperlink{class_yack_terminal_1_1_field_af54903ed6e54661531aaa7cf9c7449fd}{rconstruct}} (const std\+::string \&nw\+\_\+arg\+\_\+str)
+\begin{DoxyCompactList}\small\item\em reconstruit un objet de type field à partir d\textquotesingle{}une chaîne de caractères \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_yack_terminal_1_1_field_af14f785e578606ee1123bb5b12b85499}{inspect}} (const std\+::function$<$ bool(const std\+::string \&)$>$ \&predicate) const
+\begin{DoxyCompactList}\small\item\em applique un prédicat unaire à chaque élément du vecteur d\textquotesingle{}arguments \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_yack_terminal_1_1_field_aea710147d375c20d35e05859713c8a06}\label{class_yack_terminal_1_1_field_aea710147d375c20d35e05859713c8a06}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries m\+\_\+argv}
+\begin{DoxyCompactList}\small\item\em vecteur d\textquotesingle{}arguements contenant toute les chaînes de caractères constituant la commande entrée par l\textquotesingle{}utilisateur \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_yack_terminal_1_1_field_a0c2cb91ef5bcf30aa32d096c951b2168}\label{class_yack_terminal_1_1_field_a0c2cb91ef5bcf30aa32d096c951b2168}} 
+std\+::string {\bfseries m\+\_\+name}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_yack_terminal_1_1_field_a9a4f0ca00ef0d0f6cbe06f0a374ad82a}\label{class_yack_terminal_1_1_field_a9a4f0ca00ef0d0f6cbe06f0a374ad82a}} 
+\index{YackTerminal::Field@{YackTerminal::Field}!Field@{Field}}
+\index{Field@{Field}!YackTerminal::Field@{YackTerminal::Field}}
+\doxysubsubsection{\texorpdfstring{Field()}{Field()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Yack\+Terminal\+::\+Field\+::\+Field (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Constructeur de base de la classe \mbox{\hyperlink{class_yack_terminal_1_1_field}{Field}}. 
+
+Construit un objet de type \mbox{\hyperlink{class_yack_terminal_1_1_field}{Field}} à partir d\textquotesingle{}un vecteur d\textquotesingle{}arguemnts et de sa taille 
+\begin{DoxyParams}{Parameters}
+{\em argc} & taille du vecteur d\textquotesingle{}arguments \\
+\hline
+{\em argv} & vecteur d\textquotesingle{}arguement , le premier élèment est le nom du programme que l\textquotesingle{}utilisateur a inscrit en ligne de commandes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+aucune donnée en retour 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_yack_terminal_1_1_field_a0d6798b7b62680f441abb1e564920b73}\label{class_yack_terminal_1_1_field_a0d6798b7b62680f441abb1e564920b73}} 
+\index{YackTerminal::Field@{YackTerminal::Field}!Field@{Field}}
+\index{Field@{Field}!YackTerminal::Field@{YackTerminal::Field}}
+\doxysubsubsection{\texorpdfstring{Field()}{Field()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Yack\+Terminal\+::\+Field\+::\+Field (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{arg\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Constructeur de base de la classe field. 
+
+Construit un objet de type \mbox{\hyperlink{class_yack_terminal_1_1_field}{Field}} avec une chaîne de caractères représentant l\textquotesingle{}entrée de commande de l\textquotesingle{}utilisateur 
+\begin{DoxyParams}{Parameters}
+{\em arg\+\_\+str} & la chaîne de caractères sur laquelle le constructeur construit l\textquotesingle{}objet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+aucune donnée en retour 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_yack_terminal_1_1_field_af14f785e578606ee1123bb5b12b85499}\label{class_yack_terminal_1_1_field_af14f785e578606ee1123bb5b12b85499}} 
+\index{YackTerminal::Field@{YackTerminal::Field}!inspect@{inspect}}
+\index{inspect@{inspect}!YackTerminal::Field@{YackTerminal::Field}}
+\doxysubsubsection{\texorpdfstring{inspect()}{inspect()}}
+{\footnotesize\ttfamily virtual bool Yack\+Terminal\+::\+Field\+::inspect (\begin{DoxyParamCaption}\item[{const std\+::function$<$ bool(const std\+::string \&)$>$ \&}]{predicate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+applique un prédicat unaire à chaque élément du vecteur d\textquotesingle{}arguments 
+
+le prédicat unaire doit s\textquotesingle{}agir d\textquotesingle{}une fonction avec un seul arguement de type std\+::string qui retourne une valeur booléene 
+\begin{DoxyParams}{Parameters}
+{\em predicate} & predicat unaire à appliquer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retourne vrai si tout les éléments vérifient le prédicat faux dans le cas contraire 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_yack_terminal_1_1_command_ac1ff96ecaae48b95d815f9aa41e96cb5}{Yack\+Terminal\+::\+Command}}, and \mbox{\hyperlink{class_yack_terminal_1_1_flag_a8707ffa59925dd2b0f9182879673f208}{Yack\+Terminal\+::\+Flag}}.
+
+\mbox{\Hypertarget{class_yack_terminal_1_1_field_a5e73cb3942742568a9e975650beae157}\label{class_yack_terminal_1_1_field_a5e73cb3942742568a9e975650beae157}} 
+\index{YackTerminal::Field@{YackTerminal::Field}!name@{name}}
+\index{name@{name}!YackTerminal::Field@{YackTerminal::Field}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Yack\+Terminal\+::\+Field\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+return \mbox{\Hypertarget{class_yack_terminal_1_1_field_ad6c5ae0033a0db6e0d041e7ed7b1dc65}\label{class_yack_terminal_1_1_field_ad6c5ae0033a0db6e0d041e7ed7b1dc65}} 
+\index{YackTerminal::Field@{YackTerminal::Field}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!YackTerminal::Field@{YackTerminal::Field}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily const std\+::string \& Yack\+Terminal\+::\+Field\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Operateur d\textquotesingle{}accès en lecture des éléments du veteur d\textquotesingle{}argument de l\textquotesingle{}objet de type field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & indice d\textquotesingle{}accèss \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+une référence constante vers l\textquotesingle{}élement du tableau correspondant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_yack_terminal_1_1_field_af54903ed6e54661531aaa7cf9c7449fd}\label{class_yack_terminal_1_1_field_af54903ed6e54661531aaa7cf9c7449fd}} 
+\index{YackTerminal::Field@{YackTerminal::Field}!rconstruct@{rconstruct}}
+\index{rconstruct@{rconstruct}!YackTerminal::Field@{YackTerminal::Field}}
+\doxysubsubsection{\texorpdfstring{rconstruct()}{rconstruct()}}
+{\footnotesize\ttfamily virtual void Yack\+Terminal\+::\+Field\+::rconstruct (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nw\+\_\+arg\+\_\+str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+reconstruit un objet de type field à partir d\textquotesingle{}une chaîne de caractères 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nw\+\_\+arg\+\_\+str} & chaîne de caractère de référence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+aucune donnée en retour 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_yack_terminal_1_1_command_afac5aebc9e213da59a6a9c556e7b2941}{Yack\+Terminal\+::\+Command}}, and \mbox{\hyperlink{class_yack_terminal_1_1_flag_a184567b80ff348b3bae12a33d3441cc9}{Yack\+Terminal\+::\+Flag}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+header/\+YT/Field.\+hpp\end{DoxyCompactItemize}

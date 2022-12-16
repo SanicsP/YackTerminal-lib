@@ -1,0 +1,37 @@
+\hypertarget{_flag_8hpp_source}{}\doxysection{Flag.\+hpp}
+\label{_flag_8hpp_source}\index{header/YT/Flag.hpp@{header/YT/Flag.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef FLAG\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define FLAG\_HPP}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Field.hpp"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{namespace }YackTerminal \{}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7     \textcolor{keyword}{class }\mbox{\hyperlink{class_yack_terminal_1_1_flag}{Flag}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_yack_terminal_1_1_field}{Field}}}
+\DoxyCodeLine{8     \{}
+\DoxyCodeLine{9         \textcolor{keyword}{public}:}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{17             \mbox{\hyperlink{class_yack_terminal_1_1_flag_aec9620e227f0b668043cdfe73e00ed92}{Flag}}(\textcolor{keyword}{const} std::string\& ArgStr , \textcolor{keywordtype}{char} deliI , \textcolor{keywordtype}{char} deliO , \textcolor{keywordtype}{char} arg\_delim);}
+\DoxyCodeLine{18             \mbox{\hyperlink{class_yack_terminal_1_1_flag}{Flag}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{19         \textcolor{keyword}{private}:}
+\DoxyCodeLine{20             \textcolor{keywordtype}{char} m\_delim\_in;}
+\DoxyCodeLine{21             \textcolor{keywordtype}{char} m\_delim\_out;}
+\DoxyCodeLine{22             \textcolor{keywordtype}{char} m\_arg\_delim;}
+\DoxyCodeLine{23         public : }
+\DoxyCodeLine{30             \textcolor{keywordtype}{void} \mbox{\hyperlink{class_yack_terminal_1_1_flag_a184567b80ff348b3bae12a33d3441cc9}{rconstruct}}(\textcolor{keyword}{const} std::string\& nw\_arg\_str) \textcolor{keyword}{override};}
+\DoxyCodeLine{31             }
+\DoxyCodeLine{38             \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_yack_terminal_1_1_flag_a8707ffa59925dd2b0f9182879673f208}{inspect}}(\textcolor{keyword}{const} std::function<\textcolor{keywordtype}{bool}(\textcolor{keyword}{const} std::string\&)>\& predicate) \textcolor{keyword}{const override};}
+\DoxyCodeLine{39         private : }
+\DoxyCodeLine{40             }
+\DoxyCodeLine{47             \textcolor{keywordtype}{bool} isFlag(\textcolor{keyword}{const} std::string\& arg) \textcolor{keyword}{const};}
+\DoxyCodeLine{48     \};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{bool} isFlag(\textcolor{keyword}{const} std::string\& arg , \textcolor{keywordtype}{char} delimIn , \textcolor{keywordtype}{char} delimOut);}
+\DoxyCodeLine{51 \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

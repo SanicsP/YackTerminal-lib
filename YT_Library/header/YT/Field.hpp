@@ -24,10 +24,11 @@ namespace YackTerminal {
 			Field(size_t argc , char* argv[]) ;
 			
 			/**
-			 * @brief 
-			 * @details
-			 * @param
-			 * @return
+			 * @brief Constructeur de base de la classe field 
+			 * @details Construit un objet de type Field avec une chaîne de caractères représentant 
+			 * l'entrée de commande de l'utilisateur
+			 * @param arg_str la chaîne de caractères sur laquelle le constructeur construit l'objet 
+			 * @return aucune donnée en retour 
 			*/
 			Field(const std::string& arg_str) ;
 
@@ -41,10 +42,10 @@ namespace YackTerminal {
 		public : //operations
 
 			/**
-			 * @brief 
-			 * @details
-			 * @param
-			 * @return
+			 * @brief Operateur d'accès en lecture des éléments du veteur d'argument de l'objet 
+			 * de type field
+			 * @param key indice d'accèss
+			 * @return une référence constante vers l'élement du tableau correspondant 
 			*/
 			const std::string& operator[](size_t key) const;
 			
@@ -57,23 +58,28 @@ namespace YackTerminal {
 			std::string name() const noexcept;
 			
 			/**
-			 * @brief 
-			 * @details
-			 * @param
-			 * @return
+			 * @brief reconstruit un objet de type field à partir d'une chaîne de caractères 
+			 * @param nw_arg_str chaîne de caractère de référence 
+			 * @return aucune donnée en retour 
 			*/
 			virtual void rconstruct(const std::string& nw_arg_str);
 			
 			/**
-			 * @brief 
-			 * @details
-			 * @param
-			 * @return
+			 * @brief applique un prédicat unaire à chaque élément du vecteur d'arguments 
+			 * @details le prédicat unaire doit s'agir d'une fonction avec un seul arguement de 
+			 * type std::string qui retourne une valeur booléene
+			 * @param predicate predicat unaire à appliquer 
+			 * @return retourne vrai si tout les éléments vérifient le prédicat faux dans le cas 
+			 * contraire 
 			*/
 			virtual bool inspect(const std::function<bool(const std::string&)>& predicate) const;
 			
 			public : // public members
 			
+			/** 
+			* @brief vecteur d'arguements contenant toute les chaînes de caractères constituant 
+			* la commande entrée par l'utilisateur
+			*/ 
 			std::vector<std::string> m_argv;
 			
 
