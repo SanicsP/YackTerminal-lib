@@ -20,6 +20,8 @@ namespace YackTerminal {
 
 	const std::string& Field::operator[](size_t key) const
 	{
+		if(m_argv.empty())
+			throw std::invalid_argument("access to empty argument vector");
 		return m_argv[key];
 	}
 
@@ -30,9 +32,17 @@ namespace YackTerminal {
 
 	void Field::rconstruct(const std::string& nw_arg_str)
 	{
+
+		if(nw_arg_str.empty())
+			throw std::invalid_argument("empty string");
+
 		std::vector<std::string> arg_array = stringSplit(nw_arg_str , ' ');
+
 		m_name = arg_array[1];
 		m_argv = std::vector<std::string>{std::begin(arg_array) + 2 ,std::end(arg_array)};
+
+		
+			
 	}
 	
 	bool Field::inspect(const std::function<bool(const std::string&)>& predicate) const 

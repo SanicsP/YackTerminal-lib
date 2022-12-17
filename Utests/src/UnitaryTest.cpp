@@ -76,7 +76,9 @@ void UT_Command()
 
 void UT_Other()
 {
-
+	std::vector<std::string> test{yt::stringSplit("f gt" , ' ')};
+	std::cout<<test[1]<<std::endl;
+	std::cout<<test.size()<<std::endl;
 }
 
 void UT_Flag()
