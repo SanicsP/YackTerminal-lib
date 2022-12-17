@@ -62,5 +62,60 @@ bool TC_FlAG()
 
 bool TC_COMMAND()
 {
-	UT_Command();
+	std::cout<<"\n\t TC_COMMAND \n ";
+	std::cout<<"--------------------------------------------------------------------\n";
+
+	//UT_Command();
+	std::string command;
+	std::cout<<"> ";
+	try {
+		std::getline(std::cin , command , '\n');
+
+		YackTerminal::Command com{command , '[' , ']' , '/'};
+
+		bool endl_ = false;
+		bool spec_ = false;
+			if(com.argCount() == 0 || com.name() != "rp") {
+			std::cout<<"bad syntax"<<std::endl;
+			return false;
+		}
+
+		if(com.hasFlag("-el"))
+		{
+			std::cout<<"rawPrint with endline"<<std::endl;
+			endl_ = true;
+		}
+		if(com.hasFlag("-sp"))
+		{
+			std::cout<<"rawPrint with endline"<<std::endl;
+			endl_ = true;
+		}
+		if(com.hasFlag("-spec"))
+		{
+			std::cout<<"rawPrint with special char"<<std::endl;
+			spec_ = true;
+		}
+		
+		std::cout<<"Rp;";
+		for(std::string str : com.m_com_argv)
+		{
+			std::cout<<str;
+			if(endl_)
+				std::cout<<'\n';
+			else
+				std::cout<<" ";
+			if(spec_)
+			{
+				std::cout<<com.m_flagv[1][0]<<std::endl;
+			}
+		}
+
+	}
+	catch(const std::exception& ex)
+	{
+		std::cout<<ex.what()<<std::endl;
+	}
+
+	std::cout<<"--------------------------------------------------------------------\n";
+
 }

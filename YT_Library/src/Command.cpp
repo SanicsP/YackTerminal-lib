@@ -21,8 +21,12 @@ namespace YackTerminal {
 
 	void Command::rconstruct(const std::string& nw_arg_str) 
 	{
-		Field::rconstruct(nw_arg_str);
 		
+		this->Field::rconstruct(nw_arg_str);
+		
+		if(m_argv.empty())
+			throw std::invalid_argument("empty command");
+
 		size_t size = m_argv.size();
 
 		for(int i = 0 ; i < size ; i++)
