@@ -10,7 +10,6 @@
 #include <cstring>
 #include <cctype> 
 #include <algorithm>
-#define assertErr(msg , str) ((msg + str).c_str)
 
 
 void UT_Field();

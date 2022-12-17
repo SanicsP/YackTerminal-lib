@@ -52,7 +52,7 @@ namespace YackTerminal {
 			 * @param key indice d'accèss
 			 * @return une référence constante vers l'élement du tableau correspondant 
 			*/
-			const std::string& operator[](size_t key) const;
+			virtual const std::string& operator[](size_t key) const;
 			
 			/**
 			 * @brief renvoi le nom du champ

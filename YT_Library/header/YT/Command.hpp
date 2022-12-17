@@ -60,6 +60,8 @@ namespace YackTerminal
 			//inherited override services from field class : 
 			void rconstruct(const std::string& nw_arg_str) override;
 			bool inspect(const std::function<bool(const std::string&)>& predicate) const override;
+			const std::string& operator[](size_t key) const override;
+			
 			///////////
 			
 			

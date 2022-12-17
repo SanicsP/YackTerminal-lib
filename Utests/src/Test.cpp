@@ -1,16 +1,15 @@
 #include <iostream>
 #include <UnitaryTest.hpp>
-
+#include <TestCode.hpp>
 namespace yt = YackTerminal;
 
 int main(int argc , char* argv[])
 {
-	UT_Other();
-	UT_Field();
-	UT_Flag();
-	UT_Command();
+	TC_FIELD();
+	TC_FlAG();
+	TC_COMMAND();
 	
-	std::cout<<"No Error"<<std::endl;
+	std::cout<<" Exit success "<<std::endl;
 
 	std::cin.get();
 	return 0;

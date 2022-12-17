@@ -130,5 +130,10 @@ namespace YackTerminal {
 		return m_flagv.size();
 	}
 
+	const std::string& Command::operator[](size_t key) const 
+	{
+		return m_com_argv[key];
+	}
+	
 
 };
