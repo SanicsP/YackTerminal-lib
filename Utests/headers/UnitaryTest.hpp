@@ -7,7 +7,9 @@
 #include <cassert>
 #include <iostream>
 #include<YT/Flag.hpp>
-
+#include <cstring>
+#include <cctype> 
+#include <algorithm>
 #define assertErr(msg , str) ((msg + str).c_str)
 
 

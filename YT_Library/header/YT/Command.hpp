@@ -107,7 +107,7 @@ namespace YackTerminal
 			 * @param 
 			 * @return le nombre d'argumenets de la commande  
 			*/
-			std::size_t aCount() const;
+			std::size_t argCount() const;
 			
 			/**
 			 * @brief renvoi le nombre total d'arguments d'un drapeau de la commande 
@@ -135,6 +135,7 @@ namespace YackTerminal
 		public: // public members  
 			///@brief vecteur d'arguments du drapeau
 			std::vector<Flag> m_flagv;
+			std::vector<std::string> m_com_argv;
 	};
 }
 

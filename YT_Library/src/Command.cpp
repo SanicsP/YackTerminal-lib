@@ -27,11 +27,15 @@ namespace YackTerminal {
 
 		for(int i = 0 ; i < size ; i++)
 		{
-			std::cout<<m_argv[i] << " | ";
+			//std::cout<<m_argv[i] << " | ";
 			if(isFlag(m_argv[i] , m_delim_in , m_delim_out))
 			{
-				std::cout<<"flag"<<std::endl;
+				//std::cout<<"flag"<<std::endl;
 				m_flagv.push_back(Flag{m_argv[i] , m_delim_in , m_delim_out , m_flag_arg_delim});
+			}
+			else
+			{
+				m_com_argv.push_back(m_argv[i]);
 			}
 		}
 		std::cout<<"\n";
@@ -39,7 +43,7 @@ namespace YackTerminal {
 	}
 	bool Command::inspect(const std::function<bool(const std::string&)>& predicate) const 
 	{
-		for(std::string str : m_argv)
+		for(std::string str : m_com_argv)
 		{
 			if(!predicate(str))
 				return false;
@@ -50,49 +54,81 @@ namespace YackTerminal {
 
 	bool Command::hasFlag(const std::string& flag_name) const
 	{
-
+		for(Flag flg : m_flagv)
+		{
+			if(flg.name() == flag_name)
+				return true;
+		}
+		return false;
 	}
 	
 	bool Command::inspectF(const std::string& flag_name , const std::function<bool(const std::string&)>& predicate) const
 	{
-
+		for(Flag flg : m_flagv)
+		{
+			if(flg.name() == flag_name)
+			{
+				if(!flg.inspect(predicate))
+					return false;
+				return true;
+			}
+		}
 	}
 	
 	bool Command::inspectF(const std::function<bool(const std::string&)>& predicate) const
 	{
-
+		for(Flag flg : m_flagv)
+		{
+			if(!flg.inspect(predicate))
+				return false;
+		}
+		return true;
 	}
 	
 	bool Command::inspectAll(const std::function<bool(const std::string&)>& predicate)const 
 	{
+		
+		return inspectF(predicate) && inspect(predicate);
 
 	}
 	
-	std::size_t Command::aCount() const
+	std::size_t Command::argCount() const
 	{
-
+		return m_com_argv.size();
 	}
 	
 	std::size_t Command::fArgCount(const std::string& flagName) const
 	{
-
+		for(Flag flg : m_flagv)
+		{
+			if(flg.name() == flagName)
+			{
+				return flg.m_argv.size();
+			}
+		}
+		return 0;
 	}
 	
 	std::size_t Command::fArgCount() const
 	{
+		std::size_t count = 0;
+		for(Flag flg : m_flagv)
+		{
+			if(!flg.m_argv.empty())
+			{
+				count += flg.m_argv.size();
+			}
+		}
 
+		return count;
 	}
 	
 	std::size_t Command::fCount() const
 	{
-
+		if(m_flagv.empty())
+			return 0;
+		return m_flagv.size();
 	}
-
-
-
-
-
-
 
 
 };

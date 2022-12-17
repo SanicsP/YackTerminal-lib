@@ -7,7 +7,7 @@ void UT_Field()
 	std::string assert_msg{"assertion fail : "};
 	//Test of constructors
 	{
-		//ield(size_t argc , char* argv[])
+		//field(size_t argc , char* argv[])
 		int argc = 4;
 		char* argv[] {
 			"prog" , "command" , "arg1" , "arg2"
@@ -42,12 +42,35 @@ void UT_Field()
 
 void UT_Command()
 {
-	yt::Command com{"prog command arg1 arg2 f<arg1|arg2|arg3|arg4|arg5|arg6>" , '<' , '>' , '|'};
-	std::cout<< com.name() << " " << com.m_argv[0] << " " << com.m_flagv[0].name()<<std::endl;
-	for(std::string str : com.m_flagv[0].m_argv)
+	
+	auto numPredicate = [](const std::string& str ) -> bool
 	{
-		std::cout<<str<<std::endl;
-	}
+		return std::all_of(std::begin(str) , std::end(str) , isdigit);
+	};
+
+	auto alphaPredicate = [](const std::string& str ) -> bool
+	{
+		return std::all_of(std::begin(str) , std::end(str) , isalpha);
+	};
+
+	yt::Command com{"prog command1 arg1 arg2 arg3 flag1<arg1/arg2> flag2<1/2/3/>" , '<' , '>' , '/'};
+	
+	std::cout<<com.m_flagv[1][2]<<std::endl;;
+	assert(com.argCount() == 3 && "func Flag::argCount()");
+	
+	assert(com.fArgCount() == 5 && "func Flag::fargCount()");
+	
+	assert(com.fArgCount("flag1") == 2 && "func Flag::fargCount(const std::string&)");
+	assert(com.fArgCount("flag2") == 3 && "func Flag::fargCount(const std::string&)");
+
+	assert(com.fCount() == 2 && "func Flag::fCount()");
+
+	assert(com.inspect(numPredicate) == false && "assert fail : in FLag::inspect()");
+	assert(com.inspectAll(numPredicate) == false && "assert fail : in FLag::inspectAll()");
+	assert(com.inspectF(numPredicate) == false && "assert fail : in FLag::inspectF()");
+	assert(com.inspectF("flag1" , numPredicate) == false && "assert fail : in FLag::inspectF(name , predicate)");
+	assert(com.inspectF("flag2" , alphaPredicate) == false && "assert fail : in FLag::inspectF(name , predicate)");
+	
 
 }
 
@@ -64,15 +87,15 @@ void UT_Flag()
 		}
 	};
 
-	yt::Flag test_flag{"test<arg1,arg2,arg3>" , '<' , '>', ','};
+	yt::Flag test_flag{"test<arg1/arg2/arg3>" , '<' , '>', '/'};
 	assert(test_flag.name() == "test" &&"Assert fail in Flag class constructor");
 
-	test_flag.rconstruct("reconstruct_test<arg1' arg2' arg3'>");
+	test_flag.rconstruct("reconstruct_test<arg1'/arg2'/arg3'>");
 	assert(test_flag.name() == "reconstruct_test" &&"Assert fail in Flag class rconstruct function");
 
 	bool check = test_flag.inspect(predicate);
 	assert(check &&"Assert fail in Flag inspect function");
 
-	std::cout<<std::boolalpha<<yt::isFlag("t<arg1 arg2>" , '<' , '>')<<std::endl;
+	//std::cout<<std::boolalpha<<yt::isFlag("t<arg1 arg2>" , '<' , '>')<<std::endl;
 	
 }
