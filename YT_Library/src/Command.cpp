@@ -156,6 +156,19 @@ namespace YackTerminal {
 			throw std::length_error("std::lenght_error : Out of bound access , empty vector");
 		return m_com_argv[key];
 	}
+	Flag& Command::operator[](const std::string& flg_name)
+	{
+		if(m_flagv.empty())
+			throw std::length_error("std::lenght_error : Out of bound access , empty vector");
+		
+		for(int i = 0 ; i < m_flagv.size() ; i++)
+		{
+			if(m_flagv[i].name() == flg_name)
+				return m_flagv[i];
+		}
+		
+	}
+
 	
 
 };

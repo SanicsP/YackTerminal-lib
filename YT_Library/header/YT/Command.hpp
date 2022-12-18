@@ -133,6 +133,13 @@ namespace YackTerminal
 
 
 			////////////
+			Flag& operator[](const std::string& flg_name);
+
+			// find funcs
+			/**
+			 * @brief 
+			*/
+			/////////////////:
 			
 		public: // public members  
 			///@brief vecteur d'arguments du drapeau

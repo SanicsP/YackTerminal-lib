@@ -106,7 +106,10 @@ bool TC_COMMAND()
 				std::cout<<" ";
 			if(spec_)
 			{
-				std::cout<<com.m_flagv[1][0]<<std::endl;
+				for(int i = 0 ; i < com["-spec"].m_argv.size() ; i++)
+				{
+					std::cout<<com["-spec"][i];
+				}
 			}
 		}
 
@@ -115,7 +118,7 @@ bool TC_COMMAND()
 	{
 		std::cout<<ex.what()<<std::endl;
 	}
-
+	std::cout<<'\n';
 	std::cout<<"--------------------------------------------------------------------\n";
 
 }
