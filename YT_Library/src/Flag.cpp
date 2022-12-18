@@ -30,7 +30,7 @@ namespace YackTerminal {
 	{
 		if(m_argv.empty())
 			throw std::length_error("std::lenght_error : Out of bound access , empty vector");
-			
+
 		for(std::string str : m_argv)
 		{
 			if(!predicate(str))
@@ -39,7 +39,7 @@ namespace YackTerminal {
 		return true;
 	}
 
-	bool Flag::isFlag(const std::string& arg) const 
+	bool Flag::isFlag(const std::string& arg) const noexcept
 	{
 		if(
 			std::count(std::begin(arg) , std::end(arg) , m_delim_in) != 1 ||
@@ -55,7 +55,7 @@ namespace YackTerminal {
 	
 	///Free func 
 
-	bool isFlag(const std::string& arg , char delimIn , char delimOut)
+	bool isFlag(const std::string& arg , char delimIn , char delimOut) 
 	{
 		if(
 			std::count(std::begin(arg) , std::end(arg) , delimIn) != 1 ||

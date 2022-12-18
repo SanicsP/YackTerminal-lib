@@ -45,7 +45,7 @@ namespace YackTerminal {
 		std::cout<<"\n";
 
 	}
-	bool Command::inspect(const std::function<bool(const std::string&)>& predicate) const 
+	bool Command::inspect(const std::function<bool(const std::string&)>& predicate) const noexcept
 	{
 		if(m_com_argv.empty())
 			throw std::length_error("std::lenght_error : Out of bound access , empty vector");
@@ -59,7 +59,7 @@ namespace YackTerminal {
 		return true;
 	}
 
-	bool Command::hasFlag(const std::string& flag_name) const
+	bool Command::hasFlag(const std::string& flag_name) const noexcept
 	{
 		if(m_flagv.empty())
 			return false;
@@ -108,12 +108,12 @@ namespace YackTerminal {
 
 	}
 	
-	std::size_t Command::argCount() const
+	std::size_t Command::argCount() const noexcept
 	{
 		return m_com_argv.size();
 	}
 	
-	std::size_t Command::fArgCount(const std::string& flagName) const
+	std::size_t Command::fArgCount(const std::string& flagName) const noexcept
 	{
 		if(m_flagv.empty())
 			return 0;
@@ -128,7 +128,7 @@ namespace YackTerminal {
 		return 0;
 	}
 	
-	std::size_t Command::fArgCount() const
+	std::size_t Command::fArgCount() const noexcept
 	{
 		if(m_flagv.empty())
 			return 0;
@@ -145,7 +145,7 @@ namespace YackTerminal {
 		return count;
 	}
 	
-	std::size_t Command::fCount() const
+	std::size_t Command::fCount() const noexcept
 	{
 		return m_flagv.size();
 	}

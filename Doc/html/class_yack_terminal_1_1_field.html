@@ -120,6 +120,7 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 Attributs protégés</h2></td></tr>
 <tr class="memitem:a0c2cb91ef5bcf30aa32d096c951b2168"><td class="memItemLeft" align="right" valign="top"><a id="a0c2cb91ef5bcf30aa32d096c951b2168" name="a0c2cb91ef5bcf30aa32d096c951b2168"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td></tr>
+<tr class="memdesc:a0c2cb91ef5bcf30aa32d096c951b2168"><td class="mdescLeft">&#160;</td><td class="mdescRight">nom du champ <br /></td></tr>
 <tr class="separator:a0c2cb91ef5bcf30aa32d096c951b2168"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
@@ -224,8 +225,14 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>retourne vrai si tout les éléments vérifient le prédicat faux dans le cas contraire </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">peut</td><td>lancer une exception de type std::lenght_error si un accès hors du tableau est fait </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Réimplémentée dans <a class="el" href="class_yack_terminal_1_1_command.html#ac1ff96ecaae48b95d815f9aa41e96cb5">YackTerminal::Command</a>, et <a class="el" href="class_yack_terminal_1_1_flag.html#a8707ffa59925dd2b0f9182879673f208">YackTerminal::Flag</a>.</p>
+<p>Réimplémentée dans <a class="el" href="class_yack_terminal_1_1_command.html#a5fef4459b5e2079bd5f222007ffb5e64">YackTerminal::Command</a>, et <a class="el" href="class_yack_terminal_1_1_flag.html#a8707ffa59925dd2b0f9182879673f208">YackTerminal::Flag</a>.</p>
 
 </div>
 </div>
@@ -289,6 +296,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>une référence constante vers l'élement du tableau correspondant </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">peut</td><td>lancer une exception de type std::lenght_error si un accès hors du tableau est fait </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Réimplémentée dans <a class="el" href="class_yack_terminal_1_1_command.html#ab65f39b20bff07f4a9a931d22149e2a8">YackTerminal::Command</a>.</p>
 
@@ -326,6 +339,13 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>aucune donnée en retour </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">peut</td><td>lancer une exception de type std::invalid argument si nw_arg_str est une chaîne de caractères vide </td></tr>
+    <tr><td class="paramname">peut</td><td>lancer une exception de type std::runtime_error si aucun nom n'est donné à la commande : par exemple si le programme est appelé sans commande </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Réimplémentée dans <a class="el" href="class_yack_terminal_1_1_command.html#afac5aebc9e213da59a6a9c556e7b2941">YackTerminal::Command</a>, et <a class="el" href="class_yack_terminal_1_1_flag.html#a184567b80ff348b3bae12a33d3441cc9">YackTerminal::Flag</a>.</p>
 

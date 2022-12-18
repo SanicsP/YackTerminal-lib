@@ -73,6 +73,11 @@ le prédicat unaire doit s\textquotesingle{}agir d\textquotesingle{}une fonction
 retourne vrai si tout les éléments vérifient le prédicat faux dans le cas contraire 
 \end{DoxyReturn}
 
+\begin{DoxyExceptions}{Exceptions}
+{\em peut} & lancer une exception de type std\+::lenght\+\_\+error si un accès hors du tableau est fait \\
+\hline
+\end{DoxyExceptions}
+
 
 Réimplémentée à partir de \mbox{\hyperlink{class_yack_terminal_1_1_field_af14f785e578606ee1123bb5b12b85499}{Yack\+Terminal\+::\+Field}}.
 
@@ -94,6 +99,13 @@ reconstruit un objet de type field à partir d\textquotesingle{}une chaîne de c
 \begin{DoxyReturn}{Renvoie}
 aucune donnée en retour 
 \end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em peut} & lancer une exception de type std\+::invalid argument si nw\+\_\+arg\+\_\+str est une chaîne de caractères vide \\
+\hline
+{\em peut} & lancer une exception de type std\+::runtime\+\_\+error si aucun nom n\textquotesingle{}est donné à la commande \+: par exemple si le programme est appelé sans commande \\
+\hline
+\end{DoxyExceptions}
 
 
 Réimplémentée à partir de \mbox{\hyperlink{class_yack_terminal_1_1_field_af54903ed6e54661531aaa7cf9c7449fd}{Yack\+Terminal\+::\+Field}}.

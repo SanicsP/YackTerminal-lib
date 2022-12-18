@@ -59,7 +59,7 @@ namespace YackTerminal
 
 			//inherited override services from field class : 
 			void rconstruct(const std::string& nw_arg_str) override;
-			bool inspect(const std::function<bool(const std::string&)>& predicate) const override;
+			bool inspect(const std::function<bool(const std::string&)>& predicate) const noexcept override;
 			const std::string& operator[](size_t key) const override;
 			
 			///////////
@@ -72,7 +72,7 @@ namespace YackTerminal
 			 * @param flag_name le nom du drapeau recherché 
 			 * @return true si le drapeau existe , false dans le cas contraire
 			*/
-			bool hasFlag(const std::string& flag_name) const;
+			bool hasFlag(const std::string& flag_name) const noexcept;
 
 			/**
 			 * @brief verifie selon un predicat tout les arguments d'un drapeau
@@ -80,6 +80,8 @@ namespace YackTerminal
 			 * @param predicate le predicat unaire de vérification 
 			 * @return vrai si tout les arguments du drapeau vérifient le prédicat , faux dans le 
 			 * cas contraire 
+			 * @exception peut lancer une excepetion de type std::lenght error si elle est appellé et qu'il n'existe 
+			 * aucun flag dans la commande 
 			*/
 			bool inspectF(const std::string& flag_name , const std::function<bool(const std::string&)>& predicate) const;
 			
@@ -88,6 +90,8 @@ namespace YackTerminal
 			 * @param predicate le predicat unaire de vérification 
 			 * @return vrai si tout les arguments vérifient le prédicat , faux dans le 
 			 * cas contraire 
+			 * @exception peut lancer une excepetion de type std::lenght error si elle est appellé et qu'il n'existe 
+			 * aucun flag dans la commande 
 			*/
 			bool inspectF(const std::function<bool(const std::string&)>& predicate) const;
 			
@@ -97,6 +101,8 @@ namespace YackTerminal
 			 * @param predicate le predicat unaire de vérification 
 			 * @return vrai si tout les arguments vérifient le prédicat , faux dans le 
 			 * cas contraire 
+			 * @exception peut lancer une excepetion de type std::lenght error si elle est appellé et qu'il n'existe 
+			 * aucun flag dans la commande 
 			*/
 			bool inspectAll(const std::function<bool(const std::string&)>& predicate)const ;
 
@@ -108,26 +114,26 @@ namespace YackTerminal
 			 * @brief renvoi le nombre d'arguments de la commande 
 			 * @return le nombre d'argumenets de la commande  
 			*/
-			std::size_t argCount() const;
+			std::size_t argCount() const noexcept;
 			
 			/**
 			 * @brief renvoi le nombre total d'arguments d'un drapeau de la commande 
 			 * @param flagName le nom du drapeaux à analyser
 			 * @return le nombre total d'arguments
 			*/
-			std::size_t fArgCount(const std::string& flagName) const;
+			std::size_t fArgCount(const std::string& flagName) const noexcept;
 			
 			/**
 			 * @brief renvoi le nombre total d'arguments de tout les drapeaux de la commande 
 			 * @return le nombre total d'arguments
 			*/
-			std::size_t fArgCount() const;
+			std::size_t fArgCount() const noexcept;
 			
 			/**
 			 * @brief renvoi le nombre total de drapeaux  
 			 * @return le nombre total de drapeaux 
 			*/
-			std::size_t fCount() const;
+			std::size_t fCount() const noexcept;
 
 
 
@@ -147,8 +153,9 @@ namespace YackTerminal
 			/////////////////:
 			
 		public: // public members  
-			///@brief vecteur d'arguments du drapeau
+			///@brief vecteur d'arguments contenant tout les drapeaux de la commande
 			std::vector<Flag> m_flagv;
+			/// @brief vecteur d'arguments contenant tout les arguments de la commande
 			std::vector<std::string> m_com_argv;
 	};
 }

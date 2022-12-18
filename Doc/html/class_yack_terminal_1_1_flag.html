@@ -127,6 +127,7 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 <tr class="inherit_header pro_attribs_class_yack_terminal_1_1_field"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_yack_terminal_1_1_field')"><img src="closed.png" alt="-"/>&#160;Attributs protégés hérités de <a class="el" href="class_yack_terminal_1_1_field.html">YackTerminal::Field</a></td></tr>
 <tr class="memitem:a0c2cb91ef5bcf30aa32d096c951b2168 inherit pro_attribs_class_yack_terminal_1_1_field"><td class="memItemLeft" align="right" valign="top"><a id="a0c2cb91ef5bcf30aa32d096c951b2168" name="a0c2cb91ef5bcf30aa32d096c951b2168"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td></tr>
+<tr class="memdesc:a0c2cb91ef5bcf30aa32d096c951b2168 inherit pro_attribs_class_yack_terminal_1_1_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">nom du champ <br /></td></tr>
 <tr class="separator:a0c2cb91ef5bcf30aa32d096c951b2168 inherit pro_attribs_class_yack_terminal_1_1_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
@@ -219,6 +220,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>retourne vrai si tout les éléments vérifient le prédicat faux dans le cas contraire </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">peut</td><td>lancer une exception de type std::lenght_error si un accès hors du tableau est fait </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Réimplémentée à partir de <a class="el" href="class_yack_terminal_1_1_field.html#af14f785e578606ee1123bb5b12b85499">YackTerminal::Field</a>.</p>
 
@@ -256,6 +263,13 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>aucune donnée en retour </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">peut</td><td>lancer une exception de type std::invalid argument si nw_arg_str est une chaîne de caractères vide </td></tr>
+    <tr><td class="paramname">peut</td><td>lancer une exception de type std::runtime_error si aucun nom n'est donné à la commande : par exemple si le programme est appelé sans commande </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Réimplémentée à partir de <a class="el" href="class_yack_terminal_1_1_field.html#af54903ed6e54661531aaa7cf9c7449fd">YackTerminal::Field</a>.</p>
 

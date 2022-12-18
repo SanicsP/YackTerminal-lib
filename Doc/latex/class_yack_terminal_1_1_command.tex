@@ -18,11 +18,11 @@ Classe représentant l\textquotesingle{}entrée d\textquotesingle{}une commande 
 \begin{DoxyCompactList}\small\item\em Constructeur de base de la classe command. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_yack_terminal_1_1_command_afac5aebc9e213da59a6a9c556e7b2941}{rconstruct}} (const std\+::string \&nw\+\_\+arg\+\_\+str) override
 \begin{DoxyCompactList}\small\item\em reconstruit un objet de type field à partir d\textquotesingle{}une chaîne de caractères \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_yack_terminal_1_1_command_ac1ff96ecaae48b95d815f9aa41e96cb5}{inspect}} (const std\+::function$<$ bool(const std\+::string \&)$>$ \&predicate) const override
+bool \mbox{\hyperlink{class_yack_terminal_1_1_command_a5fef4459b5e2079bd5f222007ffb5e64}{inspect}} (const std\+::function$<$ bool(const std\+::string \&)$>$ \&predicate) const noexcept override
 \begin{DoxyCompactList}\small\item\em applique un prédicat unaire à chaque élément du vecteur d\textquotesingle{}arguments \end{DoxyCompactList}\item 
 const std\+::string \& \mbox{\hyperlink{class_yack_terminal_1_1_command_ab65f39b20bff07f4a9a931d22149e2a8}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t key) const override
 \begin{DoxyCompactList}\small\item\em Operateur d\textquotesingle{}accès en lecture des éléments du veteur d\textquotesingle{}argument de l\textquotesingle{}objet de type field. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_yack_terminal_1_1_command_a6bd8aa9e3ae6d0164dbcb12882816661}{has\+Flag}} (const std\+::string \&flag\+\_\+name) const
+bool \mbox{\hyperlink{class_yack_terminal_1_1_command_a6bfff53b45e0c2378492085386c82c47}{has\+Flag}} (const std\+::string \&flag\+\_\+name) const noexcept
 \begin{DoxyCompactList}\small\item\em vérifie si la commande contient un drapeau au nom de flag\+\_\+name \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_yack_terminal_1_1_command_abf817ad11a0590438691b722cd5cf540}{inspectF}} (const std\+::string \&flag\+\_\+name, const std\+::function$<$ bool(const std\+::string \&)$>$ \&predicate) const
 \begin{DoxyCompactList}\small\item\em verifie selon un predicat tout les arguments d\textquotesingle{}un drapeau \end{DoxyCompactList}\item 
@@ -30,13 +30,13 @@ bool \mbox{\hyperlink{class_yack_terminal_1_1_command_a15eda1624bdee7b1c12694305
 \begin{DoxyCompactList}\small\item\em verifie selon un predicat tout les arguments de tout les drapeaux \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_yack_terminal_1_1_command_a99ccd00831e06e784c59066bf349dfab}{inspect\+All}} (const std\+::function$<$ bool(const std\+::string \&)$>$ \&predicate) const
 \begin{DoxyCompactList}\small\item\em verifie selon un predicat tout les arguments de tout les arguments des drapeaux et de la commande \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{class_yack_terminal_1_1_command_a4f220d7afbde463a6ea12d7c45efdb61}{arg\+Count}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{class_yack_terminal_1_1_command_acee38b78f5c3f30a845342d2b87cb87e}{arg\+Count}} () const noexcept
 \begin{DoxyCompactList}\small\item\em renvoi le nombre d\textquotesingle{}arguments de la commande \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{class_yack_terminal_1_1_command_a5d65123521a3024e0eca9f14ed6f59fb}{f\+Arg\+Count}} (const std\+::string \&flag\+Name) const
+std\+::size\+\_\+t \mbox{\hyperlink{class_yack_terminal_1_1_command_aba180d4a1f19910efecbe0b6805af2fd}{f\+Arg\+Count}} (const std\+::string \&flag\+Name) const noexcept
 \begin{DoxyCompactList}\small\item\em renvoi le nombre total d\textquotesingle{}arguments d\textquotesingle{}un drapeau de la commande \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{class_yack_terminal_1_1_command_a479d6cf00bf74f14fe9a7d73e263e7ca}{f\+Arg\+Count}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{class_yack_terminal_1_1_command_ac45fd1b40d4e32ce16b5ea1d167a5465}{f\+Arg\+Count}} () const noexcept
 \begin{DoxyCompactList}\small\item\em renvoi le nombre total d\textquotesingle{}arguments de tout les drapeaux de la commande \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{class_yack_terminal_1_1_command_a11df527ec90d7b97b72e1d84401abed6}{f\+Count}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{class_yack_terminal_1_1_command_a9c1f8cc863465290f557326cf8ba3687}{f\+Count}} () const noexcept
 \begin{DoxyCompactList}\small\item\em renvoi le nombre total de drapeaux ~\newline
  \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_yack_terminal_1_1_flag}{Flag}} \& \mbox{\hyperlink{class_yack_terminal_1_1_command_a938384069abdc80254b01ce16a9d520b}{operator\mbox{[}$\,$\mbox{]}}} (const std\+::string \&flg\+\_\+name)
@@ -46,10 +46,10 @@ std\+::size\+\_\+t \mbox{\hyperlink{class_yack_terminal_1_1_command_a11df527ec90
 \item 
 \mbox{\Hypertarget{class_yack_terminal_1_1_command_af18ee75cec3009560165d83410baed21}\label{class_yack_terminal_1_1_command_af18ee75cec3009560165d83410baed21}} 
 std\+::vector$<$ \mbox{\hyperlink{class_yack_terminal_1_1_flag}{Flag}} $>$ {\bfseries m\+\_\+flagv}
-\begin{DoxyCompactList}\small\item\em vecteur d\textquotesingle{}arguments du drapeau \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em vecteur d\textquotesingle{}arguments contenant tout les drapeaux de la commande \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_yack_terminal_1_1_command_aea4b4b2b8b173f62945a215189e9ea47}\label{class_yack_terminal_1_1_command_aea4b4b2b8b173f62945a215189e9ea47}} 
 std\+::vector$<$ std\+::string $>$ {\bfseries m\+\_\+com\+\_\+argv}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em vecteur d\textquotesingle{}arguments contenant tout les arguments de la commande \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membres hérités additionnels}
 
 
@@ -114,11 +114,11 @@ aucune donnée en retour
 
 
 \doxysubsection{Documentation des fonctions membres}
-\mbox{\Hypertarget{class_yack_terminal_1_1_command_a4f220d7afbde463a6ea12d7c45efdb61}\label{class_yack_terminal_1_1_command_a4f220d7afbde463a6ea12d7c45efdb61}} 
+\mbox{\Hypertarget{class_yack_terminal_1_1_command_acee38b78f5c3f30a845342d2b87cb87e}\label{class_yack_terminal_1_1_command_acee38b78f5c3f30a845342d2b87cb87e}} 
 \index{YackTerminal::Command@{YackTerminal::Command}!argCount@{argCount}}
 \index{argCount@{argCount}!YackTerminal::Command@{YackTerminal::Command}}
 \doxysubsubsection{\texorpdfstring{argCount()}{argCount()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t Yack\+Terminal\+::\+Command\+::arg\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::size\+\_\+t Yack\+Terminal\+::\+Command\+::arg\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -128,11 +128,11 @@ renvoi le nombre d\textquotesingle{}arguments de la commande
 le nombre d\textquotesingle{}argumenets de la commande ~\newline
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_yack_terminal_1_1_command_a479d6cf00bf74f14fe9a7d73e263e7ca}\label{class_yack_terminal_1_1_command_a479d6cf00bf74f14fe9a7d73e263e7ca}} 
+\mbox{\Hypertarget{class_yack_terminal_1_1_command_ac45fd1b40d4e32ce16b5ea1d167a5465}\label{class_yack_terminal_1_1_command_ac45fd1b40d4e32ce16b5ea1d167a5465}} 
 \index{YackTerminal::Command@{YackTerminal::Command}!fArgCount@{fArgCount}}
 \index{fArgCount@{fArgCount}!YackTerminal::Command@{YackTerminal::Command}}
 \doxysubsubsection{\texorpdfstring{fArgCount()}{fArgCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily std\+::size\+\_\+t Yack\+Terminal\+::\+Command\+::f\+Arg\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::size\+\_\+t Yack\+Terminal\+::\+Command\+::f\+Arg\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -141,11 +141,11 @@ renvoi le nombre total d\textquotesingle{}arguments de tout les drapeaux de la c
 \begin{DoxyReturn}{Renvoie}
 le nombre total d\textquotesingle{}arguments 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_yack_terminal_1_1_command_a5d65123521a3024e0eca9f14ed6f59fb}\label{class_yack_terminal_1_1_command_a5d65123521a3024e0eca9f14ed6f59fb}} 
+\mbox{\Hypertarget{class_yack_terminal_1_1_command_aba180d4a1f19910efecbe0b6805af2fd}\label{class_yack_terminal_1_1_command_aba180d4a1f19910efecbe0b6805af2fd}} 
 \index{YackTerminal::Command@{YackTerminal::Command}!fArgCount@{fArgCount}}
 \index{fArgCount@{fArgCount}!YackTerminal::Command@{YackTerminal::Command}}
 \doxysubsubsection{\texorpdfstring{fArgCount()}{fArgCount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily std\+::size\+\_\+t Yack\+Terminal\+::\+Command\+::f\+Arg\+Count (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flag\+Name }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::size\+\_\+t Yack\+Terminal\+::\+Command\+::f\+Arg\+Count (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flag\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -159,11 +159,11 @@ renvoi le nombre total d\textquotesingle{}arguments d\textquotesingle{}un drapea
 \begin{DoxyReturn}{Renvoie}
 le nombre total d\textquotesingle{}arguments 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_yack_terminal_1_1_command_a11df527ec90d7b97b72e1d84401abed6}\label{class_yack_terminal_1_1_command_a11df527ec90d7b97b72e1d84401abed6}} 
+\mbox{\Hypertarget{class_yack_terminal_1_1_command_a9c1f8cc863465290f557326cf8ba3687}\label{class_yack_terminal_1_1_command_a9c1f8cc863465290f557326cf8ba3687}} 
 \index{YackTerminal::Command@{YackTerminal::Command}!fCount@{fCount}}
 \index{fCount@{fCount}!YackTerminal::Command@{YackTerminal::Command}}
 \doxysubsubsection{\texorpdfstring{fCount()}{fCount()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t Yack\+Terminal\+::\+Command\+::f\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::size\+\_\+t Yack\+Terminal\+::\+Command\+::f\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -173,11 +173,11 @@ renvoi le nombre total de drapeaux ~\newline
 \begin{DoxyReturn}{Renvoie}
 le nombre total de drapeaux 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_yack_terminal_1_1_command_a6bd8aa9e3ae6d0164dbcb12882816661}\label{class_yack_terminal_1_1_command_a6bd8aa9e3ae6d0164dbcb12882816661}} 
+\mbox{\Hypertarget{class_yack_terminal_1_1_command_a6bfff53b45e0c2378492085386c82c47}\label{class_yack_terminal_1_1_command_a6bfff53b45e0c2378492085386c82c47}} 
 \index{YackTerminal::Command@{YackTerminal::Command}!hasFlag@{hasFlag}}
 \index{hasFlag@{hasFlag}!YackTerminal::Command@{YackTerminal::Command}}
 \doxysubsubsection{\texorpdfstring{hasFlag()}{hasFlag()}}
-{\footnotesize\ttfamily bool Yack\+Terminal\+::\+Command\+::has\+Flag (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flag\+\_\+name }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily bool Yack\+Terminal\+::\+Command\+::has\+Flag (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flag\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -191,11 +191,11 @@ vérifie si la commande contient un drapeau au nom de flag\+\_\+name
 \begin{DoxyReturn}{Renvoie}
 true si le drapeau existe , false dans le cas contraire 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_yack_terminal_1_1_command_ac1ff96ecaae48b95d815f9aa41e96cb5}\label{class_yack_terminal_1_1_command_ac1ff96ecaae48b95d815f9aa41e96cb5}} 
+\mbox{\Hypertarget{class_yack_terminal_1_1_command_a5fef4459b5e2079bd5f222007ffb5e64}\label{class_yack_terminal_1_1_command_a5fef4459b5e2079bd5f222007ffb5e64}} 
 \index{YackTerminal::Command@{YackTerminal::Command}!inspect@{inspect}}
 \index{inspect@{inspect}!YackTerminal::Command@{YackTerminal::Command}}
 \doxysubsubsection{\texorpdfstring{inspect()}{inspect()}}
-{\footnotesize\ttfamily bool Yack\+Terminal\+::\+Command\+::inspect (\begin{DoxyParamCaption}\item[{const std\+::function$<$ bool(const std\+::string \&)$>$ \&}]{predicate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily bool Yack\+Terminal\+::\+Command\+::inspect (\begin{DoxyParamCaption}\item[{const std\+::function$<$ bool(const std\+::string \&)$>$ \&}]{predicate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
 
 
 
@@ -209,6 +209,11 @@ le prédicat unaire doit s\textquotesingle{}agir d\textquotesingle{}une fonction
 \begin{DoxyReturn}{Renvoie}
 retourne vrai si tout les éléments vérifient le prédicat faux dans le cas contraire 
 \end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em peut} & lancer une exception de type std\+::lenght\+\_\+error si un accès hors du tableau est fait \\
+\hline
+\end{DoxyExceptions}
 
 
 Réimplémentée à partir de \mbox{\hyperlink{class_yack_terminal_1_1_field_af14f785e578606ee1123bb5b12b85499}{Yack\+Terminal\+::\+Field}}.
@@ -231,6 +236,11 @@ verifie selon un predicat tout les arguments de tout les arguments des drapeaux 
 \begin{DoxyReturn}{Renvoie}
 vrai si tout les arguments vérifient le prédicat , faux dans le cas contraire 
 \end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em peut} & lancer une excepetion de type std\+::lenght error si elle est appellé et qu\textquotesingle{}il n\textquotesingle{}existe aucun flag dans la commande \\
+\hline
+\end{DoxyExceptions}
 \mbox{\Hypertarget{class_yack_terminal_1_1_command_a15eda1624bdee7b1c126943058c3f426}\label{class_yack_terminal_1_1_command_a15eda1624bdee7b1c126943058c3f426}} 
 \index{YackTerminal::Command@{YackTerminal::Command}!inspectF@{inspectF}}
 \index{inspectF@{inspectF}!YackTerminal::Command@{YackTerminal::Command}}
@@ -249,6 +259,11 @@ verifie selon un predicat tout les arguments de tout les drapeaux
 \begin{DoxyReturn}{Renvoie}
 vrai si tout les arguments vérifient le prédicat , faux dans le cas contraire 
 \end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em peut} & lancer une excepetion de type std\+::lenght error si elle est appellé et qu\textquotesingle{}il n\textquotesingle{}existe aucun flag dans la commande \\
+\hline
+\end{DoxyExceptions}
 \mbox{\Hypertarget{class_yack_terminal_1_1_command_abf817ad11a0590438691b722cd5cf540}\label{class_yack_terminal_1_1_command_abf817ad11a0590438691b722cd5cf540}} 
 \index{YackTerminal::Command@{YackTerminal::Command}!inspectF@{inspectF}}
 \index{inspectF@{inspectF}!YackTerminal::Command@{YackTerminal::Command}}
@@ -269,6 +284,11 @@ verifie selon un predicat tout les arguments d\textquotesingle{}un drapeau
 \begin{DoxyReturn}{Renvoie}
 vrai si tout les arguments du drapeau vérifient le prédicat , faux dans le cas contraire 
 \end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em peut} & lancer une excepetion de type std\+::lenght error si elle est appellé et qu\textquotesingle{}il n\textquotesingle{}existe aucun flag dans la commande \\
+\hline
+\end{DoxyExceptions}
 \mbox{\Hypertarget{class_yack_terminal_1_1_command_a938384069abdc80254b01ce16a9d520b}\label{class_yack_terminal_1_1_command_a938384069abdc80254b01ce16a9d520b}} 
 \index{YackTerminal::Command@{YackTerminal::Command}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!YackTerminal::Command@{YackTerminal::Command}}
@@ -306,6 +326,11 @@ Operateur d\textquotesingle{}accès en lecture des éléments du veteur d\textqu
 une référence constante vers l\textquotesingle{}élement du tableau correspondant 
 \end{DoxyReturn}
 
+\begin{DoxyExceptions}{Exceptions}
+{\em peut} & lancer une exception de type std\+::lenght\+\_\+error si un accès hors du tableau est fait \\
+\hline
+\end{DoxyExceptions}
+
 
 Réimplémentée à partir de \mbox{\hyperlink{class_yack_terminal_1_1_field_af345e516e5fc03268fb353fdbbf59610}{Yack\+Terminal\+::\+Field}}.
 
@@ -327,6 +352,13 @@ reconstruit un objet de type field à partir d\textquotesingle{}une chaîne de c
 \begin{DoxyReturn}{Renvoie}
 aucune donnée en retour 
 \end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em peut} & lancer une exception de type std\+::invalid argument si nw\+\_\+arg\+\_\+str est une chaîne de caractères vide \\
+\hline
+{\em peut} & lancer une exception de type std\+::runtime\+\_\+error si aucun nom n\textquotesingle{}est donné à la commande \+: par exemple si le programme est appelé sans commande \\
+\hline
+\end{DoxyExceptions}
 
 
 Réimplémentée à partir de \mbox{\hyperlink{class_yack_terminal_1_1_field_af54903ed6e54661531aaa7cf9c7449fd}{Yack\+Terminal\+::\+Field}}.

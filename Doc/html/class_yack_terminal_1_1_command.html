@@ -98,15 +98,15 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:afac5aebc9e213da59a6a9c556e7b2941"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#afac5aebc9e213da59a6a9c556e7b2941">rconstruct</a> (const std::string &amp;nw_arg_str) override</td></tr>
 <tr class="memdesc:afac5aebc9e213da59a6a9c556e7b2941"><td class="mdescLeft">&#160;</td><td class="mdescRight">reconstruit un objet de type field à partir d'une chaîne de caractères  <a href="class_yack_terminal_1_1_command.html#afac5aebc9e213da59a6a9c556e7b2941">Plus de détails...</a><br /></td></tr>
 <tr class="separator:afac5aebc9e213da59a6a9c556e7b2941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1ff96ecaae48b95d815f9aa41e96cb5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#ac1ff96ecaae48b95d815f9aa41e96cb5">inspect</a> (const std::function&lt; bool(const std::string &amp;)&gt; &amp;predicate) const override</td></tr>
-<tr class="memdesc:ac1ff96ecaae48b95d815f9aa41e96cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">applique un prédicat unaire à chaque élément du vecteur d'arguments  <a href="class_yack_terminal_1_1_command.html#ac1ff96ecaae48b95d815f9aa41e96cb5">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ac1ff96ecaae48b95d815f9aa41e96cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fef4459b5e2079bd5f222007ffb5e64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#a5fef4459b5e2079bd5f222007ffb5e64">inspect</a> (const std::function&lt; bool(const std::string &amp;)&gt; &amp;predicate) const noexcept override</td></tr>
+<tr class="memdesc:a5fef4459b5e2079bd5f222007ffb5e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">applique un prédicat unaire à chaque élément du vecteur d'arguments  <a href="class_yack_terminal_1_1_command.html#a5fef4459b5e2079bd5f222007ffb5e64">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5fef4459b5e2079bd5f222007ffb5e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab65f39b20bff07f4a9a931d22149e2a8"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#ab65f39b20bff07f4a9a931d22149e2a8">operator[]</a> (size_t key) const override</td></tr>
 <tr class="memdesc:ab65f39b20bff07f4a9a931d22149e2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operateur d'accès en lecture des éléments du veteur d'argument de l'objet de type field.  <a href="class_yack_terminal_1_1_command.html#ab65f39b20bff07f4a9a931d22149e2a8">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ab65f39b20bff07f4a9a931d22149e2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bd8aa9e3ae6d0164dbcb12882816661"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#a6bd8aa9e3ae6d0164dbcb12882816661">hasFlag</a> (const std::string &amp;flag_name) const</td></tr>
-<tr class="memdesc:a6bd8aa9e3ae6d0164dbcb12882816661"><td class="mdescLeft">&#160;</td><td class="mdescRight">vérifie si la commande contient un drapeau au nom de flag_name  <a href="class_yack_terminal_1_1_command.html#a6bd8aa9e3ae6d0164dbcb12882816661">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a6bd8aa9e3ae6d0164dbcb12882816661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bfff53b45e0c2378492085386c82c47"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#a6bfff53b45e0c2378492085386c82c47">hasFlag</a> (const std::string &amp;flag_name) const noexcept</td></tr>
+<tr class="memdesc:a6bfff53b45e0c2378492085386c82c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">vérifie si la commande contient un drapeau au nom de flag_name  <a href="class_yack_terminal_1_1_command.html#a6bfff53b45e0c2378492085386c82c47">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6bfff53b45e0c2378492085386c82c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf817ad11a0590438691b722cd5cf540"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#abf817ad11a0590438691b722cd5cf540">inspectF</a> (const std::string &amp;flag_name, const std::function&lt; bool(const std::string &amp;)&gt; &amp;predicate) const</td></tr>
 <tr class="memdesc:abf817ad11a0590438691b722cd5cf540"><td class="mdescLeft">&#160;</td><td class="mdescRight">verifie selon un predicat tout les arguments d'un drapeau  <a href="class_yack_terminal_1_1_command.html#abf817ad11a0590438691b722cd5cf540">Plus de détails...</a><br /></td></tr>
 <tr class="separator:abf817ad11a0590438691b722cd5cf540"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,19 +116,19 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a99ccd00831e06e784c59066bf349dfab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#a99ccd00831e06e784c59066bf349dfab">inspectAll</a> (const std::function&lt; bool(const std::string &amp;)&gt; &amp;predicate) const</td></tr>
 <tr class="memdesc:a99ccd00831e06e784c59066bf349dfab"><td class="mdescLeft">&#160;</td><td class="mdescRight">verifie selon un predicat tout les arguments de tout les arguments des drapeaux et de la commande  <a href="class_yack_terminal_1_1_command.html#a99ccd00831e06e784c59066bf349dfab">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a99ccd00831e06e784c59066bf349dfab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f220d7afbde463a6ea12d7c45efdb61"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#a4f220d7afbde463a6ea12d7c45efdb61">argCount</a> () const</td></tr>
-<tr class="memdesc:a4f220d7afbde463a6ea12d7c45efdb61"><td class="mdescLeft">&#160;</td><td class="mdescRight">renvoi le nombre d'arguments de la commande  <a href="class_yack_terminal_1_1_command.html#a4f220d7afbde463a6ea12d7c45efdb61">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a4f220d7afbde463a6ea12d7c45efdb61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d65123521a3024e0eca9f14ed6f59fb"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#a5d65123521a3024e0eca9f14ed6f59fb">fArgCount</a> (const std::string &amp;flagName) const</td></tr>
-<tr class="memdesc:a5d65123521a3024e0eca9f14ed6f59fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">renvoi le nombre total d'arguments d'un drapeau de la commande  <a href="class_yack_terminal_1_1_command.html#a5d65123521a3024e0eca9f14ed6f59fb">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a5d65123521a3024e0eca9f14ed6f59fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a479d6cf00bf74f14fe9a7d73e263e7ca"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#a479d6cf00bf74f14fe9a7d73e263e7ca">fArgCount</a> () const</td></tr>
-<tr class="memdesc:a479d6cf00bf74f14fe9a7d73e263e7ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">renvoi le nombre total d'arguments de tout les drapeaux de la commande  <a href="class_yack_terminal_1_1_command.html#a479d6cf00bf74f14fe9a7d73e263e7ca">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a479d6cf00bf74f14fe9a7d73e263e7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11df527ec90d7b97b72e1d84401abed6"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#a11df527ec90d7b97b72e1d84401abed6">fCount</a> () const</td></tr>
-<tr class="memdesc:a11df527ec90d7b97b72e1d84401abed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">renvoi le nombre total de drapeaux <br  />
-  <a href="class_yack_terminal_1_1_command.html#a11df527ec90d7b97b72e1d84401abed6">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a11df527ec90d7b97b72e1d84401abed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acee38b78f5c3f30a845342d2b87cb87e"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#acee38b78f5c3f30a845342d2b87cb87e">argCount</a> () const noexcept</td></tr>
+<tr class="memdesc:acee38b78f5c3f30a845342d2b87cb87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">renvoi le nombre d'arguments de la commande  <a href="class_yack_terminal_1_1_command.html#acee38b78f5c3f30a845342d2b87cb87e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acee38b78f5c3f30a845342d2b87cb87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba180d4a1f19910efecbe0b6805af2fd"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#aba180d4a1f19910efecbe0b6805af2fd">fArgCount</a> (const std::string &amp;flagName) const noexcept</td></tr>
+<tr class="memdesc:aba180d4a1f19910efecbe0b6805af2fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">renvoi le nombre total d'arguments d'un drapeau de la commande  <a href="class_yack_terminal_1_1_command.html#aba180d4a1f19910efecbe0b6805af2fd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aba180d4a1f19910efecbe0b6805af2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac45fd1b40d4e32ce16b5ea1d167a5465"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#ac45fd1b40d4e32ce16b5ea1d167a5465">fArgCount</a> () const noexcept</td></tr>
+<tr class="memdesc:ac45fd1b40d4e32ce16b5ea1d167a5465"><td class="mdescLeft">&#160;</td><td class="mdescRight">renvoi le nombre total d'arguments de tout les drapeaux de la commande  <a href="class_yack_terminal_1_1_command.html#ac45fd1b40d4e32ce16b5ea1d167a5465">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac45fd1b40d4e32ce16b5ea1d167a5465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c1f8cc863465290f557326cf8ba3687"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#a9c1f8cc863465290f557326cf8ba3687">fCount</a> () const noexcept</td></tr>
+<tr class="memdesc:a9c1f8cc863465290f557326cf8ba3687"><td class="mdescLeft">&#160;</td><td class="mdescRight">renvoi le nombre total de drapeaux <br  />
+  <a href="class_yack_terminal_1_1_command.html#a9c1f8cc863465290f557326cf8ba3687">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9c1f8cc863465290f557326cf8ba3687"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a938384069abdc80254b01ce16a9d520b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_yack_terminal_1_1_flag.html">Flag</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#a938384069abdc80254b01ce16a9d520b">operator[]</a> (const std::string &amp;flg_name)</td></tr>
 <tr class="memdesc:a938384069abdc80254b01ce16a9d520b"><td class="mdescLeft">&#160;</td><td class="mdescRight">accède à un drapeau dans le vecteur de drapeau de l'objet à partir du nom du drapeau  <a href="class_yack_terminal_1_1_command.html#a938384069abdc80254b01ce16a9d520b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a938384069abdc80254b01ce16a9d520b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,10 +156,11 @@ Fonctions membres publiques</h2></td></tr>
 Attributs publics</h2></td></tr>
 <tr class="memitem:af18ee75cec3009560165d83410baed21"><td class="memItemLeft" align="right" valign="top"><a id="af18ee75cec3009560165d83410baed21" name="af18ee75cec3009560165d83410baed21"></a>
 std::vector&lt; <a class="el" href="class_yack_terminal_1_1_flag.html">Flag</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_flagv</b></td></tr>
-<tr class="memdesc:af18ee75cec3009560165d83410baed21"><td class="mdescLeft">&#160;</td><td class="mdescRight">vecteur d'arguments du drapeau <br /></td></tr>
+<tr class="memdesc:af18ee75cec3009560165d83410baed21"><td class="mdescLeft">&#160;</td><td class="mdescRight">vecteur d'arguments contenant tout les drapeaux de la commande <br /></td></tr>
 <tr class="separator:af18ee75cec3009560165d83410baed21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea4b4b2b8b173f62945a215189e9ea47"><td class="memItemLeft" align="right" valign="top"><a id="aea4b4b2b8b173f62945a215189e9ea47" name="aea4b4b2b8b173f62945a215189e9ea47"></a>
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_com_argv</b></td></tr>
+<tr class="memdesc:aea4b4b2b8b173f62945a215189e9ea47"><td class="mdescLeft">&#160;</td><td class="mdescRight">vecteur d'arguments contenant tout les arguments de la commande <br /></td></tr>
 <tr class="separator:aea4b4b2b8b173f62945a215189e9ea47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_yack_terminal_1_1_field"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_yack_terminal_1_1_field')"><img src="closed.png" alt="-"/>&#160;Attributs publics hérités de <a class="el" href="class_yack_terminal_1_1_field.html">YackTerminal::Field</a></td></tr>
 <tr class="memitem:aea710147d375c20d35e05859713c8a06 inherit pub_attribs_class_yack_terminal_1_1_field"><td class="memItemLeft" align="right" valign="top"><a id="aea710147d375c20d35e05859713c8a06" name="aea710147d375c20d35e05859713c8a06"></a>
@@ -172,6 +173,7 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_yack_terminal_1_1_field"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_yack_terminal_1_1_field')"><img src="closed.png" alt="-"/>&#160;Attributs protégés hérités de <a class="el" href="class_yack_terminal_1_1_field.html">YackTerminal::Field</a></td></tr>
 <tr class="memitem:a0c2cb91ef5bcf30aa32d096c951b2168 inherit pro_attribs_class_yack_terminal_1_1_field"><td class="memItemLeft" align="right" valign="top"><a id="a0c2cb91ef5bcf30aa32d096c951b2168" name="a0c2cb91ef5bcf30aa32d096c951b2168"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td></tr>
+<tr class="memdesc:a0c2cb91ef5bcf30aa32d096c951b2168 inherit pro_attribs_class_yack_terminal_1_1_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">nom du champ <br /></td></tr>
 <tr class="separator:a0c2cb91ef5bcf30aa32d096c951b2168 inherit pro_attribs_class_yack_terminal_1_1_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
@@ -291,11 +293,14 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="a4f220d7afbde463a6ea12d7c45efdb61" name="a4f220d7afbde463a6ea12d7c45efdb61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f220d7afbde463a6ea12d7c45efdb61">&#9670;&#160;</a></span>argCount()</h2>
+<a id="acee38b78f5c3f30a845342d2b87cb87e" name="acee38b78f5c3f30a845342d2b87cb87e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acee38b78f5c3f30a845342d2b87cb87e">&#9670;&#160;</a></span>argCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::size_t YackTerminal::Command::argCount </td>
@@ -304,6 +309,11 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>renvoi le nombre d'arguments de la commande </p>
@@ -312,11 +322,14 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
 
 </div>
 </div>
-<a id="a479d6cf00bf74f14fe9a7d73e263e7ca" name="a479d6cf00bf74f14fe9a7d73e263e7ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a479d6cf00bf74f14fe9a7d73e263e7ca">&#9670;&#160;</a></span>fArgCount() <span class="overload">[1/2]</span></h2>
+<a id="ac45fd1b40d4e32ce16b5ea1d167a5465" name="ac45fd1b40d4e32ce16b5ea1d167a5465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac45fd1b40d4e32ce16b5ea1d167a5465">&#9670;&#160;</a></span>fArgCount() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::size_t YackTerminal::Command::fArgCount </td>
@@ -325,6 +338,11 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>renvoi le nombre total d'arguments de tout les drapeaux de la commande </p>
@@ -332,11 +350,14 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
 
 </div>
 </div>
-<a id="a5d65123521a3024e0eca9f14ed6f59fb" name="a5d65123521a3024e0eca9f14ed6f59fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d65123521a3024e0eca9f14ed6f59fb">&#9670;&#160;</a></span>fArgCount() <span class="overload">[2/2]</span></h2>
+<a id="aba180d4a1f19910efecbe0b6805af2fd" name="aba180d4a1f19910efecbe0b6805af2fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba180d4a1f19910efecbe0b6805af2fd">&#9670;&#160;</a></span>fArgCount() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::size_t YackTerminal::Command::fArgCount </td>
@@ -346,6 +367,11 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>renvoi le nombre total d'arguments d'un drapeau de la commande </p>
@@ -359,11 +385,14 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
 
 </div>
 </div>
-<a id="a11df527ec90d7b97b72e1d84401abed6" name="a11df527ec90d7b97b72e1d84401abed6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11df527ec90d7b97b72e1d84401abed6">&#9670;&#160;</a></span>fCount()</h2>
+<a id="a9c1f8cc863465290f557326cf8ba3687" name="a9c1f8cc863465290f557326cf8ba3687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c1f8cc863465290f557326cf8ba3687">&#9670;&#160;</a></span>fCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::size_t YackTerminal::Command::fCount </td>
@@ -372,6 +401,11 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>renvoi le nombre total de drapeaux <br  />
@@ -380,11 +414,14 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
 
 </div>
 </div>
-<a id="a6bd8aa9e3ae6d0164dbcb12882816661" name="a6bd8aa9e3ae6d0164dbcb12882816661"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bd8aa9e3ae6d0164dbcb12882816661">&#9670;&#160;</a></span>hasFlag()</h2>
+<a id="a6bfff53b45e0c2378492085386c82c47" name="a6bfff53b45e0c2378492085386c82c47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bfff53b45e0c2378492085386c82c47">&#9670;&#160;</a></span>hasFlag()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool YackTerminal::Command::hasFlag </td>
@@ -394,6 +431,11 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>vérifie si la commande contient un drapeau au nom de flag_name </p>
@@ -407,8 +449,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
 
 </div>
 </div>
-<a id="ac1ff96ecaae48b95d815f9aa41e96cb5" name="ac1ff96ecaae48b95d815f9aa41e96cb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1ff96ecaae48b95d815f9aa41e96cb5">&#9670;&#160;</a></span>inspect()</h2>
+<a id="a5fef4459b5e2079bd5f222007ffb5e64" name="a5fef4459b5e2079bd5f222007ffb5e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fef4459b5e2079bd5f222007ffb5e64">&#9670;&#160;</a></span>inspect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,7 +468,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -439,6 +481,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>retourne vrai si tout les éléments vérifient le prédicat faux dans le cas contraire </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">peut</td><td>lancer une exception de type std::lenght_error si un accès hors du tableau est fait </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Réimplémentée à partir de <a class="el" href="class_yack_terminal_1_1_field.html#af14f785e578606ee1123bb5b12b85499">YackTerminal::Field</a>.</p>
 
@@ -468,6 +516,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>vrai si tout les arguments vérifient le prédicat , faux dans le cas contraire </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">peut</td><td>lancer une excepetion de type std::lenght error si elle est appellé et qu'il n'existe aucun flag dans la commande </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -495,6 +549,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>vrai si tout les arguments vérifient le prédicat , faux dans le cas contraire </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">peut</td><td>lancer une excepetion de type std::lenght error si elle est appellé et qu'il n'existe aucun flag dans la commande </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -533,6 +593,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>vrai si tout les arguments du drapeau vérifient le prédicat , faux dans le cas contraire </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">peut</td><td>lancer une excepetion de type std::lenght error si elle est appellé et qu'il n'existe aucun flag dans la commande </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -596,6 +662,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>une référence constante vers l'élement du tableau correspondant </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">peut</td><td>lancer une exception de type std::lenght_error si un accès hors du tableau est fait </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Réimplémentée à partir de <a class="el" href="class_yack_terminal_1_1_field.html#af345e516e5fc03268fb353fdbbf59610">YackTerminal::Field</a>.</p>
 
@@ -633,6 +705,13 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>aucune donnée en retour </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">peut</td><td>lancer une exception de type std::invalid argument si nw_arg_str est une chaîne de caractères vide </td></tr>
+    <tr><td class="paramname">peut</td><td>lancer une exception de type std::runtime_error si aucun nom n'est donné à la commande : par exemple si le programme est appelé sans commande </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Réimplémentée à partir de <a class="el" href="class_yack_terminal_1_1_field.html#af54903ed6e54661531aaa7cf9c7449fd">YackTerminal::Field</a>.</p>
 

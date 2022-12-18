@@ -41,7 +41,7 @@ namespace YackTerminal {
 			Field() = default; 
 
 		protected: // members
-
+			///@brief nom du champ 
 			std::string m_name;
 
 		public : //operations
@@ -50,7 +50,9 @@ namespace YackTerminal {
 			 * @brief Operateur d'accès en lecture des éléments du veteur d'argument de l'objet 
 			 * de type field
 			 * @param key indice d'accèss
-			 * @return une référence constante vers l'élement du tableau correspondant 
+			 * @return une référence constante vers l'élement du tableau correspondant
+			 * @exception peut lancer une exception de type std::lenght_error si un accès hors du tableau 
+			 * est fait 
 			*/
 			virtual const std::string& operator[](size_t key) const;
 			
@@ -64,6 +66,10 @@ namespace YackTerminal {
 			 * @brief reconstruit un objet de type field à partir d'une chaîne de caractères 
 			 * @param nw_arg_str chaîne de caractère de référence 
 			 * @return aucune donnée en retour 
+			 * @exception peut lancer une exception de type std::invalid argument si nw_arg_str 
+			 * est une chaîne de caractères vide 
+			 * @exception peut lancer une exception de type std::runtime_error si aucun nom n'est donné à la commande : 
+			 * par exemple si le programme est appelé sans commande 
 			*/
 			virtual void rconstruct(const std::string& nw_arg_str);
 			
@@ -74,6 +80,8 @@ namespace YackTerminal {
 			 * @param predicate predicat unaire à appliquer 
 			 * @return retourne vrai si tout les éléments vérifient le prédicat faux dans le cas 
 			 * contraire 
+			 * @exception peut lancer une exception de type std::lenght_error si un accès hors du tableau 
+			 * est fait 
 			*/
 			virtual bool inspect(const std::function<bool(const std::string&)>& predicate) const;
 			

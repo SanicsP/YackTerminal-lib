@@ -35,7 +35,7 @@ std\+::vector$<$ std\+::string $>$ {\bfseries m\+\_\+argv}
 \item 
 \mbox{\Hypertarget{class_yack_terminal_1_1_field_a0c2cb91ef5bcf30aa32d096c951b2168}\label{class_yack_terminal_1_1_field_a0c2cb91ef5bcf30aa32d096c951b2168}} 
 std\+::string {\bfseries m\+\_\+name}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em nom du champ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -104,8 +104,13 @@ le prédicat unaire doit s\textquotesingle{}agir d\textquotesingle{}une fonction
 retourne vrai si tout les éléments vérifient le prédicat faux dans le cas contraire 
 \end{DoxyReturn}
 
+\begin{DoxyExceptions}{Exceptions}
+{\em peut} & lancer une exception de type std\+::lenght\+\_\+error si un accès hors du tableau est fait \\
+\hline
+\end{DoxyExceptions}
 
-Réimplémentée dans \mbox{\hyperlink{class_yack_terminal_1_1_command_ac1ff96ecaae48b95d815f9aa41e96cb5}{Yack\+Terminal\+::\+Command}}, et \mbox{\hyperlink{class_yack_terminal_1_1_flag_a8707ffa59925dd2b0f9182879673f208}{Yack\+Terminal\+::\+Flag}}.
+
+Réimplémentée dans \mbox{\hyperlink{class_yack_terminal_1_1_command_a5fef4459b5e2079bd5f222007ffb5e64}{Yack\+Terminal\+::\+Command}}, et \mbox{\hyperlink{class_yack_terminal_1_1_flag_a8707ffa59925dd2b0f9182879673f208}{Yack\+Terminal\+::\+Flag}}.
 
 \mbox{\Hypertarget{class_yack_terminal_1_1_field_a5e73cb3942742568a9e975650beae157}\label{class_yack_terminal_1_1_field_a5e73cb3942742568a9e975650beae157}} 
 \index{YackTerminal::Field@{YackTerminal::Field}!name@{name}}
@@ -139,6 +144,11 @@ Operateur d\textquotesingle{}accès en lecture des éléments du veteur d\textqu
 une référence constante vers l\textquotesingle{}élement du tableau correspondant 
 \end{DoxyReturn}
 
+\begin{DoxyExceptions}{Exceptions}
+{\em peut} & lancer une exception de type std\+::lenght\+\_\+error si un accès hors du tableau est fait \\
+\hline
+\end{DoxyExceptions}
+
 
 Réimplémentée dans \mbox{\hyperlink{class_yack_terminal_1_1_command_ab65f39b20bff07f4a9a931d22149e2a8}{Yack\+Terminal\+::\+Command}}.
 
@@ -160,6 +170,13 @@ reconstruit un objet de type field à partir d\textquotesingle{}une chaîne de c
 \begin{DoxyReturn}{Renvoie}
 aucune donnée en retour 
 \end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em peut} & lancer une exception de type std\+::invalid argument si nw\+\_\+arg\+\_\+str est une chaîne de caractères vide \\
+\hline
+{\em peut} & lancer une exception de type std\+::runtime\+\_\+error si aucun nom n\textquotesingle{}est donné à la commande \+: par exemple si le programme est appelé sans commande \\
+\hline
+\end{DoxyExceptions}
 
 
 Réimplémentée dans \mbox{\hyperlink{class_yack_terminal_1_1_command_afac5aebc9e213da59a6a9c556e7b2941}{Yack\+Terminal\+::\+Command}}, et \mbox{\hyperlink{class_yack_terminal_1_1_flag_a184567b80ff348b3bae12a33d3441cc9}{Yack\+Terminal\+::\+Flag}}.

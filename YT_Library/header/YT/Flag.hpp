@@ -40,7 +40,7 @@ namespace YackTerminal {
 			 * @param arg  chaîne de carctère 
 			 * @return vraie si la chaîne est un drapeau , faux dans le cas contraire 
 			*/
-			bool isFlag(const std::string& arg) const;
+			bool isFlag(const std::string& arg) const noexcept;
 	};
 
 	/**
