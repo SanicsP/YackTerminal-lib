@@ -20,8 +20,8 @@ namespace YackTerminal {
 
 	const std::string& Field::operator[](size_t key) const
 	{
-		if(m_argv.empty())
-			throw std::invalid_argument("access to empty argument vector");
+		if(m_argv.empty() || key > m_argv.size() - 1)
+			throw std::length_error("std::lenght_error : Out of bound access");
 		return m_argv[key];
 	}
 
@@ -34,15 +34,16 @@ namespace YackTerminal {
 	{
 
 		if(nw_arg_str.empty())
-			throw std::invalid_argument("empty string");
+			throw std::invalid_argument("std::invalid_argument empty string");
 
 		std::vector<std::string> arg_array = stringSplit(nw_arg_str , ' ');
+
+		if(arg_array.size() < 2)
+			throw std::runtime_error("std::runtime_error : no command name");
 
 		m_name = arg_array[1];
 		m_argv = std::vector<std::string>{std::begin(arg_array) + 2 ,std::end(arg_array)};
 
-		
-			
 	}
 	
 	bool Field::inspect(const std::function<bool(const std::string&)>& predicate) const 

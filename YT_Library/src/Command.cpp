@@ -24,8 +24,8 @@ namespace YackTerminal {
 		
 		this->Field::rconstruct(nw_arg_str);
 		
-		if(m_argv.empty())
-			throw std::invalid_argument("empty command");
+		//if(m_argv.empty())
+		//	throw std::invalid_argument("Empty command");
 
 		size_t size = m_argv.size();
 
@@ -47,6 +47,9 @@ namespace YackTerminal {
 	}
 	bool Command::inspect(const std::function<bool(const std::string&)>& predicate) const 
 	{
+		if(m_com_argv.empty())
+			throw std::length_error("std::lenght_error : Out of bound access , empty vector");
+
 		for(std::string str : m_com_argv)
 		{
 			if(!predicate(str))
@@ -58,6 +61,9 @@ namespace YackTerminal {
 
 	bool Command::hasFlag(const std::string& flag_name) const
 	{
+		if(m_flagv.empty())
+			return false;
+
 		for(Flag flg : m_flagv)
 		{
 			if(flg.name() == flag_name)
@@ -68,6 +74,9 @@ namespace YackTerminal {
 	
 	bool Command::inspectF(const std::string& flag_name , const std::function<bool(const std::string&)>& predicate) const
 	{
+		if(m_flagv.empty())
+			throw std::length_error("std::lenght_error : Out of bound access , empty vector");
+
 		for(Flag flg : m_flagv)
 		{
 			if(flg.name() == flag_name)
@@ -81,6 +90,9 @@ namespace YackTerminal {
 	
 	bool Command::inspectF(const std::function<bool(const std::string&)>& predicate) const
 	{
+		if(m_flagv.empty())
+			throw std::length_error("std::lenght_error : Out of bound access , empty vector");
+
 		for(Flag flg : m_flagv)
 		{
 			if(!flg.inspect(predicate))
@@ -91,7 +103,7 @@ namespace YackTerminal {
 	
 	bool Command::inspectAll(const std::function<bool(const std::string&)>& predicate)const 
 	{
-		
+
 		return inspectF(predicate) && inspect(predicate);
 
 	}
@@ -103,6 +115,9 @@ namespace YackTerminal {
 	
 	std::size_t Command::fArgCount(const std::string& flagName) const
 	{
+		if(m_flagv.empty())
+			return 0;
+
 		for(Flag flg : m_flagv)
 		{
 			if(flg.name() == flagName)
@@ -115,6 +130,9 @@ namespace YackTerminal {
 	
 	std::size_t Command::fArgCount() const
 	{
+		if(m_flagv.empty())
+			return 0;
+			
 		std::size_t count = 0;
 		for(Flag flg : m_flagv)
 		{
@@ -129,13 +147,13 @@ namespace YackTerminal {
 	
 	std::size_t Command::fCount() const
 	{
-		if(m_flagv.empty())
-			return 0;
 		return m_flagv.size();
 	}
 
 	const std::string& Command::operator[](size_t key) const 
 	{
+		if(key > m_com_argv.size() - 1)
+			throw std::length_error("std::lenght_error : Out of bound access , empty vector");
 		return m_com_argv[key];
 	}
 	
