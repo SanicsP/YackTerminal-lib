@@ -28,6 +28,9 @@ namespace YackTerminal {
 
 	bool Flag::inspect(const std::function<bool(const std::string&)>& predicate) const 
 	{
+		if(m_argv.empty())
+			throw std::length_error("std::lenght_error : Out of bound access , empty vector");
+			
 		for(std::string str : m_argv)
 		{
 			if(!predicate(str))
