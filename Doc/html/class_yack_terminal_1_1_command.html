@@ -129,6 +129,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memdesc:a11df527ec90d7b97b72e1d84401abed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">renvoi le nombre total de drapeaux <br  />
   <a href="class_yack_terminal_1_1_command.html#a11df527ec90d7b97b72e1d84401abed6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a11df527ec90d7b97b72e1d84401abed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a938384069abdc80254b01ce16a9d520b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_yack_terminal_1_1_flag.html">Flag</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_command.html#a938384069abdc80254b01ce16a9d520b">operator[]</a> (const std::string &amp;flg_name)</td></tr>
+<tr class="memdesc:a938384069abdc80254b01ce16a9d520b"><td class="mdescLeft">&#160;</td><td class="mdescRight">accède à un drapeau dans le vecteur de drapeau de l'objet à partir du nom du drapeau  <a href="class_yack_terminal_1_1_command.html#a938384069abdc80254b01ce16a9d520b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a938384069abdc80254b01ce16a9d520b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_yack_terminal_1_1_field"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_yack_terminal_1_1_field')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="class_yack_terminal_1_1_field.html">YackTerminal::Field</a></td></tr>
 <tr class="memitem:a9a4f0ca00ef0d0f6cbe06f0a374ad82a inherit pub_methods_class_yack_terminal_1_1_field"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_yack_terminal_1_1_field.html#a9a4f0ca00ef0d0f6cbe06f0a374ad82a">Field</a> (size_t argc, char *argv[])</td></tr>
 <tr class="memdesc:a9a4f0ca00ef0d0f6cbe06f0a374ad82a inherit pub_methods_class_yack_terminal_1_1_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de base de la classe <a class="el" href="class_yack_terminal_1_1_field.html" title="classe représentant un champ">Field</a>.  <a href="class_yack_terminal_1_1_field.html#a9a4f0ca00ef0d0f6cbe06f0a374ad82a">Plus de détails...</a><br /></td></tr>
@@ -304,14 +307,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
 </div><div class="memdoc">
 
 <p>renvoi le nombre d'arguments de la commande </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<p>return le nombre d'argumenets de la commande <br  />
- </p>
+<dl class="section return"><dt>Renvoie</dt><dd>le nombre d'argumenets de la commande <br  />
+ </dd></dl>
 
 </div>
 </div>
@@ -352,6 +349,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
 </div><div class="memdoc">
 
 <p>renvoi le nombre total d'arguments d'un drapeau de la commande </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flagName</td><td>le nom du drapeaux à analyser </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Renvoie</dt><dd>le nombre total d'arguments </dd></dl>
 
 </div>
@@ -533,8 +536,36 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td
 
 </div>
 </div>
+<a id="a938384069abdc80254b01ce16a9d520b" name="a938384069abdc80254b01ce16a9d520b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a938384069abdc80254b01ce16a9d520b">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_yack_terminal_1_1_flag.html">Flag</a> &amp; YackTerminal::Command::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>flg_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>accède à un drapeau dans le vecteur de drapeau de l'objet à partir du nom du drapeau </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flg_name</td><td>le nom du flag recherché </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>une reférence vers le drapeau ayant le nom flg_name</dd></dl>
+<p>si la commande contient plusieurs fois le même flag c'est la reférence du flag se trouvant le plus proche du début du tableau qui sera envoyée </p>
+
+</div>
+</div>
 <a id="ab65f39b20bff07f4a9a931d22149e2a8" name="ab65f39b20bff07f4a9a931d22149e2a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab65f39b20bff07f4a9a931d22149e2a8">&#9670;&#160;</a></span>operator[]()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab65f39b20bff07f4a9a931d22149e2a8">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

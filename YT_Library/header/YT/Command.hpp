@@ -106,13 +106,13 @@ namespace YackTerminal
 			
 			/**
 			 * @brief renvoi le nombre d'arguments de la commande 
-			 * @param 
 			 * @return le nombre d'argumenets de la commande  
 			*/
 			std::size_t argCount() const;
 			
 			/**
 			 * @brief renvoi le nombre total d'arguments d'un drapeau de la commande 
+			 * @param flagName le nom du drapeaux à analyser
 			 * @return le nombre total d'arguments
 			*/
 			std::size_t fArgCount(const std::string& flagName) const;
@@ -133,12 +133,17 @@ namespace YackTerminal
 
 
 			////////////
-			Flag& operator[](const std::string& flg_name);
 
 			// find funcs
 			/**
-			 * @brief 
+			 * @brief accède à un drapeau dans le vecteur de drapeau de l'objet à partir du 
+			 * nom du drapeau
+			 * @param flg_name le nom du flag recherché 
+			 * @return une reférence vers le drapeau ayant le nom flg_name
+			 * @details si la commande contient plusieurs fois le même flag c'est la reférence du flag
+			 * se trouvant le plus proche du début du tableau qui sera envoyée 
 			*/
+			Flag& operator[](const std::string& flg_name);
 			/////////////////:
 			
 		public: // public members  

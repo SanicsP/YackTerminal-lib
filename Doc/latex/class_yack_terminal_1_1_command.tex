@@ -38,7 +38,9 @@ std\+::size\+\_\+t \mbox{\hyperlink{class_yack_terminal_1_1_command_a479d6cf00bf
 \begin{DoxyCompactList}\small\item\em renvoi le nombre total d\textquotesingle{}arguments de tout les drapeaux de la commande \end{DoxyCompactList}\item 
 std\+::size\+\_\+t \mbox{\hyperlink{class_yack_terminal_1_1_command_a11df527ec90d7b97b72e1d84401abed6}{f\+Count}} () const
 \begin{DoxyCompactList}\small\item\em renvoi le nombre total de drapeaux ~\newline
- \end{DoxyCompactList}\end{DoxyCompactItemize}
+ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_yack_terminal_1_1_flag}{Flag}} \& \mbox{\hyperlink{class_yack_terminal_1_1_command_a938384069abdc80254b01ce16a9d520b}{operator\mbox{[}$\,$\mbox{]}}} (const std\+::string \&flg\+\_\+name)
+\begin{DoxyCompactList}\small\item\em accède à un drapeau dans le vecteur de drapeau de l\textquotesingle{}objet à partir du nom du drapeau \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Attributs publics}
 \begin{DoxyCompactItemize}
 \item 
@@ -122,13 +124,11 @@ aucune donnée en retour
 
 renvoi le nombre d\textquotesingle{}arguments de la commande 
 
-
-\begin{DoxyParams}{Paramètres}
-{\em } & \\
-\hline
-\end{DoxyParams}
-return le nombre d\textquotesingle{}argumenets de la commande ~\newline
- \mbox{\Hypertarget{class_yack_terminal_1_1_command_a479d6cf00bf74f14fe9a7d73e263e7ca}\label{class_yack_terminal_1_1_command_a479d6cf00bf74f14fe9a7d73e263e7ca}} 
+\begin{DoxyReturn}{Renvoie}
+le nombre d\textquotesingle{}argumenets de la commande ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_yack_terminal_1_1_command_a479d6cf00bf74f14fe9a7d73e263e7ca}\label{class_yack_terminal_1_1_command_a479d6cf00bf74f14fe9a7d73e263e7ca}} 
 \index{YackTerminal::Command@{YackTerminal::Command}!fArgCount@{fArgCount}}
 \index{fArgCount@{fArgCount}!YackTerminal::Command@{YackTerminal::Command}}
 \doxysubsubsection{\texorpdfstring{fArgCount()}{fArgCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -151,6 +151,11 @@ le nombre total d\textquotesingle{}arguments
 
 renvoi le nombre total d\textquotesingle{}arguments d\textquotesingle{}un drapeau de la commande 
 
+
+\begin{DoxyParams}{Paramètres}
+{\em flag\+Name} & le nom du drapeaux à analyser \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
 le nombre total d\textquotesingle{}arguments 
 \end{DoxyReturn}
@@ -264,10 +269,28 @@ verifie selon un predicat tout les arguments d\textquotesingle{}un drapeau
 \begin{DoxyReturn}{Renvoie}
 vrai si tout les arguments du drapeau vérifient le prédicat , faux dans le cas contraire 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_yack_terminal_1_1_command_ab65f39b20bff07f4a9a931d22149e2a8}\label{class_yack_terminal_1_1_command_ab65f39b20bff07f4a9a931d22149e2a8}} 
+\mbox{\Hypertarget{class_yack_terminal_1_1_command_a938384069abdc80254b01ce16a9d520b}\label{class_yack_terminal_1_1_command_a938384069abdc80254b01ce16a9d520b}} 
 \index{YackTerminal::Command@{YackTerminal::Command}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!YackTerminal::Command@{YackTerminal::Command}}
-\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_yack_terminal_1_1_flag}{Flag}} \& Yack\+Terminal\+::\+Command\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flg\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+accède à un drapeau dans le vecteur de drapeau de l\textquotesingle{}objet à partir du nom du drapeau 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em flg\+\_\+name} & le nom du flag recherché \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+une reférence vers le drapeau ayant le nom flg\+\_\+name
+\end{DoxyReturn}
+si la commande contient plusieurs fois le même flag c\textquotesingle{}est la reférence du flag se trouvant le plus proche du début du tableau qui sera envoyée \mbox{\Hypertarget{class_yack_terminal_1_1_command_ab65f39b20bff07f4a9a931d22149e2a8}\label{class_yack_terminal_1_1_command_ab65f39b20bff07f4a9a931d22149e2a8}} 
+\index{YackTerminal::Command@{YackTerminal::Command}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!YackTerminal::Command@{YackTerminal::Command}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily const std\+::string \& Yack\+Terminal\+::\+Command\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 

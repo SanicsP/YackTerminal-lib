@@ -65,6 +65,7 @@ bool TC_COMMAND()
 	std::cout<<"\n\t TC_COMMAND \n ";
 	std::cout<<"--------------------------------------------------------------------\n";
 
+	
 	//UT_Command();
 	std::string command;
 	std::cout<<"> ";
@@ -106,8 +107,13 @@ bool TC_COMMAND()
 				std::cout<<" ";
 			if(spec_)
 			{
-				for(int i = 0 ; i < com["-spec"].m_argv.size() ; i++)
+				for(int i = 0 ; i < com["-spec"].m_argv.size(); i++)
 				{
+					if(!com["-spec"].inspect([](const std::string& str) -> bool {
+
+						return std::all_of(std::begin(str) , std::end(str) , isdigit);
+					}))
+						std::cout<<"☻♥";
 					std::cout<<com["-spec"][i];
 				}
 			}
