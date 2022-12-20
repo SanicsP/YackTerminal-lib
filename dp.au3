@@ -20,6 +20,7 @@ Global $CompilerDef = $CmdLine[1]
 
 Move()
 Build()
+
 Func Move() 
 	
 	If FileExists($destDir) Then
