@@ -22,7 +22,6 @@ Move()
 Build()
 
 Func Move() 
-	
 	If FileExists($destDir) Then
 		DirRemove($destDir , 1)
 	EndIf

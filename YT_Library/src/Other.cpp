@@ -1,4 +1,5 @@
-#include <Other.hpp>
+#include <YT/Other.hpp>
+#include <YT/Other_Utils.hpp>
 
 namespace YackTerminal{
 
@@ -23,55 +24,19 @@ namespace YackTerminal{
 
 	std::vector<std::string> stringSplit(const std::string& str , char delim)
 	{
-		using Cstr_it = std::string::const_iterator;
-		std::vector<std::string> return_v{};
+		const size_t max_argument_caracters = 255;
+		std::istringstream str_stream{str};
 
-		Cstr_it mov_it{std::begin(str)};
-		Cstr_it delim_it{std::begin(str)};
+		std::vector<std::string> split_Vector;
 
-		auto replace = [](char delim , Cstr_it& mov_it , Cstr_it& delim_it ,
-						  const std::string& str
-		) -> void {
+		char sub_stream[max_argument_caracters];
 
-			while(true) {
-			if (mov_it == std::end(str)  - 1)
-			{
-				
-				break;
-			}
-			else if(*mov_it == delim && *(mov_it + 1) != delim)
-			{
-				delim_it = mov_it + 1;
-				mov_it++;
-				break;
-			}
-			else 
-			{
-				mov_it++;
-			}
-			}
-
-		};
-
-		while(mov_it != std::end(str))
+		for(int i = 0 ; str_stream.getline(sub_stream , max_argument_caracters , delim) ; )
 		{
-			if(mov_it == std::begin(str) && *mov_it == delim)
-				replace(delim , mov_it , delim_it , str);
-	
-			
-			if(*mov_it == delim )
-			{
-				return_v.push_back({delim_it , mov_it});
-				replace(delim , mov_it , delim_it , str);
-			}
-			else if(mov_it == std::end(str) - 1) 
-			{
-				return_v.push_back({delim_it , mov_it +1 });
-			}
-			mov_it++;
-
+			split_Vector.push_back(sub_stream);
 		}
-		return return_v;
+
+		return split_Vector;
 		//str_____ipp 
 
 	}

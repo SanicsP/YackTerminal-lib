@@ -6,9 +6,10 @@
 #include <string>
 #include <vector>
 #include <functional>
-#include <Field.hpp>
-#include <Flag.hpp>
-#include <Other.hpp>
+
+#include <YT/Field.hpp>
+#include <YT/Flag.hpp>
+#include <YT/Other.hpp>
 
 namespace YackTerminal  
 {

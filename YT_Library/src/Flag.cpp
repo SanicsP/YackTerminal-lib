@@ -1,5 +1,5 @@
-#include <Flag.hpp>
-#include <Other.hpp>
+#include <YT/Flag.hpp>
+#include <YT/Other.hpp>
 namespace YackTerminal {
 
 	Flag::Flag(const std::string& ArgStr , char deliI , char deliO , char arg_delim) : 

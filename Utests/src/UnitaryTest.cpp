@@ -76,9 +76,16 @@ void UT_Command()
 
 void UT_Other()
 {
-	std::vector<std::string> test{yt::stringSplit("f gt" , ' ')};
-	std::cout<<test[1]<<std::endl;
-	std::cout<<test.size()<<std::endl;
+	/* 
+	std::vector<std::string> test{yt::stringSplit("f 1 3" , ' ')};
+	assert(test[0] == "f" && "assert fail in stringSplit");
+	assert(test[1] == "1" && "assert fail in stringSplit");
+	assert(test[2] == "3" && "assert fail in stringSplit");
+	*/
+
+	std::string cleared = yt::clear_delim_string("--hello--world--" , '-');
+	std::cout<<cleared<<std::endl;
+	assert(cleared == "hello--world" && "assert error");
 }
 
 void UT_Flag()

@@ -3,7 +3,7 @@
 
 #ifndef FLAG_HPP
 #define FLAG_HPP
-#include "Field.hpp"
+#include <YT/Field.hpp>
 
 namespace YackTerminal {
 

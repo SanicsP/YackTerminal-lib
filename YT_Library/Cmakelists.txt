@@ -3,20 +3,21 @@ project(YackTerminalLib)
 
 
 #repertoirs 
-set(include_dir ${PROJECT_SOURCE_DIR}/header/YT)
+set(include_dir ${PROJECT_SOURCE_DIR}/header)
+set(include_dir_2 ${PROJECT_SOURCE_DIR}/header/YT)
 
 set(sources_dir ${PROJECT_SOURCE_DIR}/src)
 
 
 
 #fichiers sources 
-#test de déploiment
 
 set(headersArg 
 	${include_dir}/Command.hpp
 	${include_dir}/Field.hpp
 	${include_dir}/Other.hpp
 	${include_dir}/Flag.hpp
+	${include_dir}/Other_Utils.hpp
 
 )
 
@@ -25,9 +26,13 @@ set (srcArg
 	${sources_dir}/Command.cpp 
 	${sources_dir}/Field.cpp
 	${sources_dir}/Flag.cpp
+	${sources_dir}/Other_Utils.cpp
+
 )
 
 
 add_library(Arg ${srcArg} ${include_dir})
+
 target_include_directories(Arg PUBLIC ${include_dir})
+
 target_compile_options(Arg PUBLIC -std=c++17)
