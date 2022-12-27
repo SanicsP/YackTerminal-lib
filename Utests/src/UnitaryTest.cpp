@@ -77,13 +77,32 @@ void UT_Flag()
 	assert(check &&"Assert fail in Flag inspect function");
 
 	std::vector<std::string> split_flag{
-		"flag[arg1" , "arg2" , "arg3" , "arg4]" 
+		"flag[arg1" , "arg2" , "arg3]"
 	};
-	
 	std::vector<std::string>::const_iterator it = std::cbegin(split_flag);
+	std::string flag = yt::repastFlag(split_flag , it, '[' , ']' , ' ');
+	
+	assert(flag != "" && "assert fail ! ");
 
-	std::cout<<yt::repastFlag(split_flag , it, '[' , ']' , ' ')<<std::endl;
+	split_flag = {
+		"flag[arg1" , "arg3]"
+	};
+	 it = std::cbegin(split_flag);
+	flag = yt::repastFlag(split_flag , it, '[' , ']' , ' ');
+	assert(flag != "" && "assert fail ! ");
 
+	split_flag = {
+		"flag[arg1]" , "arg3]"
+	};
+
+	 it = std::cbegin(split_flag);
+	
+	flag = yt::repastFlag(split_flag , it, '[' , ']' , ' ');
+	
+	assert(flag == "" && "assert fail ! ");
+	
+
+	
 }
 
 void UT_Command()

@@ -49,9 +49,37 @@ namespace YackTerminal {
 	* @return vraie si la chaîne est un drapeau , faux dans le cas contraire 
 	*/
 	bool isFlag(const std::string& arg , char delimIn , char delimOut);
+	
+	/**
+	 * @brief verifie si une chaîne de caractères d'un vecteur est la première partie 
+	 * d'un drapeau
+	 * @param str la chaîne à traiter 
+	 * @param celimIn le caractère ouvrant 
+	 * @param delimOut le caractère fermant
+	 * @return vrai si la chaîne est une partie d'un drapeau , faux dans le cas contraire
+	*/
+	bool isPart_Of_Flag(const std::string& str , char delimIn , char delimOut);
+
+	/**
+	 * @brief dans un vecteur de chaîne de caractère , rassemble dans une même chaîne de 
+	 * caractères des parties de drapeaux séparés par StringSplit
+	 * @details cette fonction résout le problème de séparation d'un drapeau. L'orsque celui-ci 
+	 * delimite ses arguments par des caractères d'espacement Field::reconstruct n'identifie pas le 
+	 * drapeau et le voit comme plusieurs arguments séparés par des espaces , cela a pour conséquance 
+	 * de rendre la délimitation des arguments par un espace impossible
+	 * à noter qu'un drapeau commence par son nom suivi du délimiteur ouvrant et se termine par le 
+	 * délimiteur fermant , entre les deux il y a les arguments du drapeau 
+	 * @example
+	 * f[arg1 arg2] le nom du drapeau est f les caractères ouvrants et fermants sont [ et ] et 
+	 * le caractère de délimitation est l'espace ' ' 
+	 * 
+	 * @param argv le vecteur de chaîne de caractères à traiter 
+	 * @param initFlagpos la position du début du drapeau dans le tableau 
+	*/
 	std::string repastFlag(const std::vector<std::string>& argv , 
 	const std::vector<std::string>::const_iterator& initFlagPos, 
 							char delimIn , char delimOut , char arg_delim);
+
 }
 
 
