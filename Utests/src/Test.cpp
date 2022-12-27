@@ -7,10 +7,12 @@ int main(int argc , char* argv[])
 {
 	
 	//TC_FIELD();
-	//UT_Other();
 	//TC_FlAG();
 	//TC_COMMAND();
 	UT_Other();
+	UT_Field();
+	UT_Flag();
+	UT_Command();
 	std::cout<<" Exit success "<<std::endl;
 
 	std::cin.get();

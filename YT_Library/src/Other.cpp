@@ -24,20 +24,9 @@ namespace YackTerminal{
 
 	std::vector<std::string> stringSplit(const std::string& str , char delim)
 	{
-		const size_t max_argument_caracters = 255;
-		std::istringstream str_stream{str};
-
-		std::vector<std::string> split_Vector;
-
-		char sub_stream[max_argument_caracters];
-
-		for(int i = 0 ; str_stream.getline(sub_stream , max_argument_caracters , delim) ; )
-		{
-			split_Vector.push_back(sub_stream);
-		}
-
+		std::string clear_str = clear_delim_string(str , delim);
+		std::vector<std::string> split_Vector = raw_divide_string(clear_str , delim);
 		return split_Vector;
 		//str_____ipp 
-
 	}
 }
