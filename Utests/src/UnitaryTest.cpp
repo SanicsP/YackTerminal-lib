@@ -76,8 +76,14 @@ void UT_Flag()
 	bool check = test_flag.inspect(predicate);
 	assert(check &&"Assert fail in Flag inspect function");
 
-	//std::cout<<std::boolalpha<<yt::isFlag("t<arg1 arg2>" , '<' , '>')<<std::endl;
+	std::vector<std::string> split_flag{
+		"flag[arg1" , "arg2" , "arg3" , "arg4]" 
+	};
 	
+	std::vector<std::string>::const_iterator it = std::cbegin(split_flag);
+
+	std::cout<<yt::repastFlag(split_flag , it, '[' , ']' , ' ')<<std::endl;
+
 }
 
 void UT_Command()

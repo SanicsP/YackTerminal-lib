@@ -11,7 +11,9 @@ namespace YackTerminal {
 	/**
 	 * @brief classe représentant un champ 
 	 * @details un champ est un élément possédant un nom auquel lui est associé une liste de
-	 * d'arguments délimités par des espaces 
+	 * d'arguments délimités par des espaces , il représente la commande entrée par l'utilisateur lors 
+	 * du lancement du programme . fourrnit des opérations de base pour faciliter le traitement de données issues 
+	 * de la ligne de commande 
 	*/
 	class Field {
 		
@@ -70,6 +72,8 @@ namespace YackTerminal {
 			 * est une chaîne de caractères vide 
 			 * @exception peut lancer une exception de type std::runtime_error si aucun nom n'est donné à la commande : 
 			 * par exemple si le programme est appelé sans commande 
+			 * @note à noter que le premier mot de la commande n'est pas enregistré , cela est dût au fait 
+			 * que l'objet considère systématiquement le premier mot comme le nom du programme
 			*/
 			virtual void rconstruct(const std::string& nw_arg_str);
 			

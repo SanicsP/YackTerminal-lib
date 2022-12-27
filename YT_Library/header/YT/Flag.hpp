@@ -49,6 +49,9 @@ namespace YackTerminal {
 	* @return vraie si la chaîne est un drapeau , faux dans le cas contraire 
 	*/
 	bool isFlag(const std::string& arg , char delimIn , char delimOut);
+	std::string repastFlag(const std::vector<std::string>& argv , 
+	const std::vector<std::string>::const_iterator& initFlagPos, 
+							char delimIn , char delimOut , char arg_delim);
 }
 
 

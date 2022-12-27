@@ -69,6 +69,81 @@ namespace YackTerminal {
 		return true;
 	}
 
+	std::string repastFlag(const std::vector<std::string>& argv , 
+	const std::vector<std::string>::const_iterator& initFlagPos , 
+							char delimIn , char delimOut , char arg_delim)
+	{
+		
+		std::string flag_first_part = *initFlagPos;
+		std::vector<std::string>::const_iterator secondFlagPos;
+
+		auto first_part_predicate = [delimIn , delimOut](const std::string& str) -> bool {
+
+			if(std::count(std::begin(str) , std::end(str) , delimIn) != 1)
+				return false;
+			else if(str.front() == delimIn)
+				return false;
+			else if (std::count(std::begin(str) , std::end(str) , delimOut) > 0)
+				return false;
+			
+			return true;
+		};
+		
+		std::cout<<"1"<<std::endl;
+		std::cout<<flag_first_part<<std::endl;
+
+
+		if(!first_part_predicate(flag_first_part))
+			return "";
+		//first part check 
+		
+		auto second_part_flag_predicate = [delimOut , delimIn](const std::string& str) -> bool {
+
+			if(std::count(std::begin(str) , std::end(str) , delimOut) != 1)
+				return false;
+			else if(str.back() != delimOut)
+				return false;
+			else if (std::count(std::begin(str) , std::end(str) , delimIn) > 0)
+				return false;
+			return true;
+		};
+
+
+		
+		//second part find
+		secondFlagPos = std::find_if(initFlagPos , std::cend(argv) , second_part_flag_predicate);
+		std::cout<<"2"<<std::endl;
+		if(secondFlagPos == std::cend(argv))
+			return "no flag";
+		
+		auto flag_predicate = [delimOut , delimIn , first_part_predicate](const std::string& str) -> bool {
+
+			if(first_part_predicate(str) == true) 
+				return true;
+			else if(std::count(std::begin(str) , std::end(str) , delimIn) > 0 || 
+					std::count(std::begin(str) , std::end(str) , delimOut) > 0 
+			)
+				return true;
+			return false;
+		};
+		
+		std::string flag_str;
+
+		std::cout<<"3"<<std::endl;
+		if(std::count_if(initFlagPos + 1 , secondFlagPos , flag_predicate) > 0)
+			return "";
+		else {
+			for(auto it = initFlagPos ; it != secondFlagPos + 1 ; it++)
+			{
+				flag_str+= *it + arg_delim;
+			}
+		}
+
+		std::cout<<"4"<<std::endl;
+		return flag_str;
+
+	}
+
 
 };
 
