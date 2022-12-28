@@ -71,10 +71,16 @@ namespace YackTerminal {
 	 * de rendre la délimitation des arguments par un espace impossible
 	 * à noter qu'un drapeau commence par son nom suivi du délimiteur ouvrant et se termine par le 
 	 * délimiteur fermant , entre les deux il y a les arguments du drapeau 
-	 * 
-	 * 
 	 * @param argv le vecteur de chaîne de caractères à traiter 
 	 * @param initFlagpos la position du début du drapeau dans le tableau 
+	 * @param delimIn caractère ouvrant du drapeau 
+	 * @param delimOut caractère fermant du drapeau
+	 * @param arg_delim caractère de délimitation des arguments du drapeau
+	 * @return un doublet std::pair<std::string , std::vector<std::string>::const_iterator> 
+	 * le first est las chaîne de cararctère du drapeau rassemblé et le second
+	 * est un itérateur pointant sur la chaîne de caractère contenant le caractère fermant
+	 * si une erreur est rencontrée la fonction renverra un doublet avec une chaîne vide et un 
+	 * itérateur pointant à la fin de argv 
 	*/
 	std::pair<std::string , std::vector<std::string>::const_iterator> repastFlag(const std::vector<std::string>& argv , 
 	const std::vector<std::string>::const_iterator& initFlagPos, 

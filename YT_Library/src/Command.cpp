@@ -33,20 +33,26 @@ namespace YackTerminal {
 
 		while(argv_it != std::cend(m_argv))
 		{
-			std::cout<<"analysing : "<<*argv_it<< "\n";
-			if(isPart_Of_Flag(*argv_it , m_delim_in , m_delim_out))
+			//std::cout<<"analysing : "<<*argv_it<< "\n";
+			
+			if(isFlag(*argv_it , m_delim_in , m_delim_out))
+			{
+				m_flagv.push_back(Flag{*argv_it , m_delim_in , 
+					m_delim_out , m_flag_arg_delim});
+			}
+			else if(isPart_Of_Flag(*argv_it , m_delim_in , m_delim_out))
 			{
 				std::pair<std::string , std::vector<std::string>::const_iterator> flag_str = 
 				repastFlag(m_argv , argv_it , m_delim_in , m_delim_out , m_flag_arg_delim);
 				
-				std::cout<<"repast flag : "<<flag_str.first<<"\n";
+				//std::cout<<"repast flag : "<<flag_str.first<<"\n";
 				
-				if(flag_str.first == "")
-					std::cout<<"no flag"<<std::endl;
-				else {
+				if(flag_str.first != ""){
+					
+					//std::cout<<"no flag"<<std::endl;
+					
 					m_flagv.push_back(Flag{flag_str.first , m_delim_in , 
 					m_delim_out , m_flag_arg_delim});
-
 					argv_it = flag_str.second;
 					continue;
 				}

@@ -101,16 +101,16 @@ namespace YackTerminal {
 		std::string flag_first_part = *initFlagPos;
 		std::vector<std::string>::const_iterator secondFlagPos;
 
-		
-		
 		//std::cout<<"1"<<std::endl;
-		 std::cout<<flag_first_part<<" is a part of flag "<<std::endl;
+		//std::cout<<flag_first_part<<" is a part of flag "<<std::endl;
 
-
+		///////////////////first part check /////////////////////////////////////////////
 		if(!isPart_Of_Flag(flag_first_part , delimIn , delimOut))
 			return {"" , std::cend(argv)};;
-		//first part check 
 		
+		///////////////////second part check /////////////////////////////////////////////
+				
+		// predicat that chek if in str vector there are close character of flag
 		auto second_part_flag_predicate = [delimOut , delimIn](const std::string& str) -> bool {
 
 			if(std::count(std::begin(str) , std::end(str) , delimOut) != 1)
@@ -122,15 +122,15 @@ namespace YackTerminal {
 			return true;
 		};
 
-
 		
-		//second part find
 		secondFlagPos = std::find_if(initFlagPos , std::cend(argv) , second_part_flag_predicate);
 		// std::cout<<"2"<<std::endl;
 		if(secondFlagPos == std::cend(argv))
-			return {"no flag" , std::cend(argv)};
+			return {"" , std::cend(argv)};
 		
-		auto flag_predicate = [delimOut , delimIn ](const std::string& str) -> bool {
+		//////////////////////repast the flag/////////////////////////////////////////////
+		// predicat that chek if between open and close character there another flag
+		auto flag_predicate = [delimOut , delimIn](const std::string& str) -> bool {
 
 			if(isPart_Of_Flag(str , delimIn , delimOut) == true) 
 				return true;
@@ -145,6 +145,7 @@ namespace YackTerminal {
 		std::vector<std::string>::const_iterator return_it = initFlagPos;
 
 		// std::cout<<"3"<<std::endl;
+
 
 		if(std::count_if(initFlagPos + 1 , secondFlagPos , flag_predicate) > 0)
 			return {"" , std::cend(argv)};
