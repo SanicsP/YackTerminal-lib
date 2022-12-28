@@ -80,16 +80,16 @@ void UT_Flag()
 		"flag[arg1" , "arg2" , "arg3]"
 	};
 	std::vector<std::string>::const_iterator it = std::cbegin(split_flag);
-	std::string flag = yt::repastFlag(split_flag , it, '[' , ']' , ' ');
+	std::pair<std::string , std::vector<std::string>::const_iterator> flag = yt::repastFlag(split_flag , it, '[' , ']' , ' ');
 	
-	assert(flag != "" && "assert fail ! ");
+	assert(flag.first != "" && "assert fail ! ");
 
 	split_flag = {
 		"flag[arg1" , "arg3]"
 	};
 	 it = std::cbegin(split_flag);
 	flag = yt::repastFlag(split_flag , it, '[' , ']' , ' ');
-	assert(flag != "" && "assert fail ! ");
+	assert(flag.first != "" && "assert fail ! ");
 
 	split_flag = {
 		"flag[arg1]" , "arg3]"
@@ -99,7 +99,7 @@ void UT_Flag()
 	
 	flag = yt::repastFlag(split_flag , it, '[' , ']' , ' ');
 	
-	assert(flag == "" && "assert fail ! ");
+	assert(flag.first == "" && "assert fail ! ");
 	
 
 	
@@ -118,9 +118,15 @@ void UT_Command()
 		return std::all_of(std::begin(str) , std::end(str) , isalpha);
 	};
 
-	yt::Command com{"prog command1 arg1 arg2 arg3 flag1<arg1/arg2> flag2<1/2/3/>" , '<' , '>' , '/'};
+	yt::Command com{"prog command1 arg1 arg2 arg3 flag1<arg1 arg2> flag2<1 2 3>" , '<' , '>' , ' '};
 	
-	std::cout<<com.m_flagv[1][2]<<std::endl;;
+	for(auto arr : com.m_com_argv)
+	{
+		std::cout<<arr<<std::endl;
+	}
+	std::cout<<"print end"<<std::endl;
+
+	std::cout<<com.m_flagv[1][1]<<std::endl;;
 	assert(com.argCount() == 3 && "func Flag::argCount()");
 	
 

@@ -60,6 +60,8 @@ namespace YackTerminal {
 	*/
 	bool isPart_Of_Flag(const std::string& str , char delimIn , char delimOut);
 
+	bool isEnd_Of_Flag(const std::string& str , char delimIn , char delimOut);
+
 	/**
 	 * @brief dans un vecteur de chaîne de caractère , rassemble dans une même chaîne de 
 	 * caractères des parties de drapeaux séparés par StringSplit
@@ -69,14 +71,12 @@ namespace YackTerminal {
 	 * de rendre la délimitation des arguments par un espace impossible
 	 * à noter qu'un drapeau commence par son nom suivi du délimiteur ouvrant et se termine par le 
 	 * délimiteur fermant , entre les deux il y a les arguments du drapeau 
-	 * @example
-	 * f[arg1 arg2] le nom du drapeau est f les caractères ouvrants et fermants sont [ et ] et 
-	 * le caractère de délimitation est l'espace ' ' 
+	 * 
 	 * 
 	 * @param argv le vecteur de chaîne de caractères à traiter 
 	 * @param initFlagpos la position du début du drapeau dans le tableau 
 	*/
-	std::string repastFlag(const std::vector<std::string>& argv , 
+	std::pair<std::string , std::vector<std::string>::const_iterator> repastFlag(const std::vector<std::string>& argv , 
 	const std::vector<std::string>::const_iterator& initFlagPos, 
 							char delimIn , char delimOut , char arg_delim);
 

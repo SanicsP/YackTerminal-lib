@@ -29,18 +29,39 @@ namespace YackTerminal {
 
 		size_t size = m_argv.size();
 
-		for(int i = 0 ; i < size ; i++)
+		std::vector<std::string>::const_iterator argv_it = std::cbegin(m_argv);
+
+		while(argv_it != std::cend(m_argv))
 		{
-			//std::cout<<m_argv[i] << " | ";
-			if(isFlag(m_argv[i] , m_delim_in , m_delim_out))
+			std::cout<<"analysing : "<<*argv_it<< "\n";
+			if(isPart_Of_Flag(*argv_it , m_delim_in , m_delim_out))
 			{
-				//std::cout<<"flag"<<std::endl;
-				m_flagv.push_back(Flag{m_argv[i] , m_delim_in , m_delim_out , m_flag_arg_delim});
+				std::pair<std::string , std::vector<std::string>::const_iterator> flag_str = 
+				repastFlag(m_argv , argv_it , m_delim_in , m_delim_out , m_flag_arg_delim);
+				
+				std::cout<<"repast flag : "<<flag_str.first<<"\n";
+				
+				if(flag_str.first == "")
+					std::cout<<"no flag"<<std::endl;
+				else {
+					m_flagv.push_back(Flag{flag_str.first , m_delim_in , 
+					m_delim_out , m_flag_arg_delim});
+
+					argv_it = flag_str.second;
+					continue;
+				}
+			}
+			else if(isEnd_Of_Flag(*argv_it , m_delim_in , m_delim_out))
+			{
+				argv_it++;
+				continue;
 			}
 			else
 			{
-				m_com_argv.push_back(m_argv[i]);
+				m_com_argv.push_back(*argv_it);
 			}
+
+			argv_it++;
 		}
 		std::cout<<"\n";
 

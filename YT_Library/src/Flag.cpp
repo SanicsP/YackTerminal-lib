@@ -77,11 +77,23 @@ namespace YackTerminal {
 				return false;
 			else if (std::count(std::begin(str) , std::end(str) , delimOut) > 0)
 				return false;
-			
+
 			return true;
 	}
 
-	std::string repastFlag(const std::vector<std::string>& argv , 
+	bool isEnd_Of_Flag(const std::string& str , char delimIn , char delimOut)
+	{
+		if(std::count(std::begin(str) , std::end(str) , delimOut) != 1)
+			return false;
+		else if(str.back() != delimOut)
+			return false;
+		else if (std::count(std::begin(str) , std::end(str) , delimIn) > 0)
+			return false;
+		
+		return true;
+	}
+
+	std::pair<std::string , std::vector<std::string>::const_iterator> repastFlag(const std::vector<std::string>& argv , 
 	const std::vector<std::string>::const_iterator& initFlagPos , 
 							char delimIn , char delimOut , char arg_delim)
 	{
@@ -92,11 +104,11 @@ namespace YackTerminal {
 		
 		
 		//std::cout<<"1"<<std::endl;
-		std::cout<<flag_first_part<<std::endl;
+		 std::cout<<flag_first_part<<" is a part of flag "<<std::endl;
 
 
 		if(!isPart_Of_Flag(flag_first_part , delimIn , delimOut))
-			return "";
+			return {"" , std::cend(argv)};;
 		//first part check 
 		
 		auto second_part_flag_predicate = [delimOut , delimIn](const std::string& str) -> bool {
@@ -116,7 +128,7 @@ namespace YackTerminal {
 		secondFlagPos = std::find_if(initFlagPos , std::cend(argv) , second_part_flag_predicate);
 		// std::cout<<"2"<<std::endl;
 		if(secondFlagPos == std::cend(argv))
-			return "no flag";
+			return {"no flag" , std::cend(argv)};
 		
 		auto flag_predicate = [delimOut , delimIn ](const std::string& str) -> bool {
 
@@ -130,20 +142,24 @@ namespace YackTerminal {
 		};
 		
 		std::string flag_str;
+		std::vector<std::string>::const_iterator return_it = initFlagPos;
 
 		// std::cout<<"3"<<std::endl;
-		
+
 		if(std::count_if(initFlagPos + 1 , secondFlagPos , flag_predicate) > 0)
-			return "";
+			return {"" , std::cend(argv)};
 		else {
-			for(auto it = initFlagPos ; it != secondFlagPos + 1 ; it++)
+			while(return_it != secondFlagPos + 1)
 			{
-				flag_str+= *it + arg_delim;
+				flag_str+= *return_it;
+				if(return_it != secondFlagPos)
+					flag_str+= arg_delim;
+				return_it++;
 			}
 		}
 
 		// std::cout<<"4"<<std::endl;
-		return flag_str;
+		return {flag_str , return_it};
 
 	}
 
