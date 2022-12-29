@@ -107,7 +107,18 @@ void UT_Flag()
 
 void UT_Command()
 {
+	auto print_argv = [](const std::vector<std::string>& argv) -> void {
+		std::cout<<"\\* ArgVPrint\n-----------------------------------\n";
+		for(auto str : argv )
+			std::cout<<str<<'\n';
+		std::cout<<"-----------------------------------*\\ \n";
+		
+	};
+	yt::Command test_com{"gcc compile main.cpp -o<yoyo> source.cpp " , '<' , '>' , ' '};
 	
+	print_argv(test_com.m_com_argv);
+
+
 	auto numPredicate = [](const std::string& str ) -> bool
 	{
 		return std::all_of(std::begin(str) , std::end(str) , isdigit);
@@ -120,11 +131,7 @@ void UT_Command()
 
 	yt::Command com{"prog command1 arg1 arg2 arg3 flag1<arg1 arg2> flag2<1 2 3>" , '<' , '>' , ' '};
 	
-	for(auto arr : com.m_com_argv)
-	{
-		std::cout<<arr<<std::endl;
-	}
-	std::cout<<"print end"<<std::endl;
+	print_argv(com.m_com_argv);
 
 	std::cout<<com.m_flagv[1][1]<<std::endl;;
 	assert(com.argCount() == 3 && "func Flag::argCount()");

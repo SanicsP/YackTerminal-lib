@@ -8,6 +8,9 @@
 *.ar
 *.cmake
 *Makefile
+*.png
+*.jpg
+*odp
 
 
 /build

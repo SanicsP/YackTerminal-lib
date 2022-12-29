@@ -5,32 +5,50 @@ project(${ProjName})
 
 set(TargetName ${PROJECT_NAME})
 
+#Porgramm directories ==================================
 set(SourcesDir ${PROJECT_SOURCE_DIR}/Utests/src)
 set(HeadersDir ${PROJECT_SOURCE_DIR}/Utests/headers)
-
-set(LibHeadersDir ${PROJECT_SOURCE_DIR}/YT_Library/header)
-
 set(Sub_Utest ${PROJECT_SOURCE_DIR}/Utests)
-set(Sub_Lib ${PROJECT_SOURCE_DIR}/YT_Library)
+#=============================================================
 
 
-set(SourcesFiles 
-	${SourcesDir}/Test.cpp
-	${SourcesDir}/UnitaryTest.cpp
-	${SourcesDir}/TestCode.cpp
+#yt_lib ====================================================================
 	
-)
+#lib include directories
+	set(LibHeadersDir ${PROJECT_SOURCE_DIR}/YT_Library/header)
 
-set(HeadersFiles 
-	${HeadersDir}/UnitaryTest.hpp
-	${HeadersDir}/TestCode.hpp
+#sub directories
+	set(Sub_Lib ${PROJECT_SOURCE_DIR}/YT_Library)
+#=====================================================================
 
-)
+
+#program files =========================================================
+	
+	#source files
+	set(SourcesFiles 
+		${SourcesDir}/Test.cpp
+		${SourcesDir}/UnitaryTest.cpp
+		${SourcesDir}/TestCode.cpp
+	
+	)
+	
+	#headers files
+	set(HeadersFiles 
+		${HeadersDir}/UnitaryTest.hpp
+		${HeadersDir}/TestCode.hpp
+
+	)
+#=================================================================================
+
+
+#libs names
+set(arg_lib_name yt-arg)
+set(log_lib_name yt-log)
 
 add_subdirectory(${Sub_Lib})
 
 
 add_executable(${TargetName} ${SourcesFiles} ${HeadersFiles})
-target_link_libraries(${TargetName} PUBLIC Arg)
+target_link_libraries(${TargetName} PUBLIC ${arg_lib_name})
 target_include_directories(${TargetName} PUBLIC ${HeadersDir} PUBLIC ${LibHeadersDir})
 # target_compile_options(${TargetName} PUBLIC -g)

@@ -56,6 +56,9 @@ namespace YackTerminal
 			char m_delim_in;
 			char m_delim_out;
 			char m_flag_arg_delim;
+
+			bool m_error_stat;
+
 		public:  // services 
 
 			//inherited override services from field class : 

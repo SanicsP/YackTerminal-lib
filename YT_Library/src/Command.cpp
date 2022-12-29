@@ -56,12 +56,16 @@ namespace YackTerminal {
 					argv_it = flag_str.second;
 					continue;
 				}
+				else 
+				{
+					m_com_argv.push_back(*argv_it);
+				}
 			}
-			else if(isEnd_Of_Flag(*argv_it , m_delim_in , m_delim_out))
+			/*else if(isEnd_Of_Flag(*argv_it , m_delim_in , m_delim_out))
 			{
 				argv_it++;
 				continue;
-			}
+			}*/
 			else
 			{
 				m_com_argv.push_back(*argv_it);
