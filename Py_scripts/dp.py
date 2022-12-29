@@ -3,9 +3,22 @@
 #deploiment script for YackTerminal Library 
 
 import pathlib
-import sys
+import shutil
 
-print ("the name of script :" , sys.argv[0])
-print ("command list : " , sys.argv)
+destination_dir_name = "YT_LIB"
+YackTerminal_lib_path = pathlib.Path("../YT_Library")
+destination_directory = pathlib.Path("../")/destination_dir_name
+destination_directory_src = destination_directory / "src"
+
+
+
+
+print(YackTerminal_lib_path , pathlib.Path.exists(YackTerminal_lib_path))
+
+def init_destination_dir() : 
+	shutil.copytree(YackTerminal_lib_path , destination_directory)
+	shutil.rmtree(destination_directory_src)
+
+
 
 
