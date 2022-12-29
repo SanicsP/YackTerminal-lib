@@ -1,54 +1,62 @@
 
-set(ProjName Utest)
+set(programm_name Utest)
 cmake_minimum_required(VERSION 3.24.2)
-project(${ProjName})
+project(${programm_name})
 
 set(TargetName ${PROJECT_NAME})
 
 #Porgramm directories ==================================
-set(SourcesDir ${PROJECT_SOURCE_DIR}/Utests/src)
-set(HeadersDir ${PROJECT_SOURCE_DIR}/Utests/headers)
-set(Sub_Utest ${PROJECT_SOURCE_DIR}/Utests)
+set(programm_source_dir ${PROJECT_SOURCE_DIR}/Utests/src)
+set(programm_include_dir ${PROJECT_SOURCE_DIR}/Utests/headers)
+set(programm_project_dir ${PROJECT_SOURCE_DIR}/Utests)
 #=============================================================
 
 
-#yt_lib ====================================================================
-	
-#lib include directories
-	set(LibHeadersDir ${PROJECT_SOURCE_DIR}/YT_Library/header)
 
-#sub directories
-	set(Sub_Lib ${PROJECT_SOURCE_DIR}/YT_Library)
-#=====================================================================
+
+
+
+
+
+#YackTerminalLib =================================================
+
+#lib directories
+	set(yackterminal_project_dir ${PROJECT_SOURCE_DIR}/YT_Library)
+	set(yackterminal_include_dir ${PROJECT_SOURCE_DIR}/YT_Library/header)
+#libs names
+	set(arg_lib_name yt-arg)
+	set(log_lib_name yt-log)
+#add sub directory for the programm
+	add_subdirectory(${yackterminal_project_dir})
+#============================================================================
 
 
 #program files =========================================================
 	
 	#source files
-	set(SourcesFiles 
-		${SourcesDir}/Test.cpp
-		${SourcesDir}/UnitaryTest.cpp
-		${SourcesDir}/TestCode.cpp
+	set(programm_source_files 
+		${programm_source_dir}/Test.cpp
+		${programm_source_dir}/UnitaryTest.cpp
+		${programm_source_dir}/TestCode.cpp
 	
 	)
 	
 	#headers files
-	set(HeadersFiles 
-		${HeadersDir}/UnitaryTest.hpp
-		${HeadersDir}/TestCode.hpp
+	set(programm_include_files
+		${programm_source_dir}/UnitaryTest.hpp
+		${programm_source_dir}/TestCode.hpp
 
 	)
 #=================================================================================
 
 
-#libs names
-set(arg_lib_name yt-arg)
-set(log_lib_name yt-log)
-
-add_subdirectory(${Sub_Lib})
 
 
-add_executable(${TargetName} ${SourcesFiles} ${HeadersFiles})
+
+add_executable(${TargetName} ${programm_source_files} ${programm_include_dir})
+
 target_link_libraries(${TargetName} PUBLIC ${arg_lib_name})
-target_include_directories(${TargetName} PUBLIC ${HeadersDir} PUBLIC ${LibHeadersDir})
+
+target_include_directories(${TargetName} PUBLIC ${programm_include_dir} PUBLIC ${yackterminal_include_dir})
+
 # target_compile_options(${TargetName} PUBLIC -g)
