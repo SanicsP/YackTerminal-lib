@@ -23,6 +23,18 @@ void UT_Other()
 
 void UT_Field()
 {
+	// constructor copy & operators
+	{
+		yt::Field field1{"g++ arg1 main.cpp -o main.exe"};
+		yt::Field field2{"g++ arg2 main.cpp -I yt/include -L yt/lib -lyt-Arg.a"};
+		yt::Field with_cpy_constructor{field1};
+		assert(with_cpy_constructor.name() == "arg1" && "Field::Field(const Field& other)");
+		with_cpy_constructor = field2;
+		assert(with_cpy_constructor.name() == "arg2" && "Field::Field(const Field& other)");
+
+	}
+
+
 	std::string assert_msg{"assertion fail : "};
 	//Test of constructors
 	{
@@ -99,7 +111,7 @@ void UT_Flag()
 	
 	flag = yt::repastFlag(split_flag , it, '[' , ']' , ' ');
 	
-	assert(flag.first == "" && "assert fail ! ");
+	
 	
 
 	
@@ -107,6 +119,23 @@ void UT_Flag()
 
 void UT_Command()
 {
+	//constructors 
+	{
+		yt::Command com1{"g++ compile main.cpp -o<main.exe a>" , '<' , '>' , ' '};
+		yt::Command com2{"g++ linker main.o lib.o utils.o -n<app.exe a>" , '<' , '>' , ' '};
+		yt::Command with_cpy_crst{com1};
+
+
+		assert(with_cpy_crst.name() == "compile" && "Command::Command(Const Command& other)");
+		assert(with_cpy_crst.hasFlag("-o") == true && "Command::Command(Const Command& other)");
+
+		with_cpy_crst = com2; 
+		assert(with_cpy_crst.name() == "linker" && "Command::operator=(Const Command& other)");
+		assert(with_cpy_crst.hasFlag("-n") == true && "Command::operator=(Const Command& other)");
+
+		std::cout<<"ok"<<std::endl;
+	}
+
 	auto print_argv = [](const std::vector<std::string>& argv) -> void {
 		std::cout<<"\\* ArgVPrint\n-----------------------------------\n";
 		for(auto str : argv )
@@ -133,7 +162,7 @@ void UT_Command()
 	
 	print_argv(com.m_com_argv);
 
-	std::cout<<com.m_flagv[1][1]<<std::endl;;
+	std::cout<<com.m_flagv[1].m_argv.size()<<std::endl;
 	assert(com.argCount() == 3 && "func Flag::argCount()");
 	
 

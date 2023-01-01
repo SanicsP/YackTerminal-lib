@@ -17,6 +17,11 @@ namespace YackTerminal {
 		this->rconstruct(arg_str);
 	}
 
+	Field::Field(const Field& other) : m_argv(other.m_argv) ,
+	m_name(other.m_name)
+	{
+	}
+
 
 	const std::string& Field::operator[](size_t key) const
 	{
@@ -58,4 +63,10 @@ namespace YackTerminal {
 		return true;
 	}
 
+	void Field::operator=(const Field& other)
+	{
+		m_name = other.m_name;
+		m_argv = other.m_argv;
+	}
+	
 }

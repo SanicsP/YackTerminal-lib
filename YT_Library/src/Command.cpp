@@ -5,7 +5,8 @@ namespace YackTerminal {
 	Command::Command(int argc , char* argv[] , char delimI , char delimO , char flag_delim) : 
 	m_delim_in(delimI),
 	m_delim_out(delimO),
-	m_flag_arg_delim(flag_delim)
+	m_flag_arg_delim(flag_delim),
+	m_error_stat(Command_Error::good)
 	{
 		std::string arg_array = argv2String(argc , argv);
 		rconstruct(arg_array);
@@ -14,9 +15,35 @@ namespace YackTerminal {
 	Command::Command(const std::string& arg_str , char delimI , char delimO , char flag_delim) :
 	m_delim_in(delimI),
 	m_delim_out(delimO),
-	m_flag_arg_delim(flag_delim)
+	m_flag_arg_delim(flag_delim),
+	m_error_stat(Command_Error::good)
 	{
 		rconstruct(arg_str);
+	}
+
+	Command::Command(const Command& other) : 
+		m_delim_in (other.m_delim_in),
+		m_delim_out (other.m_delim_out),
+		m_flag_arg_delim(other.m_flag_arg_delim),
+		m_error_stat(other.m_error_stat)
+	{
+		m_com_argv = other.m_com_argv;
+		m_argv = other.m_argv;
+		m_flagv = other.m_flagv;
+		m_name = other.m_name;
+	}
+
+	void Command::operator=(const Command& other)
+	{
+		m_name = other.m_name;
+		m_delim_in =other.m_delim_in;
+		m_delim_out = other.m_delim_out;
+		m_flag_arg_delim = other.m_flag_arg_delim;
+		m_error_stat = other.m_error_stat;
+
+		m_com_argv = other.m_com_argv;
+		m_argv = other.m_argv;
+		m_flagv = other.m_flagv;
 	}
 
 	void Command::rconstruct(const std::string& nw_arg_str) 
@@ -56,9 +83,10 @@ namespace YackTerminal {
 					argv_it = flag_str.second;
 					continue;
 				}
-				else 
+				else // if only the in delimiter is entred
 				{
 					m_com_argv.push_back(*argv_it);
+					m_error_stat = Command_Error::bad_flag;
 				}
 			}
 			/*else if(isEnd_Of_Flag(*argv_it , m_delim_in , m_delim_out))
@@ -200,6 +228,10 @@ namespace YackTerminal {
 		
 	}
 
-	
+	Command_Error Command::stat() const
+	{
+		return m_error_stat;
+	}
+
 
 };

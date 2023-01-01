@@ -10,6 +10,7 @@ int main(int argc , char* argv[])
 	//TC_COMMAND();
 	//UT_Other();
 	//UT_Field();
+	UT_Field();
 	UT_Flag();
 	UT_Command();
 

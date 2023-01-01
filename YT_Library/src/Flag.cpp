@@ -9,6 +9,24 @@ namespace YackTerminal {
 	{
 		rconstruct(ArgStr);
 	}
+	Flag::Flag(const Flag& other) : m_delim_in(other.m_delim_in) ,
+	m_delim_out(other.m_delim_out),
+	m_arg_delim(other.m_arg_delim)
+	{
+		m_name = other.m_name;
+		m_argv = other.m_argv;
+	}
+
+	Flag::Flag(Flag&& other)
+	{
+		m_name = other.m_name;
+		m_argv = other.m_argv;
+		m_delim_in = other.m_delim_in;
+		m_delim_out = other.m_delim_out;
+		m_arg_delim = other.m_arg_delim;
+	}
+	
+
 	void Flag::rconstruct(const std::string& nw_arg_str ) 
 	{
 		using StrIt = std::string::const_iterator;
@@ -52,8 +70,25 @@ namespace YackTerminal {
 			return false;
 		return true;
 	}
+
+	void Flag::operator=(const Flag& other)
+	{
+		m_name = other.m_name;
+		m_argv = other.m_argv;
+		m_delim_in = other.m_delim_in;
+		m_delim_out = other.m_delim_out;
+		m_arg_delim = other.m_arg_delim;
+	}
+	//===========================================================================================
+
+
+
+
+
+
+
 	
-	///Free func 
+	///Free func ==============================================================================
 
 	bool isFlag(const std::string& arg , char delimIn , char delimOut) 
 	{

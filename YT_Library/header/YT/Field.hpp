@@ -39,6 +39,9 @@ namespace YackTerminal {
 			*/
 			Field(const std::string& arg_str) ;
 
+			explicit Field(const Field& other);
+
+
 			
 			Field() = default; 
 
@@ -96,6 +99,9 @@ namespace YackTerminal {
 			* la commande entrée par l'utilisateur
 			*/ 
 			std::vector<std::string> m_argv;
+
+			public: // operators
+			void operator=(const Field& other);
 			
 
 	};

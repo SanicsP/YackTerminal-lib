@@ -25,6 +25,9 @@ namespace YackTerminal {
 			 * @return 
 			*/
 			Flag(const std::string& ArgStr , char deliI , char deliO , char arg_delim);
+
+			Flag(const Flag& other);
+			explicit Flag(Flag&& other);
 			Flag() = default;
 		private:
 			char m_delim_in;
@@ -41,6 +44,8 @@ namespace YackTerminal {
 			 * @return vraie si la chaîne est un drapeau , faux dans le cas contraire 
 			*/
 			bool isFlag(const std::string& arg) const noexcept;
+		public : //operators 
+			void operator=(const Flag& other);
 	};
 
 	/**

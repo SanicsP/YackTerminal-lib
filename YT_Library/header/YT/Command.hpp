@@ -10,6 +10,7 @@
 #include <YT/Field.hpp>
 #include <YT/Flag.hpp>
 #include <YT/Other.hpp>
+#include <YT/Command_Error.hpp>
 
 namespace YackTerminal  
 {
@@ -52,12 +53,17 @@ namespace YackTerminal
 			 * @return aucune donnée en retour 
 			*/
 			Command(const std::string& arg_str , char delimI , char delimO , char flag_delim);
+
+			explicit Command(const Command& other);
+			
+		public : // operators 
+			void operator=(const Command& other);
 		private :
 			char m_delim_in;
 			char m_delim_out;
 			char m_flag_arg_delim;
 
-			bool m_error_stat;
+			Command_Error m_error_stat;
 
 		public:  // services 
 
@@ -155,6 +161,9 @@ namespace YackTerminal
 			*/
 			Flag& operator[](const std::string& flg_name);
 			/////////////////:
+
+			// Error func
+			Command_Error stat() const;
 			
 		public: // public members  
 			///@brief vecteur d'arguments contenant tout les drapeaux de la commande
