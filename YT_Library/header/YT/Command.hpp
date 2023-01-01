@@ -54,8 +54,9 @@ namespace YackTerminal
 			*/
 			Command(const std::string& arg_str , char delimI , char delimO , char flag_delim);
 
-			explicit Command(const Command& other);
-			
+			///@brief constructeur de copie 
+			Command(const Command& other);
+
 		public : // operators 
 			void operator=(const Command& other);
 		private :

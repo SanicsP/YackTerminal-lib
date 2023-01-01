@@ -39,7 +39,8 @@ namespace YackTerminal {
 			*/
 			Field(const std::string& arg_str) ;
 
-			explicit Field(const Field& other);
+			///@brief constructeur de copie 
+			Field(const Field& other);
 
 
 			
