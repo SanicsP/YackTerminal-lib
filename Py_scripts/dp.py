@@ -9,7 +9,7 @@ import subprocess
 
 #=========names================================================
 
-destination_dir_name = "YT_LIB_TEST"
+destination_dir_name = "YT_LIB"
 destination_licence_dir_name = "Licence"
 readme_file_name = "readme.md"
 
@@ -50,7 +50,6 @@ def init_destination_dir() :
 	shutil.copyfile(YackTerminal_readme_path , destination_directory_readme)
 
 	#shutil.rmtree(destination_directory_src)
-
 
 try :
 	init_destination_dir()
