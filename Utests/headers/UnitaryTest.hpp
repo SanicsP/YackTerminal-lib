@@ -16,5 +16,6 @@ void UT_Field();
 void UT_Command();
 void UT_Other();
 void UT_Flag();
+void UT_Command_Wrapper();
 
 #endif

@@ -184,3 +184,7 @@ void UT_Command()
 
 
 
+void UT_Command_Wrapper()
+{
+	
+}
