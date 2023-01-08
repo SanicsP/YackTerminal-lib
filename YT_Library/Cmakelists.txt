@@ -34,6 +34,7 @@ message("compile mode : ${COMPILE_MODE}")
 			${arg_lib_include_dir}/Flag.hpp
 			${arg_lib_include_dir}/Other_Utils.hpp
 			${arg_lib_include_dir}/Command_Error.hpp
+			${arg_lib_include_dir}/Command_Wrapper.hpp
 		)
 	#source files for arg lib
 		set (arg_lib_sources_files
@@ -42,6 +43,7 @@ message("compile mode : ${COMPILE_MODE}")
 			${arg_lib_sources_dir}/Field.cpp
 			${arg_lib_sources_dir}/Flag.cpp
 			${arg_lib_sources_dir}/Other_Utils.cpp
+			${arg_lib_sources_dir}/Command_Wrapper.cpp
 		)
 	#creation of arg lib target 
 		set(arg_lib_name yt-arg)
